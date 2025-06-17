@@ -1,0 +1,359 @@
+{
+  "general": [
+    {
+        "id": 211,
+        "q": "Welcher Politiker steht für die '{Ostverträge}'?",
+        "o": ["Helmut Kohl", "Willy Brandt", "Michail Gorbatschow", "Ludwig Erhard"],
+        "a": "Willy Brandt",
+        "t": {
+            "Ostverträge": "Eastern Treaties"
+        },
+        "en": "Which politician is associated with the 'Ostverträge' (Eastern Treaties)?",
+        "o_en": ["Helmut Kohl", "Willy Brandt", "Mikhail Gorbachev", "Ludwig Erhard"],
+        "expl": { "de": "Die 'Ostverträge' waren Teil der 'Neuen Ostpolitik' von Bundeskanzler Willy Brandt Anfang der 1970er Jahre, die auf eine Entspannung und Aussöhnung mit den osteuropäischen Staaten abzielte.", "en": "The 'Ostverträge' were part of the 'Neue Ostpolitik' (New Eastern Policy) of Chancellor Willy Brandt in the early 1970s, which aimed at détente and reconciliation with the Eastern European states." }
+    },
+    {
+        "id": 212,
+        "q": "Wie heißt Deutschland mit vollem Namen?",
+        "o": ["Bundesstaat Deutschland", "Bundesländer Deutschland", "Bundesrepublik Deutschland", "Bundesbezirk Deutschland"],
+        "a": "Bundesrepublik Deutschland",
+        "en": "What is the full name of Germany?",
+        "o_en": ["Federal State of Germany", "Federal Lands of Germany", "Federal Republic of Germany", "Federal District of Germany"],
+        "expl": { "de": "Der offizielle Name des deutschen Staates ist Bundesrepublik Deutschland.", "en": "The official name of the German state is the Federal Republic of Germany." }
+    },
+    {
+        "id": 213,
+        "q": "Wie viele {Einwohner} hat Deutschland?",
+        "o": ["70 Millionen", "78 Millionen", "84 Millionen", "90 Millionen"],
+        "a": "84 Millionen",
+        "t": {
+            "Einwohner": "inhabitants"
+        },
+        "en": "How many inhabitants does Germany have?",
+        "o_en": ["70 million", "78 million", "84 million", "90 million"],
+        "expl": { "de": "Die Einwohnerzahl Deutschlands liegt bei etwa 84 Millionen (Stand 2023), was es zum bevölkerungsreichsten Land der EU macht.", "en": "The population of Germany is approximately 84 million (as of 2023), making it the most populous country in the EU." }
+    },
+    {
+        "id": 214,
+        "q": "Welche Farben hat die deutsche {Flagge}?",
+        "o": ["schwarz-rot-gold", "rot-weiß-schwarz", "schwarz-rot-grün", "schwarz-gelb-rot"],
+        "a": "schwarz-rot-gold",
+        "t": {
+            "Flagge": "flag"
+        },
+        "en": "What are the colors of the German flag?",
+        "o_en": ["black-red-gold", "red-white-black", "black-red-green", "black-yellow-red"],
+        "expl": { "de": "Die Farben der Bundesflagge sind Schwarz, Rot und Gold, festgelegt in Artikel 22 des Grundgesetzes.", "en": "The colors of the federal flag are black, red, and gold, as stipulated in Article 22 of the Basic Law." }
+    },
+    {
+        "id": 215,
+        "q": "Wer wird als '{Kanzler der Deutschen Einheit}' bezeichnet?",
+        "o": ["Gerhard Schröder", "Helmut Kohl", "Konrad Adenauer", "Helmut Schmidt"],
+        "a": "Helmut Kohl",
+        "t": {
+            "Kanzler der Deutschen Einheit": "Chancellor of German Unity"
+        },
+        "en": "Who is referred to as the 'Chancellor of German Unity'?",
+        "o_en": ["Gerhard Schröder", "Helmut Kohl", "Konrad Adenauer", "Helmut Schmidt"],
+        "expl": { "de": "Helmut Kohl war der Bundeskanzler während des Prozesses der deutschen Wiedervereinigung 1990 und wird daher oft als 'Kanzler der Einheit' bezeichnet.", "en": "Helmut Kohl was the Federal Chancellor during the process of German reunification in 1990 and is therefore often referred to as the 'Chancellor of Unity'." }
+    },
+    {
+        "id": 216,
+        "q": "Welches {Symbol} ist im {Plenarsaal} des Deutschen Bundestages zu sehen?",
+        "isImage": true,
+        "o": ["der Bundesadler", "die Fahne der Stadt Berlin", "der Reichsadler", "die Reichskrone"],
+        "a": "der Bundesadler",
+        "t": {
+            "Symbol": "symbol",
+            "Plenarsaal": "plenary hall"
+        },
+        "en": "Which symbol can be seen in the plenary hall of the German Bundestag?",
+        "o_en": ["the Federal Eagle", "the flag of the city of Berlin", "the Imperial Eagle", "the Imperial Crown"],
+        "expl": { "de": "Im Plenarsaal des Bundestages hängt eine große, stilisierte Form des Bundesadlers, oft auch 'Fette Henne' genannt.", "en": "In the plenary hall of the Bundestag hangs a large, stylized form of the Federal Eagle, often nicknamed the 'Fat Hen'." }
+    },
+    {
+        "id": 217,
+        "q": "In welchem {Zeitraum} gab es die Deutsche Demokratische Republik (DDR)?",
+        "o": ["1919 bis 1927", "1933 bis 1945", "1945 bis 1961", "1949 bis 1990"],
+        "a": "1949 bis 1990",
+        "t": {
+            "Zeitraum": "period"
+        },
+        "en": "In which period did the German Democratic Republic (GDR) exist?",
+        "o_en": ["1919 to 1927", "1933 to 1945", "1945 to 1961", "1949 to 1990"],
+        "expl": { "de": "Die DDR existierte von ihrer Gründung am 7. Oktober 1949 bis zur deutschen Wiedervereinigung am 3. Oktober 1990.", "en": "The GDR existed from its founding on October 7, 1949, until German reunification on October 3, 1990." }
+    },
+    {
+        "id": 218,
+        "q": "Wie viele Bundesländer kamen bei der {Wiedervereinigung} 1990 zur Bundesrepublik Deutschland hinzu?",
+        "o": ["4", "5", "6", "7"],
+        "a": "5",
+        "t": {
+            "Wiedervereinigung": "reunification"
+        },
+        "en": "How many federal states were added to the Federal Republic of Germany during reunification in 1990?",
+        "o_en": ["4", "5", "6", "7"],
+        "expl": { "de": "Mit der Wiedervereinigung traten die fünf 'neuen Bundesländer' Brandenburg, Mecklenburg-Vorpommern, Sachsen, Sachsen-Anhalt und Thüringen der Bundesrepublik bei.", "en": "With reunification, the five 'new federal states' of Brandenburg, Mecklenburg-Vorpommern, Saxony, Saxony-Anhalt, and Thuringia joined the Federal Republic." }
+    },
+    {
+        "id": 219,
+        "q": "Die Bundesrepublik Deutschland hat die {Grenzen} von heute seit ...",
+        "o": ["1933", "1949", "1971", "1990"],
+        "a": "1990",
+        "t": {
+            "Grenzen": "borders"
+        },
+        "en": "The Federal Republic of Germany has had its current borders since...",
+        "o_en": ["1933", "1949", "1971", "1990"],
+        "expl": { "de": "Mit dem Beitritt der DDR am 3. Oktober 1990 erhielt die Bundesrepublik Deutschland ihre heutigen Grenzen.", "en": "With the accession of the GDR on October 3, 1990, the Federal Republic of Germany acquired its present-day borders." }
+    },
+    {
+        "id": 220,
+        "q": "Der 27. Januar ist in Deutschland ein offizieller {Gedenktag}. Woran erinnert dieser Tag?",
+        "o": ["an das Ende des Zweiten Weltkrieges", "an die Verabschiedung des Grundgesetzes", "an die Wiedervereinigung Deutschlands", "an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)"],
+        "a": "an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)",
+        "t": {
+            "Gedenktag": "day of remembrance"
+        },
+        "en": "January 27 is an official day of remembrance in Germany. What does this day commemorate?",
+        "o_en": ["the end of the Second World War", "the adoption of the Basic Law", "the reunification of Germany", "the victims of National Socialism (Day of the liberation of the Auschwitz concentration camp)"],
+        "expl": { "de": "Der 27. Januar ist der Tag des Gedenkens an die Opfer des Nationalsozialismus. Er wurde gewählt, weil an diesem Tag im Jahr 1945 das Konzentrations- und Vernichtungslager Auschwitz befreit wurde.", "en": "January 27 is the Day of Remembrance for the victims of National Socialism. It was chosen because on this day in 1945, the Auschwitz concentration and extermination camp was liberated." }
+    },
+    {
+        "id": 221,
+        "q": "Deutschland ist Mitglied des {Schengener Abkommens}. Was bedeutet das?",
+        "o": ["Deutsche können in viele Länder Europas ohne Passkontrolle reisen.", "Alle Menschen können ohne Personenkontrolle in Deutschland einreisen.", "Deutsche können ohne Passkontrolle in jedes Land reisen.", "Deutsche können in jedem Land mit dem Euro bezahlen."],
+        "a": "Deutsche können in viele Länder Europas ohne Passkontrolle reisen.",
+        "t": {
+            "Schengener Abkommens": "Schengen Agreement"
+        },
+        "en": "Germany is a member of the Schengen Agreement. What does that mean?",
+        "o_en": ["Germans can travel to many European countries without passport control.", "All people can enter Germany without identity checks.", "Germans can travel to any country without passport control.", "Germans can pay with the Euro in any country."],
+        "expl": { "de": "Das Schengener Abkommen regelt den Wegfall der stationären Grenzkontrollen zwischen den teilnehmenden Staaten. Es ermöglicht freies Reisen innerhalb des Schengen-Raums.", "en": "The Schengen Agreement regulates the abolition of stationary border controls between the participating states. It allows for free travel within the Schengen Area." }
+    },
+    {
+        "id": 222,
+        "q": "Welches Land ist ein {Nachbarland} von Deutschland?",
+        "o": ["Ungarn", "Portugal", "Spanien", "Schweiz"],
+        "a": "Schweiz",
+        "t": {
+            "Nachbarland": "neighboring country"
+        },
+        "en": "Which country is a neighboring country of Germany?",
+        "o_en": ["Hungary", "Portugal", "Spain", "Switzerland"],
+        "expl": { "de": "Die Schweiz ist eines der neun Nachbarländer Deutschlands.", "en": "Switzerland is one of Germany's nine neighboring countries." }
+    },
+    {
+        "id": 223,
+        "q": "Welches Land ist ein {Nachbarland} von Deutschland?",
+        "o": ["Rumänien", "Bulgarien", "Polen", "Griechenland"],
+        "a": "Polen",
+        "t": {
+            "Nachbarland": "neighboring country"
+        },
+        "en": "Which country is a neighboring country of Germany?",
+        "o_en": ["Romania", "Bulgaria", "Poland", "Greece"],
+        "expl": { "de": "Polen teilt eine lange Grenze mit Deutschland im Osten.", "en": "Poland shares a long border with Germany in the east." }
+    },
+    {
+        "id": 224,
+        "q": "Was bedeutet die {Abkürzung} EU?",
+        "o": ["Europäische Unternehmen", "Europäische Union", "Einheitliche Union", "Euro Union"],
+        "a": "Europäische Union",
+        "t": {
+            "Abkürzung": "abbreviation"
+        },
+        "en": "What does the abbreviation EU stand for?",
+        "o_en": ["European Enterprises", "European Union", "Unitary Union", "Euro Union"],
+        "expl": { "de": "EU ist die Abkürzung für die Europäische Union.", "en": "EU is the abbreviation for the European Union." }
+    },
+    {
+        "id": 225,
+        "q": "In welchem anderen Land gibt es eine große {deutschsprachige} Bevölkerung?",
+        "o": ["Tschechien", "Norwegen", "Spanien", "Österreich"],
+        "a": "Österreich",
+        "t": {
+            "deutschsprachige": "German-speaking"
+        },
+        "en": "In which other country is there a large German-speaking population?",
+        "o_en": ["Czech Republic", "Norway", "Spain", "Austria"],
+        "expl": { "de": "In Österreich ist Deutsch die alleinige Amtssprache und wird von der überwiegenden Mehrheit der Bevölkerung gesprochen.", "en": "In Austria, German is the sole official language and is spoken by the vast majority of the population." }
+    },
+    {
+        "id": 226,
+        "q": "Welche ist die Flagge der Europäischen Union?",
+        "isImage": true,
+        "o": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
+        "a": "Bild 1",
+        "en": "Which is the flag of the European Union?",
+        "o_en": ["Image 1", "Image 2", "Image 3", "Image 4"],
+        "expl": { "de": "Die Flagge der EU (Bild 1) zeigt einen Kreis aus zwölf goldenen Sternen auf blauem Hintergrund.", "en": "The flag of the EU (Image 1) shows a circle of twelve golden stars on a blue background." }
+    },
+    {
+        "id": 227,
+        "q": "Welches Land ist ein {Nachbarland} von Deutschland?",
+        "o": ["Finnland", "Dänemark", "Norwegen", "Schweden"],
+        "a": "Dänemark",
+        "t": {
+            "Nachbarland": "neighboring country"
+        },
+        "en": "Which country is a neighboring country of Germany?",
+        "o_en": ["Finland", "Denmark", "Norway", "Sweden"],
+        "expl": { "de": "Dänemark ist das einzige skandinavische Land, das eine Landgrenze mit Deutschland hat.", "en": "Denmark is the only Scandinavian country that has a land border with Germany." }
+    },
+    {
+        "id": 228,
+        "q": "Wie wird der {Beitritt} der DDR zur Bundesrepublik Deutschland im Jahr 1990 allgemein genannt?",
+        "o": ["NATO-Osterweiterung", "EU-Osterweiterung", "Deutsche Wiedervereinigung", "Europäische Gemeinschaft"],
+        "a": "Deutsche Wiedervereinigung",
+        "t": {
+            "Beitritt": "accession / joining"
+        },
+        "en": "What is the accession of the GDR to the Federal Republic of Germany in 1990 generally called?",
+        "o_en": ["NATO eastward expansion", "EU eastward expansion", "German reunification", "European Community"],
+        "expl": { "de": "Dieser historische Prozess wird als Deutsche Wiedervereinigung bezeichnet.", "en": "This historical process is called German reunification." }
+    },
+    {
+        "id": 229,
+        "q": "Welches Land ist ein {Nachbarland} von Deutschland?",
+        "o": ["Spanien", "Bulgarien", "Norwegen", "Luxemburg"],
+        "a": "Luxemburg",
+        "t": {
+            "Nachbarland": "neighboring country"
+        },
+        "en": "Which country is a neighboring country of Germany?",
+        "o_en": ["Spain", "Bulgaria", "Norway", "Luxembourg"],
+        "expl": { "de": "Luxemburg ist eines der neun Nachbarländer Deutschlands.", "en": "Luxembourg is one of Germany's nine neighboring countries." }
+    },
+    {
+        "id": 230,
+        "q": "Das Europäische Parlament wird {regelmäßig} gewählt, nämlich alle ...",
+        "o": ["5 Jahre.", "6 Jahre.", "7 Jahre.", "8 Jahre."],
+        "a": "5 Jahre.",
+        "t": {
+            "regelmäßig": "regularly"
+        },
+        "en": "The European Parliament is elected regularly, namely every...",
+        "o_en": ["5 years.", "6 years.", "7 years.", "8 years."],
+        "expl": { "de": "Die Wahlperiode des Europäischen Parlaments beträgt fünf Jahre.", "en": "The electoral term of the European Parliament is five years." }
+    },
+    {
+        "id": 231,
+        "q": "Was bedeutet der Begriff '{europäische Integration}'?",
+        "o": ["Damit sind amerikanische Einwanderinnen und Einwanderer in Europa gemeint.", "Der Begriff meint den Einwanderungsstopp nach Europa.", "Damit sind europäische Auswanderinnen und Auswanderer in den USA gemeint.", "Der Begriff meint den Zusammenschluss europäischer Staaten zur EU."],
+        "a": "Der Begriff meint den Zusammenschluss europäischer Staaten zur EU.",
+        "t": {
+            "europäische Integration": "European integration"
+        },
+        "en": "What does the term 'European integration' mean?",
+        "o_en": ["It refers to American immigrants in Europe.", "The term means the stop of immigration to Europe.", "It refers to European emigrants in the USA.", "The term means the union of European states to form the EU."],
+        "expl": { "de": "Europäische Integration bezeichnet den Prozess des immer engeren politischen und wirtschaftlichen Zusammenschlusses der europäischen Staaten, der zur Gründung der EU führte.", "en": "European integration refers to the process of ever-closer political and economic union of European states, which led to the founding of the EU." }
+    },
+    {
+        "id": 232,
+        "q": "Wer wird bei der {Europawahl} gewählt?",
+        "o": ["die Europäische Kommission", "die Länder, die in die EU eintreten dürfen", "die Abgeordneten des Europäischen Parlaments", "die europäische Verfassung"],
+        "a": "die Abgeordneten des Europäischen Parlaments",
+        "t": {
+            "Europawahl": "European elections"
+        },
+        "en": "Who is elected in the European elections?",
+        "o_en": ["the European Commission", "the countries that are allowed to join the EU", "the members of the European Parliament", "the European constitution"],
+        "expl": { "de": "Bei der Europawahl wählen die Bürgerinnen und Bürger der EU-Mitgliedstaaten die Abgeordneten des Europäischen Parlaments, die einzige direkt gewählte Institution der EU.", "en": "In the European elections, the citizens of the EU member states elect the members of the European Parliament, the only directly elected institution of the EU." }
+    },
+    {
+        "id": 233,
+        "q": "Welches Land ist ein {Nachbarland} von Deutschland?",
+        "o": ["Tschechien", "Bulgarien", "Griechenland", "Portugal"],
+        "a": "Tschechien",
+        "t": {
+            "Nachbarland": "neighboring country"
+        },
+        "en": "Which country is a neighboring country of Germany?",
+        "o_en": ["Czech Republic", "Bulgaria", "Greece", "Portugal"],
+        "expl": { "de": "Die Tschechische Republik teilt eine Grenze mit Deutschland im Südosten.", "en": "The Czech Republic shares a border with Germany in the southeast." }
+    },
+    {
+        "id": 234,
+        "q": "Wo ist ein {Sitz} des Europäischen Parlaments?",
+        "o": ["London", "Paris", "Berlin", "Straßburg"],
+        "a": "Straßburg",
+        "t": {
+            "Sitz": "seat"
+        },
+        "en": "Where is a seat of the European Parliament?",
+        "o_en": ["London", "Paris", "Berlin", "Strasbourg"],
+        "expl": { "de": "Der offizielle Sitz des Europäischen Parlaments, an dem die monatlichen Plenarsitzungen stattfinden, ist Straßburg in Frankreich.", "en": "The official seat of the European Parliament, where the monthly plenary sessions are held, is Strasbourg in France." }
+    },
+    {
+        "id": 235,
+        "q": "Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches {Ziel} der Europäischen Union wird bei diesem Treffen deutlich?",
+        "isImage": true,
+        "o": ["Freundschaft zwischen England und Deutschland", "Reisefreiheit in alle Länder der EU", "Frieden und Sicherheit in den Ländern der EU", "einheitliche Feiertage in den Ländern der EU"],
+        "a": "Frieden und Sicherheit in den Ländern der EU",
+        "t": {
+            "Ziel": "goal"
+        },
+        "en": "The then French President François Mitterrand and the then German Chancellor Helmut Kohl jointly commemorate the dead of both World Wars in Verdun. Which goal of the European Union becomes clear at this meeting?",
+        "o_en": ["Friendship between England and Germany", "Freedom of travel to all EU countries", "Peace and security in the countries of the EU", "uniform public holidays in the countries of the EU"],
+        "expl": { "de": "Die Geste der Versöhnung zwischen Deutschland und Frankreich, ehemaligen 'Erbfeinden', symbolisiert das Kernziel der EU: dauerhaften Frieden und Sicherheit auf dem europäischen Kontinent zu sichern.", "en": "The gesture of reconciliation between Germany and France, former 'hereditary enemies', symbolizes the core goal of the EU: to secure lasting peace and security on the European continent." }
+    },
+    {
+        "id": 236,
+        "q": "Wie viele {Mitgliedstaaten} hat die EU heute?",
+        "o": ["21", "23", "25", "27"],
+        "a": "27",
+        "t": {
+            "Mitgliedstaaten": "member states"
+        },
+        "en": "How many member states does the EU have today?",
+        "o_en": ["21", "23", "25", "27"],
+        "expl": { "de": "Nach dem Austritt des Vereinigten Königreichs (Brexit) hat die Europäische Union 27 Mitgliedstaaten (Stand 2023).", "en": "After the withdrawal of the United Kingdom (Brexit), the European Union has 27 member states (as of 2023)." }
+    },
+    {
+        "id": 237,
+        "q": "2007 wurde das 50-jährige {Jubiläum} der \"Römischen Verträge\" gefeiert. Was war der Inhalt der Verträge?",
+        "o": ["Beitritt Deutschlands zur NATO", "Gründung der Europäischen Wirtschaftsgemeinschaft (EWG)", "Verpflichtung Deutschlands zu Reparationsleistungen", "Festlegung der Oder-Neiße-Linie als Ostgrenze"],
+        "a": "Gründung der Europäischen Wirtschaftsgemeinschaft (EWG)",
+        "t": {
+            "Jubiläum": "anniversary"
+        },
+        "en": "In 2007, the 50th anniversary of the 'Treaties of Rome' was celebrated. What was the content of the treaties?",
+        "o_en": ["Germany's accession to NATO", "Founding of the European Economic Community (EEC)", "Germany's obligation to pay reparations", "Establishment of the Oder-Neisse line as the eastern border"],
+        "expl": { "de": "Mit den Römischen Verträgen von 1957 wurde die Europäische Wirtschaftsgemeinschaft (EWG), der direkte Vorläufer der EU, gegründet.", "en": "The Treaties of Rome in 1957 established the European Economic Community (EEC), the direct predecessor of the EU." }
+    },
+    {
+        "id": 238,
+        "q": "An welchen Orten arbeitet das Europäische Parlament?",
+        "o": ["Paris, London und Den Haag", "Straßburg, Luxemburg und Brüssel", "Rom, Bern und Wien", "Bonn, Zürich und Mailand"],
+        "a": "Straßburg, Luxemburg und Brüssel",
+        "en": "In which places does the European Parliament work?",
+        "o_en": ["Paris, London, and The Hague", "Strasbourg, Luxembourg, and Brussels", "Rome, Bern, and Vienna", "Bonn, Zurich, and Milan"],
+        "expl": { "de": "Das Europäische Parlament hat drei Arbeitsorte: Straßburg (Plenarsitzungen), Brüssel (Ausschusssitzungen) und Luxemburg (Generalsekretariat).", "en": "The European Parliament has three places of work: Strasbourg (plenary sessions), Brussels (committee meetings), and Luxembourg (General Secretariat)." }
+    },
+    {
+        "id": 239,
+        "q": "Durch welche {Verträge} schloss sich die Bundesrepublik Deutschland mit anderen Staaten zur Europäischen Wirtschaftsgemeinschaft zusammen?",
+        "o": ["durch die \"Hamburger Verträge\"", "durch die \"Römischen Verträge\"", "durch die \"Pariser Verträge\"", "durch die \"Londoner Verträge\""],
+        "a": "durch die \"Römischen Verträge\"",
+        "t": {
+            "Verträge": "treaties"
+        },
+        "en": "Through which treaties did the Federal Republic of Germany join with other states to form the European Economic Community?",
+        "o_en": ["through the 'Hamburg Treaties'", "through the 'Treaties of Rome'", "through the 'Paris Treaties'", "through the 'London Treaties'"],
+        "expl": { "de": "Die Gründung der EWG erfolgte durch die Unterzeichnung der Römischen Verträge im Jahr 1957.", "en": "The founding of the EEC took place with the signing of the Treaties of Rome in 1957." }
+    },
+    {
+        "id": 240,
+        "q": "Seit wann bezahlt man in Deutschland mit dem Euro in {bar}?",
+        "o": ["1995", "1998", "2002", "2005"],
+        "a": "2002",
+        "t": {
+            "bar": "cash"
+        },
+        "en": "Since when can one pay with the Euro in cash in Germany?",
+        "o_en": ["1995", "1998", "2002", "2005"],
+        "expl": { "de": "Die Euro-Banknoten und -Münzen wurden am 1. Januar 2002 als offizielles Bargeld in Deutschland und anderen Euro-Ländern eingeführt.", "en": "The Euro banknotes and coins were introduced as official cash in Germany and other Euro countries on January 1, 2002." }
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "general": [
+    {
+      "id": 1,
+      "q": "In Deutschland dürfen Menschen offen etwas gegen die {Regierung} sagen, weil hier {Meinungsfreiheit} gilt.",
+      "o": ["hier Religionsfreiheit gilt.", "die Menschen Steuern zahlen.", "die Menschen das Wahlrecht haben.", "hier Meinungsfreiheit gilt."],
+      "a": "hier Meinungsfreiheit gilt.",
+      "t": {
+        "Regierung": "government",
+        "Meinungsfreiheit": "freedom of speech"
+      },
+      "en": "In Germany, people are allowed to openly say something against the government, because...",
+      "o_en": ["freedom of religion applies here.", "people pay taxes.", "people have the right to vote.", "freedom of speech applies here."],
+      "expl": { "de": "Die Meinungsfreiheit ist ein Grundrecht in Deutschland (Artikel 5 Grundgesetz) und ein zentrales Merkmal der Demokratie.", "en": "Freedom of speech is a fundamental right in Germany (Article 5 of the Basic Law) and a central feature of democracy." }
+    },
+    {
+      "id": 2,
+      "q": "In Deutschland können {Eltern} bis zum 14. Lebensjahr ihres Kindes {entscheiden}, ob es in der Schule am ...",
+      "o": ["Geschichtsunterricht teilnimmt.", "Religionsunterricht teilnimmt.", "Politikunterricht teilnimmt.", "Sprachunterricht teilnimmt."],
+      "a": "Religionsunterricht teilnimmt.",
+      "t": {
+        "Eltern": "parents",
+        "entscheiden": "decide"
+      },
+      "en": "In Germany, parents can decide until their child is 14 whether it participates in ... in school.",
+      "o_en": ["history class.", "religious education.", "politics class.", "language class."],
+      "expl": { "de": "Die Teilnahme am Religionsunterricht ist eine Entscheidung der Eltern (oder des Kindes ab 14 Jahren), während andere Fächer verpflichtend sind.", "en": "Participation in religious education is a decision for the parents (or the child from age 14), while other subjects are compulsory." }
+    },
+    {
+      "id": 3,
+      "q": "Deutschland ist ein {Rechtsstaat}. Was ist damit gemeint?",
+      "o": ["Alle Einwohnerinnen/Einwohner und der Staat müssen sich an die Gesetze halten.", "Der Staat muss sich nicht an die Gesetze halten.", "Nur Deutsche müssen die Gesetze befolgen.", "Die Gerichte machen die Gesetze."],
+      "a": "Alle Einwohnerinnen/Einwohner und der Staat müssen sich an die Gesetze halten.",
+      "t": {
+        "Rechtsstaat": "state governed by the rule of law"
+      },
+      "en": "Germany is a state governed by the rule of law. What is meant by that?",
+      "o_en": ["All inhabitants and the state must adhere to the laws.", "The state does not have to adhere to the laws.", "Only Germans must follow the laws.", "The courts make the laws."],
+      "expl": { "de": "In einem Rechtsstaat sind alle, auch der Staat selbst, an das geltende Recht und die Gesetze gebunden. Dies schützt vor Willkür.", "en": "In a rule of law state, everyone, including the state itself, is bound by the applicable law and statutes. This protects against arbitrary action." }
+    },
+    {
+      "id": 4,
+      "q": "Welches {Recht} gehört zu den {Grundrechten} in Deutschland?",
+      "o": ["Waffenbesitz", "Faustrecht", "Meinungsfreiheit", "Selbstjustiz"],
+      "a": "Meinungsfreiheit",
+      "t": {
+        "Recht": "right / law",
+        "Grundrechten": "fundamental rights"
+      },
+      "en": "Which right belongs to the fundamental rights in Germany?",
+      "o_en": ["Gun ownership", "The law of the fist (might makes right)", "Freedom of speech", "Vigilante justice"],
+      "expl": { "de": "Die Meinungsfreiheit (Artikel 5 GG) ist ein zentrales Grundrecht, während Waffenbesitz streng reguliert ist und Faustrecht sowie Selbstjustiz illegal sind.", "en": "Freedom of speech (Article 5 of the Basic Law) is a central fundamental right, while gun ownership is strictly regulated, and the law of the fist and vigilante justice are illegal." }
+    },
+    {
+      "id": 5,
+      "q": "{Wahlen} in Deutschland sind frei. Was bedeutet das?",
+      "o": ["Man darf Geld annehmen, wenn man dafür eine bestimmte Kandidatin/einen bestimmten Kandidaten wählt.", "Nur Personen, die noch nie im Gefängnis waren, dürfen wählen.", "Die Wählerin/der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.", "Alle wahlberechtigten Personen müssen wählen."],
+      "a": "Die Wählerin/der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
+      "t": {
+        "Wahlen": "Elections"
+      },
+      "en": "Elections in Germany are free. What does that mean?",
+      "o_en": ["One may accept money for voting for a specific candidate.", "Only people who have never been in prison are allowed to vote.", "The voter may not be influenced or forced to cast a specific vote and suffer no disadvantages from the election.", "All eligible persons must vote."],
+      "expl": { "de": "Freie Wahlen bedeuten eine Entscheidung ohne Zwang, unzulässige Beeinflussung oder Angst vor Nachteilen. Stimmenkauf ist illegal und es gibt keine Wahlpflicht in Deutschland.", "en": "Free elections mean making a decision without coercion, undue influence, or fear of disadvantages. Vote-buying is illegal, and there is no compulsory voting in Germany." }
+    },
+    {
+        "id": 6,
+        "q": "Wie heißt die deutsche {Verfassung}?",
+        "o": ["Volksgesetz", "Bundesgesetz", "Deutsches Gesetz", "Grundgesetz"],
+        "a": "Grundgesetz",
+        "t": {
+            "Verfassung": "constitution"
+        },
+        "en": "What is the German constitution called?", 
+        "o_en": ["People's Law", "Federal Law", "German Law", "Basic Law"],
+        "expl": { "de": "Die Verfassung der Bundesrepublik Deutschland heißt Grundgesetz. Es wurde 1949 verabschiedet.", "en": "The constitution of the Federal Republic of Germany is called the Basic Law (Grundgesetz). It was adopted in 1949." }
+    },
+    {
+        "id": 7,
+        "q": "Welches Recht gehört zu den Grundrechten, die nach der deutschen Verfassung {garantiert} werden? Das Recht auf...",
+        "o": ["Glaubens- und Gewissensfreiheit", "Unterhaltung", "Arbeit", "Wohnung"],
+        "a": "Glaubens- und Gewissensfreiheit",
+        "t": {
+            "garantiert": "guaranteed"
+        },
+        "en": "Which right is guaranteed by the German constitution as a fundamental right? The right to", 
+        "o_en": ["freedom of belief and conscience", "entertainment", "work", "housing"],
+        "expl": { "de": "Die Glaubens- und Gewissensfreiheit ist in Artikel 4 des Grundgesetzes als unverletzliches Grundrecht verankert.", "en": "Freedom of belief and conscience is enshrined in Article 4 of the Basic Law as an inviolable fundamental right." }
+    },
+    {
+        "id": 8,
+        "q": "Was steht nicht im {Grundgesetz} von Deutschland?",
+        "o": ["Die Würde des Menschen ist unantastbar.", "Alle sollen gleich viel Geld haben.", "Jeder Mensch darf seine Meinung sagen.", "Alle sind vor dem Gesetz gleich."],
+        "a": "Alle sollen gleich viel Geld haben.",
+        "t": {
+            "Grundgesetz": "Basic Law"
+        },
+        "en": "What is not in the Basic Law of Germany?", 
+        "o_en": ["The dignity of man is inviolable.", "Everyone should have the same amount of money.", "Every person is allowed to express their opinion.", "All are equal before the law."],
+        "expl": { "de": "Das Grundgesetz garantiert die Gleichheit vor dem Gesetz, aber keine ökonomische Gleichheit. Eine Forderung, dass alle gleich viel Geld haben sollen, steht nicht im Grundgesetz.", "en": "The Basic Law guarantees equality before the law, but not economic equality. A demand that everyone should have the same amount of money is not in the Basic Law." }
+    },
+    {
+        "id": 9,
+        "q": "Welches Grundrecht gilt in Deutschland nur für {Ausländerinnen/Ausländer}? Das Grundrecht auf ...",
+        "o": ["Schutz der Familie", "Menschenwürde", "Asyl", "Meinungsfreiheit"],
+        "a": "Asyl",
+        "t": {
+            "Ausländerinnen/Ausländer": "Foreigners"
+        },
+        "en": "Which fundamental right in Germany applies only to foreigners? The fundamental right to...",
+        "o_en": ["protection of the family", "human dignity", "asylum", "freedom of speech"],
+        "expl": { "de": "Das Recht auf Asyl (Artikel 16a GG) ist spezifisch für politisch Verfolgte aus dem Ausland. Die anderen genannten Rechte sind Menschenrechte, die für alle gelten.", "en": "The right to asylum (Article 16a of the Basic Law) is specifically for politically persecuted persons from abroad. The other rights mentioned are human rights that apply to everyone." }
+    },
+    {
+        "id": 10,
+        "q": "Was ist mit dem deutschen Grundgesetz {vereinbar}?",
+        "o": ["die Prügelstrafe", "die Folter", "die Todesstrafe", "die Geldstrafe"],
+        "a": "die Geldstrafe",
+        "t": {
+            "vereinbar": "compatible"
+        },
+        "en": "What is compatible with the German Basic Law?",
+        "o_en": ["corporal punishment", "torture", "the death penalty", "a fine"],
+        "expl": { "de": "Während Prügelstrafe, Folter und die Todesstrafe mit der Menschenwürde (Art. 1 GG) unvereinbar sind, ist die Geldstrafe eine anerkannte Sanktion im deutschen Rechtssystem.", "en": "While corporal punishment, torture, and the death penalty are incompatible with human dignity (Art. 1 of the Basic Law), a fine is a recognized sanction in the German legal system." }
+    },
+    {
+        "id": 11,
+        "q": "Wie wird die Verfassung der {Bundesrepublik} Deutschland genannt?",
+        "o": ["Grundgesetz", "Bundesverfassung", "Gesetzbuch", "Verfassungsvertrag"],
+        "a": "Grundgesetz",
+        "t": {
+            "Bundesrepublik": "Federal Republic"
+        },
+        "en": "What is the constitution of the Federal Republic of Germany called?",
+        "o_en": ["Basic Law", "Federal Constitution", "Book of Law", "Constitutional Treaty"]
+    },
+    {
+        "id": 12,
+        "q": "Eine Partei im Deutschen Bundestag will die {Pressefreiheit} abschaffen. Ist das möglich?",
+        "o": ["Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.", "Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.", "Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.", "Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen."],
+        "a": "Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.",
+        "t": {
+            "Pressefreiheit": "freedom of the press"
+        },
+        "en": "A party in the German Bundestag wants to abolish the freedom of the press. Is that possible?",
+        "o_en": ["Yes, if more than half of the members of the Bundestag are in favor.", "Yes, but two-thirds of the members of the Bundestag must be in favor.", "No, because freedom of the press is a fundamental right. It cannot be abolished.", "No, because only the Bundesrat can abolish the freedom of the press."],
+        "expl": { "de": "Grundrechte wie die Pressefreiheit (Art. 5 GG) sind durch die 'Ewigkeitsklausel' (Art. 79 Abs. 3 GG) geschützt und können nicht abgeschafft werden.", "en": "Fundamental rights such as freedom of the press (Art. 5 of the Basic Law) are protected by the 'eternity clause' (Art. 79 Para. 3 of the Basic Law) and cannot be abolished." }
+    },
+    {
+        "id": 13,
+        "q": "Im Parlament steht der Begriff '{Opposition}' für ...",
+        "o": ["die regierenden Parteien.", "die Fraktion mit den meisten Abgeordneten.", "alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.", "alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören."],
+        "a": "alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.",
+        "t": {
+            "Opposition": "opposition"
+        },
+        "en": "In parliament, the term 'opposition' stands for...",
+        "o_en": ["the ruling parties.", "the parliamentary group with the most members.", "all parties that were able to clear the 5% hurdle in the last election.", "all members of parliament who do not belong to the governing party/parties."],
+        "expl": { "de": "Die Opposition besteht aus den Parteien im Parlament, die nicht die Regierung bilden. Ihre Hauptaufgabe ist die Kontrolle der Regierung.", "en": "The opposition consists of the parties in parliament that do not form the government. Their main task is to scrutinize the government." }
+    },
+    {
+        "id": 14,
+        "q": "{Meinungsfreiheit} in Deutschland heißt, dass ich ...",
+        "o": ["Passanten auf der Straße beschimpfen darf.", "meine Meinung im Internet äußern kann.", "Nazi-, Hamas- oder Islamischer Staat-Symbole öffentlich tragen darf.", "meine Meinung nur dann äußern darf, solange ich der Regierung nicht widerspreche."],
+        "a": "meine Meinung im Internet äußern kann.",
+        "t": {
+            "Meinungsfreiheit": "Freedom of speech"
+        },
+        "en": "Freedom of speech in Germany means that I...",
+        "o_en": ["am allowed to insult passers-by on the street.", "can express my opinion on the internet.", "am allowed to publicly wear Nazi, Hamas, or Islamic State symbols.", "am only allowed to express my opinion as long as I do not contradict the government."],
+        "expl": { "de": "Die Meinungsfreiheit ist weitreichend, hat aber Grenzen, z.B. bei Beleidigungen, Volksverhetzung oder der Verwendung von Symbolen verfassungswidriger Organisationen.", "en": "Freedom of speech is extensive, but it has limits, e.g., in cases of insult, incitement to hatred, or the use of symbols of unconstitutional organizations." }
+    },
+    {
+        "id": 15,
+        "q": "Was {verbietet} das deutsche Grundgesetz?",
+        "o": ["Militärdienst", "Zwangsarbeit", "freie Berufswahl", "Arbeit im Ausland"],
+        "a": "Zwangsarbeit",
+        "t": {
+            "verbietet": "prohibit"
+        },
+        "en": "What does the German Basic Law prohibit?",
+        "o_en": ["Military service", "Forced labor", "Free choice of profession", "Work abroad"],
+        "expl": { "de": "Artikel 12 des Grundgesetzes verbietet Zwangsarbeit ausdrücklich.", "en": "Article 12 of the Basic Law explicitly prohibits forced labor." }
+    },
+    {
+      "id": 16,
+      "q": "Wann ist die Meinungsfreiheit in Deutschland {eingeschränkt}?",
+      "o": ["bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen", "bei Meinungsäußerungen über die Bundesregierung", "bei Diskussionen über Religionen", "bei Kritik am Staat"],
+      "a": "bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen",
+      "t": {
+        "eingeschränkt": "restricted"
+      },
+      "en": "When is freedom of speech in Germany restricted?",
+      "o_en": ["in the case of public dissemination of false claims about individuals", "in the case of expressions of opinion about the federal government", "in discussions about religions", "in criticism of the state"],
+      "expl": { "de": "Die Meinungsfreiheit endet dort, wo die Rechte anderer, z.B. das Recht auf Ehre, durch Verleumdung oder üble Nachrede verletzt werden.", "en": "Freedom of speech ends where the rights of others, e.g., the right to honor, are violated by defamation or slander." }
+    },
+    {
+      "id": 17,
+      "q": "Die deutschen Gesetze verbieten... die {Ungleichbehandlung} der Bürgerinnen und Bürger durch den Staat.",
+      "o": ["Meinungsfreiheit der Einwohnerinnen und Einwohner.", "Petitionen der Bürgerinnen und Bürger.", "Versammlungsfreiheit der Einwohnerinnen und Einwohner.", "Ungleichbehandlung der Bürgerinnen und Bürger durch den Staat."],
+      "a": "Ungleichbehandlung der Bürgerinnen und Bürger durch den Staat.",
+      "t": {
+        "Ungleichbehandlung": "Unequal treatment"
+      },
+      "en": "German laws prohibit...",
+      "o_en": ["Freedom of opinion of the inhabitants.", "Petitions from citizens.", "Freedom of assembly of the inhabitants.", "Unequal treatment of citizens by the state."],
+      "expl": { "de": "Der Gleichbehandlungsgrundsatz in Artikel 3 des Grundgesetzes verbietet dem Staat, Bürgerinnen und Bürger ohne sachlichen Grund willkürlich ungleich zu behandeln.", "en": "The principle of equal treatment in Article 3 of the Basic Law prohibits the state from arbitrarily treating citizens unequally without objective reason." }
+    },
+    {
+      "id": 18,
+      "q": "Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert? die {Unantastbarkeit} der {Menschenwürde}",
+      "o": ["die Unantastbarkeit der Menschenwürde", "das Recht auf Leben", "Religionsfreiheit", "Meinungsfreiheit"],
+      "a": "die Unantastbarkeit der Menschenwürde",
+      "t": {
+        "Unantastbarkeit": "inviolability",
+        "Menschenwürde": "human dignity"
+      },
+      "en": "Which fundamental right is guaranteed in Article 1 of the Basic Law of the Federal Republic of Germany?",
+      "o_en": ["the inviolability of human dignity", "the right to life", "freedom of religion", "freedom of speech"],
+      "expl": { "de": "Artikel 1 des Grundgesetzes beginnt mit dem Satz: 'Die Würde des Menschen ist unantastbar.' Dies ist das fundamentalste Prinzip der Verfassung.", "en": "Article 1 of the Basic Law begins with the sentence: 'Human dignity shall be inviolable.' This is the most fundamental principle of the constitution." }
+    },
+    {
+      "id": 19,
+      "q": "Was versteht man unter dem Recht der '{Freizügigkeit}' in Deutschland?",
+      "o": ["Man darf sich seinen Wohnort selbst aussuchen.", "Man kann seinen Beruf wechseln.", "Man darf sich für eine andere Religion entscheiden.", "Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen."],
+      "a": "Man darf sich seinen Wohnort selbst aussuchen.",
+      "t": {
+        "Freizügigkeit": "freedom of movement"
+      },
+      "en": "What is understood by the right of 'freedom of movement' in Germany?",
+      "o_en": ["One is allowed to choose one's own place of residence.", "One can change one's profession.", "One is allowed to decide for another religion.", "One is only allowed to move about lightly clothed in public."],
+      "expl": { "de": "Das Recht auf Freizügigkeit (Artikel 11 GG) garantiert allen Deutschen das Recht, an jedem Ort in Deutschland Wohnsitz und Aufenthalt zu nehmen.", "en": "The right to freedom of movement (Article 11 of the Basic Law) guarantees all Germans the right to take up residence and domicile anywhere in Germany." }
+    },
+    {
+      "id": 20,
+      "q": "Eine Partei in Deutschland verfolgt das Ziel, eine {Diktatur} zu errichten. Sie ist dann ...",
+      "o": ["tolerant.", "rechtsstaatlich orientiert.", "gesetzestreu.", "verfassungswidrig."],
+      "a": "verfassungswidrig.",
+      "t": {
+        "Diktatur": "dictatorship"
+      },
+      "en": "A party in Germany pursues the goal of establishing a dictatorship. It is then...",
+      "o_en": ["tolerant.", "oriented towards the rule of law.", "law-abiding.", "unconstitutional."],
+      "expl": { "de": "Eine Partei, die die freiheitlich-demokratische Grundordnung abschaffen will, ist verfassungswidrig und kann vom Bundesverfassungsgericht verboten werden.", "en": "A party that seeks to abolish the free democratic basic order is unconstitutional and can be banned by the Federal Constitutional Court." }
+    },
+    {
+      "id": 21,
+      "q": "Welches ist das {Wappen} der Bundesrepublik Deutschland?",
+      "isImage": true,
+      "o": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
+      "a": "Bild 1",
+      "t": {
+        "Wappen": "coat of arms"
+      },
+      "en": "Which is the coat of arms of the Federal Republic of Germany?",
+      "o_en": ["Image 1", "Image 2", "Image 3", "Image 4"],
+      "expl": { "de": "Bild 1 zeigt den Bundesadler, das offizielle Staatswappen der Bundesrepublik Deutschland.", "en": "Image 1 shows the federal eagle (Bundesadler), the official state coat of arms of the Federal Republic of Germany." }
+    },
+    {
+      "id": 22,
+      "q": "Was für eine {Staatsform} hat Deutschland?",
+      "o": ["Monarchie", "Diktatur", "Republik", "Fürstentum"],
+      "a": "Republik",
+      "t": {
+        "Staatsform": "form of government"
+      },
+      "en": "What form of government does Germany have?",
+      "o_en": ["Monarchy", "Dictatorship", "Republic", "Principality"],
+      "expl": { "de": "Deutschland ist eine parlamentarische Republik, in der das Staatsoberhaupt (der Bundespräsident) nicht durch Erbfolge, sondern durch Wahl bestimmt wird.", "en": "Germany is a parliamentary republic in which the head of state (the Federal President) is determined not by succession but by election." }
+    },
+    {
+      "id": 23,
+      "q": "In Deutschland sind die meisten {Erwerbstätigen} ...",
+      "o": ["in kleinen Familienunternehmen beschäftigt.", "ehrenamtlich für ein Bundesland tätig.", "selbstständig mit einer eigenen Firma tätig.", "bei einer Firma oder Behörde beschäftigt."],
+      "a": "bei einer Firma oder Behörde beschäftigt.",
+      "t": {
+        "Erwerbstätigen": "employed persons"
+      },
+      "en": "In Germany, most employed persons are...",
+      "o_en": ["employed in small family businesses.", "working as volunteers for a federal state.", "self-employed with their own company.", "employed by a company or authority."],
+      "expl": { "de": "Die Mehrheit der erwerbstätigen Bevölkerung in Deutschland sind Angestellte in Unternehmen oder im öffentlichen Dienst.", "en": "The majority of the working population in Germany are employees in companies or in the public sector." }
+    },
+    {
+      "id": 24,
+      "q": "Wie viele {Bundesländer} hat die Bundesrepublik Deutschland?",
+      "o": ["14", "15", "16", "17"],
+      "a": "16",
+      "t": {
+        "Bundesländer": "federal states"
+      },
+      "en": "How many federal states does the Federal Republic of Germany have?",
+      "expl": { "de": "Die Bundesrepublik Deutschland besteht aus 16 teilsouveränen Bundesländern.", "en": "The Federal Republic of Germany consists of 16 partially sovereign federal states." }
+    },
+    {
+      "id": 25,
+      "q": "Was ist kein {Bundesland} der Bundesrepublik Deutschland?",
+      "o": ["Elsass-Lothringen", "Nordrhein-Westfalen", "Mecklenburg-Vorpommern", "Sachsen-Anhalt"],
+      "a": "Elsass-Lothringen",
+      "t": {
+        "Bundesland": "federal state"
+      },
+      "en": "What is not a federal state of the Federal Republic of Germany?",
+      "o_en": ["Alsace-Lorraine", "North Rhine-Westphalia", "Mecklenburg-Vorpommern", "Saxony-Anhalt"],
+      "expl": { "de": "Elsass-Lothringen ist eine historische Region in Frankreich. Die anderen drei sind deutsche Bundesländer.", "en": "Alsace-Lorraine is a historical region in France. The other three are German federal states." }
+    },
+    {
+      "id": 26,
+      "q": "Deutschland ist ein demokratischer und sozialer {Bundesstaat}.",
+      "o": ["eine kommunistische Republik.", "ein demokratischer und sozialer Bundesstaat.", "eine kapitalistische und soziale Monarchie.", "ein sozialer und sozialistischer Bundesstaat."],
+      "a": "ein demokratischer und sozialer Bundesstaat.",
+      "t": {
+        "Bundesstaat": "federal state"
+      },
+      "en": "Germany is...",
+      "o_en": ["a communist republic.", "a democratic and social federal state.", "a capitalist and social monarchy.", "a social and socialist federal state."],
+      "expl": { "de": "Laut Artikel 20 des Grundgesetzes ist die Bundesrepublik Deutschland ein demokratischer und sozialer Bundesstaat.", "en": "According to Article 20 of the Basic Law, the Federal Republic of Germany is a democratic and social federal state." }
+    },
+    {
+      "id": 27,
+      "q": "Deutschland ist ein {Bundesstaat}.",
+      "o": ["ein sozialistischer Staat.", "ein Bundesstaat.", "eine Diktatur.", "eine Monarchie."],
+      "a": "ein Bundesstaat.",
+      "t": {
+        "Bundesstaat": "federal state"
+      },
+      "en": "Germany is...",
+      "o_en": ["a socialist state.", "a federal state.", "a dictatorship.", "a monarchy."],
+      "expl": { "de": "Die föderale Struktur, also die Gliederung in Bund und Länder, ist ein wesentliches Merkmal Deutschlands.", "en": "The federal structure, i.e., the division into the federation and states, is an essential feature of Germany." }
+    },
+    {
+      "id": 28,
+      "q": "Wer wählt in Deutschland die {Abgeordneten} zum Bundestag?",
+      "o": ["das Militär", "die Wirtschaft", "das wahlberechtigte Volk", "die Verwaltung"],
+      "a": "das wahlberechtigte Volk",
+      "t": {
+        "Abgeordneten": "members of parliament / representatives"
+      },
+      "en": "Who elects the members of the Bundestag in Germany?",
+      "o_en": ["the military", "the economy", "the eligible voters", "the administration"],
+      "expl": { "de": "In einer Demokratie geht alle Staatsgewalt vom Volke aus. Das Volk wählt seine Vertreter im Bundestag.", "en": "In a democracy, all state authority emanates from the people. The people elect their representatives in the Bundestag." }
+    },
+    {
+      "id": 29,
+      "q": "Welches Tier ist das {Wappentier} der Bundesrepublik Deutschland?",
+      "o": ["Löwe", "Adler", "Bär", "Pferd"],
+      "a": "Adler",
+      "t": {
+        "Wappentier": "heraldic animal"
+      },
+      "en": "Which animal is the heraldic animal of the Federal Republic of Germany?",
+      "o_en": ["Lion", "Eagle", "Bear", "Horse"],
+      "expl": { "de": "Das Wappentier Deutschlands ist der Bundesadler.", "en": "The heraldic animal of Germany is the federal eagle (Bundesadler)." }
+    },
+    {
+      "id": 30,
+      "q": "Was ist kein Merkmal unserer Demokratie? die {Pressezensur}",
+      "o": ["regelmäßige Wahlen", "Pressezensur", "Meinungsfreiheit", "verschiedene Parteien"],
+      "a": "Pressezensur",
+      "t": {
+        "Pressezensur": "press censorship"
+      },
+      "en": "What is not a feature of our democracy?",
+      "o_en": ["regular elections", "press censorship", "freedom of speech", "different parties"],
+      "expl": { "de": "Pressezensur, also die staatliche Kontrolle von Medien, ist ein Merkmal von Diktaturen und mit der Pressefreiheit in einer Demokratie unvereinbar.", "en": "Press censorship, i.e., state control of the media, is a feature of dictatorships and incompatible with the freedom of the press in a democracy." }
+    }
+  ]
+}

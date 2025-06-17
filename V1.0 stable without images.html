@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einbürgerungstest Pro v1.2 (Final)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
+        .modal-backdrop { position: fixed; inset: 0; background-color: rgba(15, 23, 42, 0.75); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 1rem; }
+        .modal-content { background-color: white; border-radius: 0.75rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); padding: 2rem; max-width: 32rem; width: 100%; max-height: 90vh; overflow-y: auto; }
+        .option { transition: all 0.2s ease-in-out; border: 2px solid #e5e7eb; padding: 0.5rem; border-radius: 0.5rem; cursor: pointer; }
+        .option.text-option { padding: 0.75rem; }
+        .option.selected { border-color: #3b82f6; background-color: #dbeafe; }
+        .option.correct { background-color: #dcfce7 !important; border-color: #22c55e !important; color: #15803d !important; }
+        .option.incorrect { background-color: #fee2e2 !important; border-color: #ef4444 !important; color: #b91c1c !important; }
+        .btn { padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-align: center; transition: all 0.2s ease-in-out; }
+        .btn-primary { background-color: #2563eb; color: white; }
+        .btn-primary:hover:not(:disabled) { background-color: #1d4ed8; }
+        .btn:disabled { background-color: #94a3b8; cursor: not-allowed; }
+        .btn-secondary { background-color: white; color: #334155; border: 1px solid #cbd5e1; }
+        .btn-danger { background-color: #dc2626; color: white; }
+        .btn-danger:hover { background-color: #b91c1c; }
+        .stats-bar { background-color: #e2e8f0; border-radius: 9999px; height: 1.25rem; overflow: hidden; }
+        .stats-bar-fill { height: 100%; transition: width 0.5s ease-in-out; text-align: right; padding-right: 0.5rem; color: white; font-size: 0.75rem; line-height: 1.25rem; }
+        .static-translation-question { color: #475569; font-size: 0.9rem; margin-top: -0.75rem; margin-bottom: 1.25rem; }
+        .keyword-translation-box { background-color: #f8fafc; border: 1px solid #e2e8f0; color: #475569; padding: 0.75rem; margin-top: 0.5rem; margin-bottom: 1.25rem; border-radius: 0.5rem; font-size: 0.9rem; }
+        .loader { border: 5px solid #f3f3f3; border-radius: 50%; border-top: 5px solid #3498db; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* Styles for Explanation Slider */
+        .explanation-details { margin-top: 1rem; }
+        .explanation-summary { cursor: pointer; color: #475569; font-weight: 500; font-size: 0.9rem; list-style: none; padding: 0.5rem 0; }
+        .explanation-summary::-webkit-details-marker { display: none; }
+        .explanation-summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; font-size: 0.7rem; transition: transform 0.2s; }
+        .explanation-details[open] > .explanation-summary::before { transform: rotate(90deg); }
+        .explanation-content { background-color: #f8fafc; border: 1px solid #e2e8f0; color: #334155; padding: 1rem; margin-top: 0.5rem; border-radius: 0.5rem; font-size: 0.9rem; line-height: 1.6; }
+    </style>
+</head>
+<body class="antialiased">
+    <main id="app-container"></main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- SECTION: GLOBAL VARIABLES ---
+        // These variables hold the application's state and are accessible by all functions.
+        let appData = { users: {}, lastUser: null }; // Holds all user profiles and the name of the last logged-in user.
+        let currentUser = null; // Stores the profile object of the currently logged-in user.
+        let currentQuestionBank = []; // An array to hold the questions for the current test.
+        let userAnswers = {}; // An object to store the user's answers for the current test.
+        let assistanceLevel = 1, selectedStateName = '', selectedQB_Key = ''; // Test settings.
+        let simulationTimer; // A variable to manage the timer for test simulations.
+
+        // --- SECTION: DOM ELEMENT ---
+        // A direct reference to the main container where all content will be rendered.
+        const appContainer = document.getElementById('app-container');
+        
+        // This helper function prevents crashes if a string is null or undefined
+        // and protects against displaying raw HTML code by escaping special characters.
+        const escapeHTML = str => {
+            if (typeof str !== 'string') return '';
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
+        };
+
+        // --- SECTION: USER & DATA MANAGEMENT ---
+        // These functions handle loading, saving, and managing user data in the browser's local storage.
+
+        /**
+         * Loads all application data from the browser's local storage.
+         * This function runs when the app first starts to see if there are any saved profiles.
+         */
+        function loadAppData() {
+            try {
+                const storedData = localStorage.getItem('einbuergerungApp_v1_2');
+                if (storedData) {
+                    appData = JSON.parse(storedData);
+                }
+            } catch (e) {
+                console.error("Could not parse app data from localStorage:", e);
+                appData = { users: {}, lastUser: null };
+            }
+        }
+
+        /**
+         * Saves the current state of appData to local storage.
+         * This is called whenever user data changes (e.g., after a test, new profile).
+         */
+        function saveAppData() {
+            try {
+                localStorage.setItem('einbuergerungApp_v1_2', JSON.stringify(appData));
+            } catch (e) {
+                console.error("Error saving app data to localStorage:", e);
+            }
+        }
+        
+        /**
+         * Handles the user login process by checking the provided username and passcode.
+         * @param {string} username - The name of the user trying to log in.
+         * @param {string} passcode - The 4-digit passcode entered.
+         * @returns {boolean} - True for a successful login, false otherwise.
+         */
+        function login(username, passcode) {
+            const user = appData.users[username];
+            if (user && user.profile.passcode === passcode) {
+                currentUser = user;
+                appData.lastUser = username; // Remember this user for next time.
+                saveAppData();
+                showScreen('setup'); // Go to the test setup screen on successful login.
+                return true;
+            }
+            return false;
+        }
+
+        /**
+         * Creates a new user profile and adds it to the application data.
+         * @param {string} name - The new user's name.
+         * @param {string} birthdate - The new user's birthdate.
+         * @param {string} passcode - The new user's 4-digit passcode.
+         */
+        function createUser(name, birthdate, passcode) {
+            if (appData.users[name]) {
+                alert("Ein Profil mit diesem Namen existiert bereits.");
+                return false;
+            }
+            appData.users[name] = {
+                profile: { name, birthdate, passcode },
+                stats: { 
+                    questionBanks: {}, 
+                    simulations: []      
+                }
+            };
+            login(name, passcode); // Automatically log in the new user.
+        }
+
+        /**
+         * Logs the current user out and returns to the login screen.
+         */
+        function logout() {
+            currentUser = null;
+            appData.lastUser = null;
+            saveAppData();
+            showScreen('login');
+        }
+
+        // --- SECTION: CORE APPLICATION LOGIC ---
+        // These functions control the main flow and features of the app.
+
+        /**
+         * Main navigation function to switch between different app screens.
+         * @param {string} screenName - The name of the screen to display ('login', 'setup', 'test', 'stats', 'words').
+         */
+        function showScreen(screenName) {
+            clearInterval(simulationTimer); // Always stop any running timer when changing screens.
+            if (screenName === 'login') renderLoginScreen();
+            else if (screenName === 'setup') renderSetupScreen();
+            else if (screenName === 'test') renderTestScreen();
+            else if (screenName === 'stats') renderStatsScreen();
+            else if (screenName === 'words') renderImportantWordsScreen();
+        }
+
+        /**
+         * Shows or hides the state selector dropdown based on the chosen test mode.
+         */
+        function toggleStateSelectorVisibility() {
+            const assistanceSelect = document.getElementById('assistance-select');
+            const qbSelect = document.getElementById('qb-select');
+            const stateSelectorContainer = document.getElementById('state-select-container');
+            
+            const isSimulation = assistanceSelect.value === 'simulation';
+            const isStateQB = qbSelect.value === 'QB_state_specific';
+
+            // Show the state selector only for simulations or state-specific questions.
+            if (isSimulation || isStateQB) {
+                stateSelectorContainer.classList.remove('hidden');
+            } else {
+                stateSelectorContainer.classList.add('hidden');
+            }
+        }
+        
+        /**
+         * Starts either a normal test or a simulation based on user selection from the setup screen.
+         */
+        async function startSession() {
+            assistanceLevel = document.getElementById('assistance-select').value;
+            selectedStateName = document.getElementById('state-select').value;
+
+            if (assistanceLevel === 'simulation') {
+                await startSimulation();
+            } else {
+                selectedQB_Key = document.getElementById('qb-select').value;
+                if (!selectedQB_Key) return; // Don't start if no question bank is chosen.
+                await startTest();
+            }
+        }
+        
+        /**
+         * Fetches all questions from either all general JSON files or a specific state's questions.
+         * @param {string} type - 'general' or 'state'.
+         * @returns {Promise<Array>} - A promise that resolves to an array of question objects.
+         */
+        async function fetchAllQuestions(type = 'general') {
+            const allQuestions = [];
+            if (type === 'general') {
+                for (let i = 1; i <= 10; i++) {
+                    try {
+                        const response = await fetch('./JSON files/QB_' + i + '.json');
+                        if (!response.ok) continue;
+                        const data = await response.json();
+                        allQuestions.push(...(data.general || []));
+                    } catch (e) {
+                        console.error('Could not load QB_' + i + '.json', e);
+                    }
+                }
+            } else if (type === 'state') {
+                 try {
+                    const response = await fetch('./JSON files/QB_state_specific.json');
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    const data = await response.json();
+                    return data.states[selectedStateName] || [];
+                } catch (e) {
+                    console.error('Could not load state questions for ' + selectedStateName, e);
+                    return [];
+                }
+            }
+            return allQuestions;
+        }
+
+        /**
+         * Prepares and starts a test simulation by fetching and randomizing questions.
+         */
+        async function startSimulation() {
+            assistanceLevel = 'simulation';
+            selectedQB_Key = 'Simulation';
+            userAnswers = {};
+
+            appContainer.innerHTML = '<div class="modal-backdrop"><div class="modal-content text-center"><div class="loader"></div><p class="mt-4 text-slate-600">Erstelle eine neue Test-Simulation...</p></div></div>';
+
+            try {
+                // Get 30 random general questions
+                const allGeneralQuestions = await fetchAllQuestions('general');
+                const shuffledGeneral = allGeneralQuestions.sort(() => 0.5 - Math.random());
+                const selectedGeneral = shuffledGeneral.slice(0, 30);
+
+                // Get 3 random state questions (or 3 more general if no state is selected)
+                let selectedState = [];
+                if(selectedStateName !== 'general'){
+                    const allStateQuestions = await fetchAllQuestions('state');
+                    const shuffledState = allStateQuestions.sort(() => 0.5 - Math.random());
+                    selectedState = shuffledState.slice(0, 3);
+                } else {
+                    selectedState = shuffledGeneral.slice(30, 33);
+                }
+
+                currentQuestionBank = [...selectedGeneral, ...selectedState];
+                
+                if (currentQuestionBank.length < 33) {
+                     throw new Error('Konnte nicht genügend Fragen finden. Benötigt: 33, Gefunden: ' + currentQuestionBank.length);
+                }
+
+                showScreen('test');
+
+            } catch(error) {
+                 console.error("Error creating simulation:", error);
+                 appContainer.innerHTML = '<div class="modal-backdrop"><div class="modal-content text-center"><h2 class="text-xl font-bold text-red-600">Fehler beim Erstellen der Simulation</h2><p class="mt-2 text-slate-600">' + error.message + '</p><button onclick="location.reload()" class="btn btn-primary mt-4">Erneut versuchen</button></div></div>';
+            }
+        }
+
+        /**
+         * Prepares and starts a regular practice test from a specific question bank.
+         */
+        async function startTest() {
+            userAnswers = {};
+            const filePath = selectedQB_Key === 'QB_state_specific' 
+                ? './JSON files/QB_state_specific.json' 
+                : './JSON files/' + selectedQB_Key + '.json';
+            
+            appContainer.innerHTML = '<div class="modal-backdrop"><div class="modal-content text-center"><div class="loader"></div><p class="mt-4 text-slate-600">Lade ' + selectedQB_Key + '...</p></div></div>';
+
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) throw new Error('Network response was not ok for ' + filePath);
+                const data = await response.json();
+                
+                if (selectedQB_Key === 'QB_state_specific') {
+                    currentQuestionBank = data.states[selectedStateName] || [];
+                } else {
+                    currentQuestionBank = data.general || [];
+                }
+                
+                if (currentQuestionBank.length === 0) throw new Error('No questions found.');
+                
+                showScreen('test');
+
+            } catch (error) {
+                console.error("Error loading question bank:", error);
+                appContainer.innerHTML = '<div class="modal-backdrop"><div class="modal-content text-center"><h2 class="text-xl font-bold text-red-600">Fehler beim Laden</h2><p class="mt-2 text-slate-600">Die Datei \'' + filePath + '\' konnte nicht geladen werden.</p><button onclick="location.reload()" class="btn btn-primary mt-4">Erneut versuchen</button></div></div>';
+            }
+        }
+
+        /**
+         * Handles clicks on answer options during a test.
+         * @param {Event} e - The click event.
+         */
+        function handleQuizContainerClick(e) {
+            const optionDiv = e.target.closest('.option');
+            if (optionDiv) {
+                const questionId = optionDiv.dataset.questionId;
+                const optionsContainer = optionDiv.parentElement;
+                if (optionsContainer.style.pointerEvents === 'none') return;
+                const previouslySelected = optionsContainer.querySelector('.selected');
+                if (previouslySelected) previouslySelected.classList.remove('selected');
+                optionDiv.classList.add('selected');
+                userAnswers[questionId] = optionDiv.dataset.optionText;
+            }
+        }
+        
+        /**
+         * Submits the test, calculates the score, updates stats, and shows results.
+         */
+        function submitTest() {
+            clearInterval(simulationTimer);
+            let correctCount = 0;
+            currentQuestionBank.forEach(q => {
+                if(userAnswers[q.id] === q.a) correctCount++;
+            });
+
+            if (assistanceLevel === 'simulation') {
+                const passed = correctCount >= 17;
+                updateStats(selectedQB_Key, correctCount, currentQuestionBank.length, passed);
+            } else {
+                updateStats(selectedQB_Key, correctCount, currentQuestionBank.length);
+            }
+
+            renderQuestions(true); // Re-render questions in "results mode".
+            
+            // Display the final score summary.
+            const resultsSummary = document.getElementById('results-summary');
+            let passThreshold, passed, resultMessage;
+
+            if (assistanceLevel === 'simulation') {
+                passThreshold = 17;
+                passed = correctCount >= passThreshold;
+                resultMessage = passed ? 'Herzlichen Glückwunsch, bestanden!' : 'Leider nicht bestanden';
+            } else {
+                passThreshold = Math.ceil(currentQuestionBank.length / 2);
+                passed = correctCount >= passThreshold;
+                resultMessage = passed ? 'Bestanden!' : 'Nicht bestanden';
+            }
+
+            resultsSummary.innerHTML =
+                '<h3 class="text-2xl font-bold ' + (passed ? 'text-green-600' : 'text-red-600') + '">' + resultMessage + '</h3>' +
+                '<p class="text-lg mt-2">Ergebnis: ' + correctCount + ' / ' + currentQuestionBank.length + ' richtig</p>' +
+                (assistanceLevel === 'simulation' ? '<p class="text-sm text-slate-500 mt-1">(Mindestens ' + passThreshold + ' richtige Antworten benötigt)</p>' : '');
+            
+            resultsSummary.classList.remove('hidden');
+            document.getElementById('submit-button').classList.add('hidden');
+            document.getElementById('back-to-setup-button').classList.remove('hidden');
+            document.getElementById('timer-container')?.classList.add('hidden');
+            window.scrollTo(0, 0); // Scroll to top to see results.
+        }
+        
+        /**
+         * Updates the user's statistics object after a test is completed.
+         * @param {string} qbKey - The key for the question bank (e.g., 'QB_1' or 'Simulation').
+         * @param {number} correct - The number of correct answers.
+         * @param {number} total - The total number of questions.
+         * @param {boolean} [passed] - Optional. True if a simulation was passed, false otherwise.
+         */
+        function updateStats(qbKey, correct, total, passed) {
+            if (qbKey === 'Simulation') {
+                if(!currentUser.stats.simulations) currentUser.stats.simulations = [];
+                currentUser.stats.simulations.push({
+                    correct, total, passed, timestamp: new Date().toISOString()
+                });
+            } else {
+                const levelKey = 'level_' + assistanceLevel;
+                if (!currentUser.stats.questionBanks) currentUser.stats.questionBanks = {};
+                if (!currentUser.stats.questionBanks[qbKey]) currentUser.stats.questionBanks[qbKey] = {};
+                currentUser.stats.questionBanks[qbKey][levelKey] = { correct, total, timestamp: new Date().toISOString() };
+            }
+            saveAppData();
+        }
+
+        /**
+         * Helper function to create the HTML for a colored progress bar.
+         * @param {number} percent - The percentage value for the bar fill.
+         * @returns {string} - The HTML string for the progress bar.
+         */
+        function createBar(percent) {
+            let colorClass = 'bg-red-500';
+            if (percent >= 85) colorClass = 'bg-green-500';
+            else if (percent >= 50) colorClass = 'bg-yellow-500';
+            return '<div class="stats-bar mt-1"><div class="stats-bar-fill ' + colorClass + '" style="width: ' + percent + '%">' + (percent > 15 ? percent+'%' : '') + '</div></div>';
+        }
+        
+        // --- SECTION: SCREEN RENDERING FUNCTIONS ---
+        // These functions build the HTML for each screen of the app.
+
+        /**
+         * Renders the initial login and profile creation screen.
+         */
+        function renderLoginScreen() {
+            const userOptions = Object.keys(appData.users).map(username => 
+                '<option value="' + username + '"' + (username === appData.lastUser ? ' selected' : '') + '>' + username + '</option>'
+            ).join('');
+
+            appContainer.innerHTML =
+                '<div class="modal-backdrop">' +
+                    '<div class="modal-content">' +
+                        '<div class="text-center mb-6">' +
+                            '<h1 class="text-3xl font-bold text-slate-800">Willkommen!</h1>' +
+                            '<p class="text-slate-600 mt-2">Bitte wählen Sie Ihr Profil oder erstellen Sie ein neues.</p>' +
+                        '</div>' +
+                        '<form id="login-form" class="' + (Object.keys(appData.users).length === 0 ? 'hidden' : '') + '">' +
+                            '<h3 class="text-lg font-semibold mb-2">Profil laden</h3>' +
+                            '<div class="space-y-4">' +
+                                '<div><label for="user-select" class="block text-sm font-medium text-slate-700">Profilname</label><select id="user-select" class="w-full p-3 border border-slate-300 rounded-lg mt-1">' + userOptions + '</select></div>' +
+                                '<div><label for="passcode-input" class="block text-sm font-medium text-slate-700">4-stelliger Passcode</label><input type="password" id="passcode-input" maxlength="4" pattern="[0-9]{4}" class="w-full p-3 border border-slate-300 rounded-lg mt-1" required></div>' +
+                                '<button type="submit" class="w-full btn btn-primary">Login</button>' +
+                                '<p id="login-error" class="text-red-500 text-sm mt-2 hidden">Passcode ist falsch.</p>' +
+                            '</div>' +
+                        '</form>' +
+                        '<div class="my-6 text-center ' + (Object.keys(appData.users).length === 0 ? 'hidden' : '') + '"><span class="text-slate-500">oder</span></div>' +
+                        '<form id="create-profile-form">' +
+                            '<h3 class="text-lg font-semibold mb-2">Neues Profil erstellen</h3>' +
+                            '<div class="space-y-4">' +
+                                '<div><label for="new-name" class="block text-sm font-medium text-slate-700">Name</label><input type="text" id="new-name" class="w-full p-3 border border-slate-300 rounded-lg mt-1" required></div>' +
+                                '<div><label for="new-birthdate" class="block text-sm font-medium text-slate-700">Geburtsdatum</label><input type="date" id="new-birthdate" class="w-full p-3 border border-slate-300 rounded-lg mt-1" required></div>' +
+                                '<div><label for="new-passcode" class="block text-sm font-medium text-slate-700">4-stelliger Passcode</label><input type="password" id="new-passcode" maxlength="4" pattern="[0-9]{4}" inputmode="numeric" class="w-full p-3 border border-slate-300 rounded-lg mt-1" required></div>' +
+                                '<button type="submit" class="w-full btn btn-secondary">Profil erstellen & Starten</button>' +
+                            '</div>' +
+                        '</form>' +
+                        '<div class="mt-6 border-t pt-4 text-center">' +
+                            '<button id="admin-button" class="text-sm text-slate-500 hover:text-blue-600">Admin</button>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+
+            document.getElementById('login-form')?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const username = document.getElementById('user-select').value;
+                const passcode = document.getElementById('passcode-input').value;
+                if (!login(username, passcode)) {
+                    document.getElementById('login-error').classList.remove('hidden');
+                }
+            });
+
+            document.getElementById('create-profile-form')?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('new-name').value.trim();
+                const birthdate = document.getElementById('new-birthdate').value;
+                const passcode = document.getElementById('new-passcode').value;
+                if (name && birthdate && passcode.length === 4) createUser(name, birthdate, passcode);
+            });
+            
+            document.getElementById('admin-button').addEventListener('click', renderAdminLogin);
+        }
+        
+        /**
+         * Renders the screen where the user sets up their test (level, question bank, state).
+         */
+        function renderSetupScreen() {
+             appContainer.innerHTML =
+                '<div class="modal-backdrop">' +
+                    '<div class="modal-content">' +
+                        '<div class="flex justify-between items-center mb-6">' +
+                            '<div><h1 class="text-2xl font-bold text-slate-800">Hallo, ' + currentUser.profile.name + '!</h1><p class="text-slate-600">Stellen Sie Ihre Übungssitzung ein.</p></div>' +
+                            '<button id="logout-button" class="btn btn-secondary text-sm">Logout</button>' +
+                        '</div>' +
+                        '<div class="space-y-6">' +
+                            '<div>' +
+                                '<label for="assistance-select" class="block text-sm font-medium text-slate-700 mb-1">1. Modus auswählen</label>' +
+                                '<select id="assistance-select" class="w-full p-3 border border-slate-300 rounded-lg text-lg">' +
+                                    '<option value="simulation">Original Test Simulation</option>' +
+                                    '<optgroup label="Übungs-Level">' +
+                                        '<option value="2">Level 2: Full Translation</option>' +
+                                        '<option value="1" selected>Level 1: Word Hints</option>' +
+                                        '<option value="0">Level 0: No Help</option>' +
+                                    '</optgroup>' +
+                                '</select>' +
+                            '</div>' +
+                            '<div id="practice-options">' +
+                                '<div>' +
+                                    '<label for="qb-select" class="block text-sm font-medium text-slate-700 mb-1">2. Question Bank</label>' +
+                                    '<select id="qb-select" class="w-full p-3 border border-slate-300 rounded-lg text-lg"></select>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div id="state-select-container" class="hidden">' +
+                                '<label for="state-select" class="block text-sm font-medium text-slate-700 mb-1">3. Bundesland (State)</label>' +
+                                '<select id="state-select" class="w-full p-3 border border-slate-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500">' +
+                                    '<option value="general" selected>Allgemeine Fragen (Standard)</option>' +
+                                    '<option value="Baden-Württemberg">Baden-Württemberg</option><option value="Bayern">Bayern</option><option value="Berlin">Berlin</option><option value="Brandenburg">Brandenburg</option><option value="Bremen">Bremen</option><option value="Hamburg">Hamburg</option><option value="Hessen">Hessen</option><option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option><option value="Niedersachsen">Niedersachsen</option><option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option><option value="Rheinland-Pfalz">Rheinland-Pfalz</option><option value="Saarland">Saarland</option><option value="Sachsen">Sachsen</option><option value="Sachsen-Anhalt">Sachsen-Anhalt</option><option value="Schleswig-Holstein">Schleswig-Holstein</option><option value="Thüringen">Thüringen</option>' +
+                                '</select>' +
+                            '</div>' +
+                        '</div>' +
+                        '<button id="start-button" class="mt-8 w-full btn btn-primary text-lg">Sitzung starten</button>' +
+                        '<button id="view-stats-button" class="mt-3 w-full btn btn-secondary">Statistiken anzeigen</button>' +
+                        '<button id="view-words-button" class="mt-3 w-full btn btn-secondary">Wichtige Wörter lernen</button>' +
+                    '</div>' +
+                '</div>';
+
+            const assistanceSelect = document.getElementById('assistance-select');
+            const practiceOptions = document.getElementById('practice-options');
+            
+            function setupMode() {
+                if(assistanceSelect.value === 'simulation') {
+                    practiceOptions.classList.add('hidden');
+                } else {
+                    practiceOptions.classList.remove('hidden');
+                }
+                setupQuestionBanks();
+                toggleStateSelectorVisibility();
+            }
+
+            assistanceSelect.addEventListener('change', setupMode);
+            document.getElementById('qb-select').addEventListener('change', toggleStateSelectorVisibility);
+            document.getElementById('start-button').addEventListener('click', startSession);
+            document.getElementById('view-stats-button').addEventListener('click', renderStatsScreen);
+            document.getElementById('view-words-button').addEventListener('click', () => showScreen('words'));
+            document.getElementById('logout-button').addEventListener('click', logout);
+            
+            setupMode();
+        }
+
+        /**
+         * Populates the dropdown menu for question banks.
+         */
+        function setupQuestionBanks() {
+            const qbSelect = document.getElementById('qb-select');
+            qbSelect.innerHTML = '<option value="" disabled selected>Wählen Sie eine Bank...</option>';
+            
+            for (let i = 1; i <= 10; i++) {
+                const option = document.createElement('option');
+                option.value = 'QB_' + i;
+                option.textContent = 'Question Bank ' + i;
+                qbSelect.appendChild(option);
+            }
+            
+            const stateOption = document.createElement('option');
+            stateOption.value = 'QB_state_specific';
+            stateOption.textContent = 'State-Specific Questions';
+            qbSelect.appendChild(stateOption);
+        }
+
+        /**
+         * Renders the main test screen where questions are displayed.
+         */
+        function renderTestScreen() {
+            let bankName;
+            if (assistanceLevel === 'simulation') {
+                bankName = 'Test Simulation';
+            } else {
+                bankName = selectedQB_Key.startsWith('QB_S') ? 'State-Specific Questions' : 'Question Bank ' + selectedQB_Key.split('_')[1];
+            }
+
+            appContainer.innerHTML =
+                '<main class="container mx-auto p-4 md:p-8">' +
+                    '<header class="flex justify-between items-start mb-6">' +
+                        '<div>' +
+                            '<h1 class="text-3xl md:text-4xl font-bold text-slate-800">' + bankName + '</h1>' +
+                            '<p class="text-slate-600 mt-1">Bundesland: ' + selectedStateName + '</p>' +
+                        '</div>' +
+                        '<div class="text-right">' +
+                           '<div id="timer-container" class="text-2xl font-bold text-red-600 mb-2 ' + (assistanceLevel !== 'simulation' ? 'hidden' : '') + '">60:00</div>' +
+                           '<button id="main-settings-button" class="btn btn-secondary">Zurück zur Auswahl</button>' +
+                        '</div>' +
+                    '</header>' +
+                    '<div id="quiz-container" class="space-y-6"></div>' +
+                    '<footer class="mt-8 text-center">' +
+                        '<div id="results-summary" class="bg-white p-6 rounded-xl shadow-md mb-6 hidden"></div>' +
+                        '<button id="submit-button" class="btn btn-primary text-lg">Test abschicken</button>' +
+                        '<button id="back-to-setup-button" class="btn btn-secondary text-lg hidden">Andere Sitzung starten</button>' +
+                    '</footer>' +
+                '</main>';
+
+            document.getElementById('main-settings-button').addEventListener('click', () => showScreen('setup'));
+            document.getElementById('submit-button').addEventListener('click', submitTest);
+            document.getElementById('back-to-setup-button').addEventListener('click', () => showScreen('setup'));
+            
+            if (assistanceLevel === 'simulation') {
+                let timeLeft = 3600;
+                const timerEl = document.getElementById('timer-container');
+                simulationTimer = setInterval(() => {
+                    timeLeft--;
+                    const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+                    const seconds = (timeLeft % 60).toString().padStart(2, '0');
+                    timerEl.textContent = minutes + ':' + seconds;
+                    if (timeLeft <= 0) {
+                        clearInterval(simulationTimer);
+                        alert("Die Zeit ist um! Der Test wird jetzt automatisch abgeschickt.");
+                        submitTest();
+                    }
+                }, 1000);
+            }
+            renderQuestions(false);
+        }
+        
+        /**
+         * Renders all questions for the current test. This function is complex as it handles
+         * different assistance levels and a "results mode" after submission.
+         * @param {boolean} isResultsMode - True if the test is over and results should be shown.
+         */
+        function renderQuestions(isResultsMode) {
+            const quizContainer = document.getElementById('quiz-container');
+            if (!quizContainer) return;
+
+            quizContainer.innerHTML = '';
+            const currentAssistance = assistanceLevel === 'simulation' ? '0' : assistanceLevel;
+            
+            currentQuestionBank.forEach((q, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.className = 'bg-white p-6 rounded-xl shadow-md border border-slate-200';
+                
+                let processedQuestionText = escapeHTML(q.q);
+                let keywordTranslationsHtml = '';
+
+                // This logic handles the highlighting of important words for Level 1 and 2.
+                if ((currentAssistance == 1 || currentAssistance == 2) && !isResultsMode && q.t && Object.keys(q.t).length > 0) {
+                    const translations = [];
+                    // This Regular Expression finds any text inside {braces}. It is robust.
+                    processedQuestionText = processedQuestionText.replace(/{([^}]+)}/g, (match, word) => {
+                        const translation = q.t[word] || 'N/A';
+                        translations.push('<strong>' + escapeHTML(word) + '</strong>: ' + escapeHTML(translation));
+                        // Replaces {word} with a bolded version of the word in the question.
+                        return '<strong>' + escapeHTML(word) + '</strong>';
+                    });
+                    
+                    // The translation box now appears for both Level 1 and Level 2.
+                    if (translations.length > 0) { 
+                        keywordTranslationsHtml = '<div class="keyword-translation-box"><strong>Wichtige Wörter:</strong> ' + translations.join('; ') + '</div>';
+                    }
+                }
+                
+                let questionHTML = '<p class="text-lg font-semibold text-slate-800 mb-2">' + (index + 1) + '. ' + processedQuestionText + '</p>';
+                
+                // This adds the full English translation below the question for Level 2.
+                const level2TranslationHtml = (currentAssistance == 2 && q.en) ? '<p class="static-translation-question">(' + escapeHTML(q.en) + ')</p>' : '';
+                
+                // This builds the HTML for all the answer option buttons.
+                const optionsHtml = q.o.map((optionText, optionIndex) => {
+                    let classes = 'option';
+                    let contentHtml = '';
+                    if (q.isImage) {
+                        contentHtml = '<img src="./img/' + q.id + '.PNG" alt="' + escapeHTML(optionText) + '" class="w-full h-auto rounded-md">';
+                    } else {
+                        classes += ' text-option';
+                        contentHtml = escapeHTML(optionText);
+                        if (currentAssistance == 2 && q.o_en && q.o_en[optionIndex]) {
+                            contentHtml += '<span class="block text-sm text-slate-500 mt-1">(' + escapeHTML(q.o_en[optionIndex]) + ')</span>';
+                        }
+                    }
+                    // In results mode, color the options green for correct, red for incorrect.
+                    if (isResultsMode) {
+                        if(optionText === q.a) classes += ' correct';
+                        else if(userAnswers[q.id] === optionText) classes += ' incorrect';
+                    } else {
+                        if (userAnswers[q.id] === optionText) classes += ' selected';
+                    }
+                    return '<div class="' + classes + '" data-question-id="' + q.id + '" data-option-text="' + escapeHTML(optionText) + '">' + contentHtml + '</div>';
+                }).join('');
+
+                // NEW FEATURE LOGIC: This creates the explanation slider.
+                let explanationHtml = '';
+                if (isResultsMode && q.expl) {
+                    let explanationContent = '';
+                    const level = assistanceLevel;
+
+                    // For both Level 1 and 2, show German and English explanations.
+                    if (level == 2 || level == 1) { 
+                        const de_expl = q.expl.de ? '<p><strong>DE:</strong> ' + escapeHTML(q.expl.de) + '</p>' : '';
+                        const en_expl = q.expl.en ? '<p class="mt-2"><strong>EN:</strong> ' + escapeHTML(q.expl.en) + '</p>' : '';
+                        explanationContent = de_expl + en_expl;
+                    } else { // For Level 0 and Simulation, show only German.
+                        explanationContent = q.expl.de ? escapeHTML(q.expl.de) : '';
+                    }
+                    
+                    if (explanationContent) {
+                        explanationHtml = 
+                            '<details class="explanation-details">' +
+                                '<summary class="explanation-summary">Erklärung anzeigen</summary>' +
+                                '<div class="explanation-content">' + explanationContent + '</div>' +
+                            '</details>';
+                    }
+                }
+                
+                // Assemble all the parts of the question card into the final HTML.
+                const optionsContainerHTML = '<div class="options-container ' + (q.isImage ? 'grid grid-cols-2 gap-4' : 'space-y-3') + '"' + (isResultsMode ? ' style="pointer-events:none;"' : '') + '>' + optionsHtml + '</div>';
+                
+                questionElement.innerHTML = questionHTML + level2TranslationHtml + keywordTranslationsHtml + optionsContainerHTML + explanationHtml;
+                quizContainer.appendChild(questionElement);
+            });
+        }
+        
+        // Renders the statistics screen.
+        function renderStatsScreen() {
+            appContainer.innerHTML =
+                '<div class="modal-backdrop">' +
+                    '<div class="modal-content">' +
+                        '<div class="flex justify-between items-start mb-4">' +
+                            '<h2 class="text-3xl font-bold text-slate-800">Lernstatistik für ' + currentUser.profile.name + '</h2>' +
+                            '<button id="close-stats-btn" class="btn btn-secondary text-sm">Zurück</button>' +
+                        '</div>' +
+                        '<div id="stats-details" class="space-y-6"></div>' +
+                    '</div>' +
+                '</div>';
+            
+            document.getElementById('close-stats-btn').addEventListener('click', () => showScreen('setup'));
+            renderStatsDetails();
+        }
+
+        // Renders the actual statistics content (progress bars, etc.).
+        function renderStatsDetails() {
+            const statsDetails = document.getElementById('stats-details');
+            if (!statsDetails) return;
+
+            const qbStats = currentUser.stats.questionBanks || {};
+            let qbHtml = '<h3 class="text-xl font-bold text-slate-700">Ergebnisse nach Question Bank</h3><div class="space-y-4">';
+            
+            const qbKeys = [...Array(10).keys()].map(i => 'QB_' + (i + 1));
+            qbKeys.push('QB_state_specific');
+
+            qbKeys.forEach(key => {
+                const qbData = qbStats[key] || {};
+                const bankName = key.startsWith('QB_S') ? 'State-Specific Questions' : 'Question Bank ' + key.split('_')[1];
+                qbHtml += '<div class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold mb-2">' + bankName + '</p><div class="space-y-2">';
+                ['2', '1', '0'].forEach(i => {
+                    const levelKey = 'level_' + i;
+                    qbHtml += '<div><p class="text-xs text-slate-600">Level ' + i + '</p>';
+                    if(qbData[levelKey]) {
+                        const { correct, total } = qbData[levelKey];
+                        const percent = total > 0 ? Math.round((correct / total) * 100) : 0;
+                        qbHtml += createBar(percent);
+                    } else {
+                        qbHtml += '<div class="stats-bar mt-1"><div class="text-xs text-slate-400 px-2 py-1">Noch nicht versucht</div></div>';
+                    }
+                    qbHtml += '</div>';
+                });
+                qbHtml += '</div></div>';
+            });
+            qbHtml += '</div>';
+
+            const simStats = currentUser.stats.simulations || [];
+            let simHtml = '<hr class="my-6"><h3 class="text-xl font-bold text-slate-700 mb-3">Test Simulationen</h3>';
+            if (simStats.length > 0) {
+                const totalSimulations = simStats.length;
+                const passedCount = simStats.filter(sim => sim.passed).length;
+                
+                simHtml += '<p class="mb-4 text-slate-600">Gesamtversuche: <span class="font-semibold">' + totalSimulations + '</span> | Bestanden: <span class="font-semibold text-green-600">' + passedCount + '</span></p>';
+                
+                simHtml += '<div class="space-y-3">';
+                simStats.slice().reverse().forEach((sim, index) => {
+                    const testNumber = totalSimulations - index;
+                    const date = new Date(sim.timestamp).toLocaleString('de-DE', { dateStyle: 'short', timeStyle: 'short' });
+                    simHtml += 
+                       '<div class="p-4 rounded-lg flex justify-between items-center ' + (sim.passed ? 'bg-green-50' : 'bg-red-50') + '">' +
+                           '<div>' +
+                               '<p class="font-semibold">Test #' + testNumber + ' &mdash; ' + (sim.passed ? 'Bestanden' : 'Nicht Bestanden') + '</p>' +
+                               '<p class="text-sm text-slate-600">' + sim.correct + ' von ' + sim.total + ' richtig</p>' +
+                           '</div>' +
+                           '<div class="text-sm text-slate-500 text-right">' + date + '</div>' +
+                       '</div>';
+                });
+                simHtml += '</div>';
+            } else {
+                simHtml += '<p class="text-slate-500">Noch keine Simulationen absolviert. Führen Sie eine durch, um hier Ergebnisse zu sehen!</p>';
+            }
+
+            statsDetails.innerHTML = qbHtml + simHtml;
+        }
+        
+        // Renders the Admin login modal.
+        function renderAdminLogin() {
+            const adminModal = document.createElement('div');
+            adminModal.id = 'admin-modal';
+            adminModal.className = 'modal-backdrop';
+            adminModal.innerHTML =
+                '<div class="modal-content">' +
+                    '<h3 class="text-xl font-bold mb-4">Admin Authentifizierung</h3>' +
+                    '<form id="admin-login-form">' +
+                        '<div class="space-y-4">' +
+                            '<div><label for="admin-user" class="block text-sm font-medium text-slate-700">Username</label><input type="text" id="admin-user" class="w-full p-3 border border-slate-300 rounded-lg mt-1" required></div>' +
+                            '<div><label for="admin-pass" class="block text-sm font-medium text-slate-700">Pass Key</label><input type="password" id="admin-pass" class="w-full p-3 border border-slate-300 rounded-lg mt-1" required></div>' +
+                            '<button type="submit" class="w-full btn btn-primary">Authentifizieren</button>' +
+                            '<button type="button" id="cancel-admin-login" class="w-full btn btn-secondary mt-2">Abbrechen</button>' +
+                            '<p id="admin-error" class="text-red-500 text-sm mt-2 hidden">Falsche Anmeldedaten.</p>' +
+                        '</div>' +
+                    '</form>' +
+                '</div>';
+            document.body.appendChild(adminModal);
+            
+            adminModal.querySelector('#admin-login-form').addEventListener('submit', e => {
+                e.preventDefault();
+                const user = document.getElementById('admin-user').value;
+                const pass = document.getElementById('admin-pass').value;
+                if (user === 'admin' && pass === '8888') {
+                    renderAdminPanel();
+                } else {
+                    document.getElementById('admin-error').classList.remove('hidden');
+                }
+            });
+
+            adminModal.querySelector('#cancel-admin-login').addEventListener('click', () => {
+                adminModal.remove();
+            });
+        }
+
+        // Renders the Admin panel for resetting/deleting profiles.
+        function renderAdminPanel() {
+            const userOptions = Object.keys(appData.users).map(username => '<option value="' + username + '">' + username + '</option>').join('');
+            
+            const adminModal = document.getElementById('admin-modal');
+            adminModal.innerHTML = 
+                '<div class="modal-content">' +
+                    '<h3 class="text-xl font-bold mb-4">Profil Verwaltung</h3>' +
+                    '<div class="space-y-4">' +
+                         '<div>' +
+                            '<label for="admin-user-select" class="block text-sm font-medium text-slate-700">Profil zum Verwalten auswählen</label>' +
+                            '<select id="admin-user-select" class="w-full p-3 border border-slate-300 rounded-lg mt-1">' + userOptions + '</select>' +
+                        '</div>' +
+                        '<div class="flex space-x-4">' +
+                            '<button id="reset-stats-btn" class="w-full btn btn-secondary">Statistik zurücksetzen</button>' +
+                            '<button id="delete-profile-btn" class="w-full btn btn-danger">Profil löschen</button>' +
+                        '</div>' +
+                        '<button type="button" id="cancel-admin-panel" class="w-full btn btn-secondary mt-4">Schließen</button>' +
+                    '</div>' +
+                '</div>';
+
+            adminModal.querySelector('#reset-stats-btn').addEventListener('click', () => {
+                const userToReset = document.getElementById('admin-user-select').value;
+                if (confirm('Sind Sie sicher, dass Sie alle Statistiken für ' + userToReset + ' zurücksetzen möchten? Diese Aktion kann nicht rückgängig gemacht werden.')) {
+                    if (appData.users[userToReset]) {
+                        appData.users[userToReset].stats = { questionBanks: {}, simulations: [] };
+                        saveAppData();
+                        alert('Statistiken für ' + userToReset + ' wurden zurückgesetzt.');
+                    }
+                }
+            });
+
+            adminModal.querySelector('#delete-profile-btn').addEventListener('click', () => {
+                 const userToDelete = document.getElementById('admin-user-select').value;
+                 if (confirm('Sind Sie absolut sicher, dass Sie das Profil von ' + userToDelete + ' löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.')) {
+                    if (appData.users[userToDelete]) {
+                        delete appData.users[userToDelete];
+                        saveAppData();
+                        alert('Profil ' + userToDelete + ' wurde gelöscht.');
+                        adminModal.remove();
+                        renderLoginScreen();
+                    }
+                }
+            });
+            
+            adminModal.querySelector('#cancel-admin-panel').addEventListener('click', () => {
+                adminModal.remove();
+            });
+        }
+
+        /**
+         * Renders the screen that displays the alphabetized list of important words.
+         * This function is now optimized to load a single pre-compiled file.
+         */
+        async function renderImportantWordsScreen() {
+            appContainer.innerHTML = '<div class="modal-backdrop"><div class="modal-content text-center"><div class="loader"></div><p class="mt-4 text-slate-600">Lade alle wichtigen Wörter...</p></div></div>';
+
+            try {
+                // Fetch the single, pre-compiled vocabulary file.
+                const response = await fetch('./JSON files/Vocab.json');
+                if (!response.ok) throw new Error('Could not load Vocab.json');
+                const data = await response.json();
+                const wordsArray = data.words || [];
+
+                // The list is already sorted, but sorting again ensures it.
+                wordsArray.sort((a, b) => a.de.localeCompare(b.de));
+
+                let tableRows = '';
+                for (const item of wordsArray) {
+                    tableRows += '<tr><td class="border p-2 font-semibold">' + escapeHTML(item.de) + '</td><td class="border p-2">' + escapeHTML(item.en) + '</td></tr>';
+                }
+
+                const modalHTML =
+                    '<div class="modal-backdrop">' +
+                        '<div class="modal-content !max-w-3xl">' + 
+                            '<div class="flex justify-between items-center mb-4">' +
+                                '<h2 class="text-2xl font-bold text-slate-800">Wichtige Wörter</h2>' +
+                                '<button id="close-words-btn" class="btn btn-secondary text-sm">Zurück</button>' +
+                            '</div>' +
+                            '<div class="max-h-[60vh] overflow-y-auto">' +
+                                '<table class="w-full border-collapse text-left"><thead><tr><th class="border p-2 bg-slate-100">Deutsch</th><th class="border p-2 bg-slate-100">Englisch</th></tr></thead><tbody>' +
+                                    tableRows +
+                                '</tbody></table>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+                
+                appContainer.innerHTML = modalHTML;
+                document.getElementById('close-words-btn').addEventListener('click', () => showScreen('setup'));
+
+            } catch(error) {
+                console.error("Error loading important words:", error);
+                appContainer.innerHTML = '<div class="modal-backdrop"><div class="modal-content text-center"><h2 class="text-xl font-bold text-red-600">Fehler</h2><p class="mt-2 text-slate-600">Die Vokabel-Datei (Vocab.json) konnte nicht geladen werden.</p><button onclick="showScreen(\'setup\')" class="btn btn-primary mt-4">Zurück</button></div></div>';
+            }
+        }
+
+        // --- SECTION: INITIALIZATION ---
+        // This is the first function that runs when the page loads.
+        function initApp() {
+            loadAppData(); // Load any saved data.
+            showScreen('login'); // Show the login screen.
+            // This general event listener helps handle clicks on answer options efficiently.
+            appContainer.addEventListener('click', (e) => {
+                if (e.target.closest('.option')) {
+                    handleQuizContainerClick(e);
+                }
+            });
+        }
+
+        // Start the application!
+        initApp();
+    });
+    </script>
+</body>
+</html>

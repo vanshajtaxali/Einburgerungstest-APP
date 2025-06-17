@@ -1,0 +1,344 @@
+{
+  "general": [
+    {
+        "id": 121,
+        "q": "Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen {Mindestanteil} an Wählerstimmen haben. Das heißt...",
+        "o": ["5%-Hürde.", "Zulassungsgrenze.", "Basiswert.", "Richtlinie."],
+        "a": "5%-Hürde.",
+        "t": {
+            "Mindestanteil": "minimum share"
+        },
+        "en": "A party wants to get into the German Bundestag. However, it must have a minimum share of votes. This is called",
+        "o_en": ["5% hurdle.", "admission limit.", "base value.", "guideline."],
+        "expl": { "de": "Die 5%-Hürde (oder Sperrklausel) soll eine Zersplitterung des Parlaments in zu viele kleine Parteien verhindern und stabile Regierungsmehrheiten fördern.", "en": "The 5% hurdle (or electoral threshold) is intended to prevent the fragmentation of parliament into too many small parties and to promote stable governing majorities." }
+    },
+    {
+        "id": 122,
+        "q": "Welchem {Grundsatz} unterliegen Wahlen in Deutschland? Wahlen in Deutschland sind ...",
+        "o": ["frei, gleich, geheim.", "offen, sicher, frei.", "geschlossen, gleich, sicher.", "sicher, offen, freiwillig."],
+        "a": "frei, gleich, geheim.",
+        "t": {
+            "Grundsatz": "principle"
+        },
+        "en": "Which principle do elections in Germany follow? Elections in Germany are...",
+        "o_en": ["free, equal, secret.", "open, secure, free.", "closed, equal, secure.", "secure, open, voluntary."],
+        "expl": { "de": "Die deutschen Wahlrechtsgrundsätze sind: allgemein, unmittelbar, frei, gleich und geheim (Artikel 38 GG).", "en": "The German electoral principles are: general, direct, free, equal, and secret (Article 38 of the Basic Law)." }
+    },
+    {
+        "id": 123,
+        "q": "Was ist in Deutschland die '{5%-Hürde}'?",
+        "o": ["Abstimmungsregelung im Bundestag für kleine Parteien", "Anwesenheitskontrolle im Bundestag für Abstimmungen", "Mindestanteil an Wählerstimmen, um ins Parlament zu kommen", "Anwesenheitskontrolle im Bundesrat für Abstimmungen"],
+        "a": "Mindestanteil an Wählerstimmen, um ins Parlament zu kommen",
+        "t": {
+            "5%-Hürde": "5% hurdle"
+        },
+        "en": "What is the '5% hurdle' in Germany?",
+        "o_en": ["Voting regulation in the Bundestag for small parties", "Attendance check in the Bundestag for votes", "Minimum share of votes to get into parliament", "Attendance check in the Bundesrat for votes"],
+        "expl": { "de": "Die 5%-Hürde ist die Sperrklausel, die besagt, dass eine Partei mindestens fünf Prozent der Zweitstimmen benötigt, um in den Bundestag einzuziehen.", "en": "The 5% hurdle is the electoral threshold which states that a party needs at least five percent of the second votes to enter the Bundestag." }
+    },
+    {
+        "id": 124,
+        "q": "Die Bundestagswahl in Deutschland ist die Wahl des {Parlaments} für Deutschland.",
+        "o": ["der Bundeskanzlerin/des Bundeskanzlers.", "der Parlamente der Länder.", "des Parlaments für Deutschland.", "der Bundespräsidentin/des Bundespräsidenten."],
+        "a": "des Parlaments für Deutschland.",
+        "t": {
+            "Parlaments": "parliament"
+        },
+        "en": "The federal election in Germany is the election...",
+        "o_en": ["of the Federal Chancellor.", "of the parliaments of the states.", "of the parliament for Germany.", "of the Federal President."],
+        "expl": { "de": "Bei der Bundestagswahl wählen die Bürgerinnen und Bürger die Abgeordneten für das Parlament der Bundesrepublik Deutschland, den Bundestag.", "en": "In the federal election, citizens elect the members of the parliament of the Federal Republic of Germany, the Bundestag." }
+    },
+    {
+        "id": 125,
+        "q": "In einer Demokratie ist eine Funktion von regelmäßigen {Wahlen}, nach dem Willen der Wählermehrheit den {Wechsel} der Regierung zu ermöglichen.",
+        "o": ["die Bürgerinnen und Bürger zu zwingen, ihre Stimme abzugeben.", "nach dem Willen der Wählermehrheit den Wechsel der Regierung zu ermöglichen.", "im Land bestehende Gesetze beizubehalten.", "den Armen mehr Macht zu geben."],
+        "a": "nach dem Willen der Wählermehrheit den Wechsel der Regierung zu ermöglichen.",
+        "t": {
+            "Wahlen": "elections",
+            "Wechsel": "change"
+        },
+        "en": "In a democracy, one function of regular elections is,",
+        "o_en": ["to force citizens to cast their vote.", "to allow for a change of government according to the will of the majority of voters.", "to maintain existing laws in the country.", "to give more power to the poor."],
+        "expl": { "de": "Regelmäßige Wahlen geben dem Volk die Möglichkeit, die Regierung zu bestätigen oder abzuwählen und somit einen friedlichen Machtwechsel zu ermöglichen.", "en": "Regular elections give the people the opportunity to confirm or vote out the government, thus enabling a peaceful transfer of power." }
+    },
+    {
+        "id": 126,
+        "q": "Was bekommen {wahlberechtigte} Bürgerinnen und Bürger in Deutschland vor einer Wahl?",
+        "o": ["eine Wahlbenachrichtigung von der Gemeinde", "eine Wahlerlaubnis von der Bundespräsidentin/von dem Bundespräsidenten", "eine Benachrichtigung von der Bundesversammlung", "eine Benachrichtigung vom Pfarramt"],
+        "a": "eine Wahlbenachrichtigung von der Gemeinde",
+        "t": {
+            "wahlberechtigte": "eligible to vote"
+        },
+        "en": "What do eligible citizens in Germany receive before an election?",
+        "o_en": ["a voter notification from the municipality", "a voting permit from the Federal President", "a notification from the Federal Convention", "a notification from the parish office"],
+        "expl": { "de": "Vor jeder Wahl erhalten alle wahlberechtigten Personen per Post eine Wahlbenachrichtigung, die über den Wahltermin und das zuständige Wahllokal informiert.", "en": "Before every election, all eligible voters receive a voter notification by mail, which informs them about the election date and their designated polling station." }
+    },
+    {
+        "id": 127,
+        "q": "Warum gibt es die 5%-Hürde im Wahlgesetz der Bundesrepublik Deutschland? Es gibt sie, weil viele kleine Parteien die {Regierungsbildung} {erschweren}.",
+        "o": ["die Programme von vielen kleinen Parteien viele Gemeinsamkeiten haben.", "die Bürgerinnen und Bürger bei vielen kleinen Parteien die Orientierung verlieren können.", "viele kleine Parteien die Regierungsbildung erschweren.", "die kleinen Parteien nicht so viel Geld haben, um die Politikerinnen und Politiker zu bezahlen."],
+        "a": "viele kleine Parteien die Regierungsbildung erschweren.",
+        "t": {
+            "Regierungsbildung": "forming of a government",
+            "erschweren": "make more difficult"
+        },
+        "en": "Why does the 5% hurdle exist in the electoral law of the Federal Republic of Germany? It exists because...",
+        "o_en": ["the programs of many small parties have much in common.", "citizens can lose their orientation with many small parties.", "many small parties make forming a government more difficult.", "the small parties do not have enough money to pay the politicians."],
+        "expl": { "de": "Die 5%-Hürde soll verhindern, dass zu viele Kleinstparteien ins Parlament einziehen. Dies würde die Bildung stabiler Regierungsmehrheiten erheblich erschweren.", "en": "The 5% hurdle is intended to prevent too many very small parties from entering parliament. This would make the formation of stable governing majorities considerably more difficult." }
+    },
+    {
+        "id": 128,
+        "q": "Parlamentsmitglieder, die von den Bürgerinnen und Bürgern gewählt werden, nennt man ...",
+        "o": ["Abgeordnete.", "Kanzlerinnen/Kanzler.", "Botschafterinnen/Botschafter.", "Ministerpräsidentinnen/Ministerpräsidenten."],
+        "a": "Abgeordnete.",
+        "en": "Members of parliament who are elected by the citizens are called...",
+        "o_en": ["Members of Parliament (Abgeordnete).", "Chancellors.", "Ambassadors.", "Minister-Presidents."],
+        "expl": { "de": "Die gewählten Mitglieder eines Parlaments sind die Abgeordneten, die das Volk vertreten.", "en": "The elected members of a parliament are the representatives (Abgeordnete) who represent the people." }
+    },
+    {
+        "id": 129,
+        "q": "Vom Volk gewählt wird in Deutschland...",
+        "o": ["die Bundeskanzlerin/der Bundeskanzler.", "die Ministerpräsidentin/der Ministerpräsident eines Bundeslandes.", "der Bundestag.", "die Bundespräsidentin/der Bundespräsident."],
+        "a": "der Bundestag.",
+        "en": "In Germany, elected by the people is...",
+        "o_en": ["the Federal Chancellor.", "the Minister-President of a federal state.", "the Bundestag.", "the Federal President."],
+        "expl": { "de": "Das Volk wählt direkt die Abgeordneten des Bundestages. Der Bundeskanzler und der Bundespräsident werden indirekt (also nicht direkt vom Volk) gewählt.", "en": "The people directly elect the members of the Bundestag. The Federal Chancellor and the Federal President are elected indirectly (i.e., not directly by the people)." }
+    },
+    {
+        "id": 130,
+        "q": "Welcher {Stimmzettel} wäre bei einer Bundestagswahl gültig?",
+        "isImage": true,
+        "o": ["1", "2", "3", "4"],
+        "a": "1",
+        "t": {
+            "Stimmzettel": "ballot paper"
+        },
+        "en": "Which ballot paper would be valid in a federal election?",
+        "o_en": ["1", "2", "3", "4"],
+        "expl": { "de": "Ein gültiger Stimmzettel muss den Wählerwillen eindeutig erkennen lassen. Stimmzettel 1 ist korrekt ausgefüllt mit je einem Kreuz für die Erst- und Zweitstimme.", "en": "A valid ballot paper must clearly show the voter's intention. Ballot 1 is correctly filled out with one cross each for the first and second vote." }
+    },
+    {
+        "id": 131,
+        "q": "In Deutschland ist eine {Bürgermeisterin/ein Bürgermeister} das Oberhaupt einer {Gemeinde}.",
+        "o": ["die Leiterin/der Leiter einer Schule.", "die Chefin/der Chef einer Bank.", "das Oberhaupt einer Gemeinde.", "die/der Vorsitzende einer Partei."],
+        "a": "das Oberhaupt einer Gemeinde.",
+        "t": {
+            "Bürgermeisterin/ein Bürgermeister": "mayor",
+            "Gemeinde": "municipality"
+        },
+        "en": "In Germany, a mayor is...",
+        "o_en": ["the head of a school.", "the head of a bank.", "the head of a municipality.", "the chairperson of a party."],
+        "expl": { "de": "Der Bürgermeister oder die Bürgermeisterin ist das gewählte Oberhaupt einer Gemeinde oder Stadt und leitet deren Verwaltung.", "en": "The mayor is the elected head of a municipality or city and leads its administration." }
+    },
+    {
+        "id": 132,
+        "q": "Viele Menschen in Deutschland arbeiten in ihrer Freizeit {ehrenamtlich}. Was bedeutet das?",
+        "o": ["Sie arbeiten als Soldatinnen/Soldaten.", "Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.", "Sie arbeiten in der Bundesregierung.", "Sie arbeiten in einem Krankenhaus und verdienen dabei Geld."],
+        "a": "Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.",
+        "t": {
+            "ehrenamtlich": "on a voluntary basis / as a volunteer"
+        },
+        "en": "Many people in Germany work on a voluntary basis in their free time. What does that mean?",
+        "o_en": ["They work as soldiers.", "They work voluntarily and unpaid in clubs and associations.", "They work in the federal government.", "They work in a hospital and earn money doing so."],
+        "expl": { "de": "Ehrenamtliche Arbeit ist ein freiwilliger, unbezahlter Beitrag zum Gemeinwohl, oft im Rahmen von Vereinen, Verbänden oder Initiativen.", "en": "Voluntary work is a willing, unpaid contribution to the common good, often within clubs, associations, or initiatives." }
+    },
+    {
+        "id": 133,
+        "q": "Was ist bei Bundestags- und Landtagswahlen in Deutschland {erlaubt}?",
+        "o": ["Der Ehemann wählt für seine Frau mit.", "Man kann durch Briefwahl seine Stimme abgeben.", "Man kann am Wahltag telefonisch seine Stimme abgeben.", "Kinder ab dem Alter von 14 Jahren dürfen wählen."],
+        "a": "Man kann durch Briefwahl seine Stimme abgeben.",
+        "t": {
+            "erlaubt": "permitted"
+        },
+        "en": "What is permitted in federal and state elections in Germany?",
+        "o_en": ["The husband votes for his wife.", "One can cast one's vote by mail.", "One can cast one's vote by telephone on election day.", "Children from the age of 14 are allowed to vote."],
+        "expl": { "de": "Die Briefwahl ist eine Möglichkeit, seine Stimme abzugeben, wenn man am Wahltag nicht persönlich ins Wahllokal gehen kann. Wählen für andere ist verboten.", "en": "Postal voting is an option to cast one's vote if one cannot go to the polling station in person on election day. Voting for others is prohibited." }
+    },
+    {
+        "id": 134,
+        "q": "Man will die Buslinie abschaffen, mit der Sie immer zur Arbeit fahren. Was können Sie machen, um die Buslinie zu {erhalten}?",
+        "o": ["Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.", "Ich werde Mitglied in einem Sportverein und trainiere Radfahren.", "Ich wende mich an das Finanzamt, weil ich als Steuerzahlerin/Steuerzahler ein Recht auf die Buslinie habe.", "Ich schreibe einen Brief an das Forstamt der Gemeinde."],
+        "a": "Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.",
+        "t": {
+            "erhalten": "keep / preserve"
+        },
+        "en": "They want to abolish the bus line you always take to work. What can you do to keep the bus line?",
+        "o_en": ["I participate in a citizens' initiative for the preservation of the bus line or start an initiative myself.", "I become a member of a sports club and practice cycling.", "I contact the tax office because as a taxpayer I have a right to the bus line.", "I write a letter to the municipal forestry office."],
+        "expl": { "de": "Eine Bürgerinitiative ist eine Form der direkten Demokratie, bei der sich Bürger zusammenschließen, um ein bestimmtes politisches oder soziales Ziel auf lokaler Ebene zu erreichen.", "en": "A citizens' initiative is a form of direct democracy in which citizens join together to achieve a specific political or social goal at the local level." }
+    },
+    {
+        "id": 135,
+        "q": "Wen vertreten die {Gewerkschaften} in Deutschland?",
+        "o": ["große Unternehmen", "kleine Unternehmen", "Selbstständige", "Arbeitnehmerinnen und Arbeitnehmer"],
+        "a": "Arbeitnehmerinnen und Arbeitnehmer",
+        "t": {
+            "Gewerkschaften": "Trade unions"
+        },
+        "en": "Whom do the trade unions in Germany represent?",
+        "o_en": ["large companies", "small companies", "self-employed persons", "employees"],
+        "expl": { "de": "Gewerkschaften sind Organisationen, die die Interessen der Arbeitnehmerinnen und Arbeitnehmer gegenüber den Arbeitgebern vertreten.", "en": "Trade unions are organizations that represent the interests of employees in relation to employers." }
+    },
+    {
+        "id": 136,
+        "q": "Sie gehen in Deutschland zum {Arbeitsgericht} bei ...",
+        "o": ["falscher Nebenkostenabrechnung.", "ungerechtfertigter Kündigung durch Ihre Chefin/Ihren Chef.", "Problemen mit den Nachbarinnen/Nachbarn.", "Schwierigkeiten nach einem Verkehrsunfall."],
+        "a": "ungerechtfertigter Kündigung durch Ihre Chefin/Ihren Chef.",
+        "t": {
+            "Arbeitsgericht": "labor court"
+        },
+        "en": "In Germany, you go to the labor court for...",
+        "o_en": ["an incorrect utility bill statement.", "unjustified dismissal by your boss.", "problems with your neighbors.", "difficulties after a traffic accident."],
+        "expl": { "de": "Die Arbeitsgerichte sind für alle Streitigkeiten aus dem Arbeitsverhältnis zuständig, wie z.B. Kündigungsschutzklagen.", "en": "The labor courts are responsible for all disputes arising from the employment relationship, such as protection against unfair dismissal." }
+    },
+    {
+        "id": 137,
+        "q": "Welches Gericht ist in Deutschland bei {Konflikten} in der Arbeitswelt zuständig?",
+        "o": ["das Familiengericht", "das Strafgericht", "das Arbeitsgericht", "das Amtsgericht"],
+        "a": "das Arbeitsgericht",
+        "t": {
+            "Konflikten": "conflicts"
+        },
+        "en": "Which court in Germany is responsible for conflicts in the world of work?",
+        "o_en": ["the family court", "the criminal court", "the labor court", "the local court"],
+        "expl": { "de": "Für Rechtsstreitigkeiten zwischen Arbeitnehmern und Arbeitgebern ist die Arbeitsgerichtsbarkeit zuständig.", "en": "The labor courts are responsible for legal disputes between employees and employers." }
+    },
+    {
+        "id": 138,
+        "q": "Was kann ich in Deutschland machen, wenn mir meine Arbeitgeberin/mein Arbeitgeber zu {Unrecht} gekündigt hat?",
+        "o": ["weiterarbeiten und freundlich zur Chefin/zum Chef sein", "ein Mahnverfahren gegen die Arbeitgeberin/den Arbeitgeber führen", "Kündigungsschutzklage erheben", "die Arbeitgeberin/den Arbeitgeber bei der Polizei anzeigen"],
+        "a": "Kündigungsschutzklage erheben",
+        "t": {
+            "Unrecht": "unjustly / unfairly"
+        },
+        "en": "What can I do in Germany if my employer has dismissed me unfairly?",
+        "o_en": ["continue working and be friendly to the boss", "initiate a dunning procedure against the employer", "file an action for protection against unfair dismissal", "report the employer to the police"],
+        "expl": { "de": "Wenn man eine Kündigung für ungerechtfertigt hält, kann man innerhalb von drei Wochen eine Kündigungsschutzklage beim zuständigen Arbeitsgericht einreichen.", "en": "If you consider a dismissal to be unjustified, you can file an action for protection against unfair dismissal with the competent labor court within three weeks." }
+    },
+    {
+        "id": 139,
+        "q": "Wann kommt es in Deutschland zu einem {Prozess} vor Gericht? Wenn jemand...",
+        "o": ["zu einer anderen Religion übertritt.", "eine Straftat begangen hat und angeklagt wird.", "eine andere Meinung als die der Regierung vertritt.", "sein Auto falsch geparkt hat und es abgeschleppt wird."],
+        "a": "eine Straftat begangen hat und angeklagt wird.",
+        "t": {
+            "Prozess": "trial / process"
+        },
+        "en": "When does a trial occur in Germany? When someone",
+        "o_en": ["converts to another religion.", "has committed a criminal offense and is charged.", "holds a different opinion from that of the government.", "has parked their car incorrectly and it is towed away."],
+        "expl": { "de": "Ein Gerichtsprozess findet statt, um über die Schuld oder Unschuld eines Angeklagten zu entscheiden, dem eine Straftat vorgeworfen wird.", "en": "A court trial takes place to decide on the guilt or innocence of an accused person who is charged with a criminal offense." }
+    },
+    {
+        "id": 140,
+        "q": "Was macht eine {Schöffin/ein Schöffe} in Deutschland? Sie/Er...",
+        "o": ["entscheidet mit Richterinnen/Richtern über Schuld und Strafe.", "gibt Bürgerinnen/Bürgern rechtlichen Rat.", "stellt Urkunden aus.", "verteidigt die Angeklagte/den Angeklagten."],
+        "a": "entscheidet mit Richterinnen/Richtern über Schuld und Strafe.",
+        "t": {
+            "Schöffin/ein Schöffe": "lay judge"
+        },
+        "en": "What does a lay judge (Schöffe) do in Germany? He/She...",
+        "o_en": ["decides with professional judges on guilt and punishment.", "gives legal advice to citizens.", "issues documents.", "defends the accused."],
+        "expl": { "de": "Schöffen sind ehrenamtliche Richter, die in Strafprozessen gleichberechtigt mit den Berufsrichtern an der Urteilsfindung beteiligt sind.", "en": "Lay judges are volunteer judges who participate in criminal trials on an equal footing with professional judges in finding a verdict." }
+    },
+    {
+        "id": 141,
+        "q": "Wer berät in Deutschland Personen bei {Rechtsfragen} und vertritt sie vor Gericht?",
+        "o": ["eine Rechtsanwältin/ein Rechtsanwalt", "eine Richterin/ein Richter", "eine Schöffin/ein Schöffe", "eine Staatsanwältin/ein Staatsanwalt"],
+        "a": "eine Rechtsanwältin/ein Rechtsanwalt",
+        "t": {
+            "Rechtsfragen": "legal questions"
+        },
+        "en": "Who advises people in Germany on legal questions and represents them in court?",
+        "o_en": ["a lawyer", "a judge", "a lay judge", "a public prosecutor"],
+        "expl": { "de": "Rechtsanwälte sind unabhängige Organe der Rechtspflege, die ihre Mandanten in rechtlichen Angelegenheiten beraten und vertreten.", "en": "Lawyers are independent bodies of the administration of justice who advise and represent their clients in legal matters." }
+    },
+    {
+        "id": 142,
+        "q": "Was ist die {Hauptaufgabe} einer Richterin/eines Richters in Deutschland? Eine Richterin/ein Richter...",
+        "o": ["vertritt Bürgerinnen und Bürger vor einem Gericht.", "arbeitet an einem Gericht und spricht Urteile.", "ändert Gesetze.", "betreut Jugendliche vor Gericht."],
+        "a": "arbeitet an einem Gericht und spricht Urteile.",
+        "t": {
+            "Hauptaufgabe": "main task"
+        },
+        "en": "What is the main task of a judge in Germany? A judge",
+        "o_en": ["represents citizens before a court.", "works at a court and passes judgments.", "changes laws.", "supervises young people in court."],
+        "expl": { "de": "Die Kernaufgabe von Richtern ist es, unabhängig und nur dem Gesetz unterworfen Recht zu sprechen und Urteile zu fällen.", "en": "The core task of judges is to administer justice and pass judgments independently and subject only to the law." }
+    },
+    {
+        "id": 143,
+        "q": "Eine Richterin/ein Richter in Deutschland gehört zur ...",
+        "o": ["Judikative.", "Exekutive.", "Operative.", "Legislative."],
+        "a": "Judikative.",
+        "en": "A judge in Germany belongs to the...",
+        "o_en": ["Judiciary.", "Executive.", "Operative.", "Legislative."],
+        "expl": { "de": "Die Richter und Gerichte bilden die Judikative, die rechtsprechende Gewalt im Staat.", "en": "The judges and courts form the judiciary, the judicial power in the state." }
+    },
+    {
+        "id": 144,
+        "q": "Eine Richterin/ein Richter gehört in Deutschland zur {rechtsprechenden} Gewalt.",
+        "o": ["vollziehenden Gewalt.", "rechtsprechenden Gewalt.", "planenden Gewalt.", "gesetzgebenden Gewalt."],
+        "a": "rechtsprechenden Gewalt.",
+        "t": {
+            "rechtsprechenden": "judicial"
+        },
+        "en": "A judge in Germany belongs to the...",
+        "o_en": ["executive power.", "judicial power.", "planning power.", "legislative power."],
+        "expl": { "de": "Die rechtsprechende Gewalt ist ein anderer Begriff für die Judikative, der die Richter angehören.", "en": "Judicial power is another term for the judiciary, to which judges belong." }
+    },
+    {
+        "id": 145,
+        "q": "In Deutschland wird die Staatsgewalt geteilt. Für welche Staatsgewalt arbeitet eine Richterin/ein Richter? Für die ...",
+        "o": ["Judikative", "Exekutive", "Presse", "Legislative"],
+        "a": "Judikative",
+        "en": "In Germany, state power is divided. For which branch of state power does a judge work? For the...",
+        "o_en": ["Judiciary", "Executive", "Press", "Legislative"],
+        "expl": { "de": "Richter gehören zur Judikative (rechtsprechende Gewalt), die unabhängig von der Legislative (Gesetzgebung) und Exekutive (ausführende Gewalt) ist.", "en": "Judges belong to the judiciary (judicial power), which is independent of the legislative (law-making) and executive (enforcing) branches." }
+    },
+    {
+        "id": 146,
+        "q": "Wie nennt man in Deutschland ein Verfahren vor einem Gericht?",
+        "o": ["Programm", "Prozedur", "Protokoll", "Prozess"],
+        "a": "Prozess",
+        "en": "What is a proceeding before a court called in Germany?",
+        "o_en": ["Program", "Procedure", "Protocol", "Process/Trial"],
+        "expl": { "de": "Ein Gerichtsverfahren wird in Deutschland als Prozess bezeichnet.", "en": "A court proceeding in Germany is called a Prozess (process or trial)." }
+    },
+    {
+        "id": 147,
+        "q": "Was ist die Arbeit einer Richterin/eines Richters in Deutschland?",
+        "o": ["Deutschland regieren", "Recht sprechen", "Pläne erstellen", "Gesetze erlassen"],
+        "a": "Recht sprechen",
+        "en": "What is the job of a judge in Germany?",
+        "o_en": ["Governing Germany", "Administering justice", "Creating plans", "Enacting laws"],
+        "expl": { "de": "Die Aufgabe von Richtern ist es, im Namen des Volkes Recht zu sprechen, also Urteile auf der Grundlage von Gesetzen zu fällen.", "en": "The task of judges is to administer justice in the name of the people, meaning to pass judgments based on laws." }
+    },
+    {
+        "id": 148,
+        "q": "Was ist eine Aufgabe der Polizei in Deutschland?",
+        "o": ["das Land zu verteidigen", "die Bürgerinnen und Bürger abzuhören", "die Gesetze zu beschließen", "die Einhaltung von Gesetzen zu überwachen"],
+        "a": "die Einhaltung von Gesetzen zu überwachen",
+        "en": "What is a task of the police in Germany?",
+        "o_en": ["to defend the country", "to wiretap the citizens", "to pass the laws", "to monitor compliance with laws"],
+        "expl": { "de": "Die Polizei gehört zur Exekutive und ihre Aufgabe ist es, die öffentliche Sicherheit und Ordnung zu gewährleisten und die Einhaltung der Gesetze zu überwachen.", "en": "The police are part of the executive branch, and their task is to ensure public safety and order and to monitor compliance with the laws." }
+    },
+    {
+        "id": 149,
+        "q": "Was ist ein Beispiel für {antisemitisches} Verhalten?",
+        "o": ["ein jüdisches Fest besuchen", "die israelische Regierung kritisieren", "den Holocaust leugnen", "gegen Juden Fußball spielen."],
+        "a": "den Holocaust leugnen",
+        "t": {
+            "antisemitisches": "anti-Semitic"
+        },
+        "en": "What is an example of anti-Semitic behavior?",
+        "o_en": ["visiting a Jewish festival", "criticizing the Israeli government", "denying the Holocaust", "playing soccer against Jews."],
+        "expl": { "de": "Die Leugnung des Holocaust ist eine Form des Antisemitismus und in Deutschland eine Straftat (§ 130 StGB). Sachliche Kritik an einer Regierung ist hingegen von der Meinungsfreiheit gedeckt.", "en": "Denying the Holocaust is a form of anti-Semitism and a criminal offense in Germany (§ 130 of the Criminal Code). Factual criticism of a government, however, is covered by freedom of speech." }
+    },
+    {
+        "id": 150,
+        "q": "Eine Gerichtsschöffin/ein Gerichtsschöffe in Deutschland ist ...",
+        "o": ["die Stellvertreterin/der Stellvertreter des Stadtoberhaupts.", "eine ehrenamtliche Richterin/ein ehrenamtlicher Richter.", "ein Mitglied eines Gemeinderats.", "eine Person, die Jura studiert hat."],
+        "a": "eine ehrenamtliche Richterin/ein ehrenamtlicher Richter.",
+        "en": "A lay judge (Gerichtsschöffe) in Germany is...",
+        "o_en": ["the deputy of the head of the city.", "a volunteer judge.", "a member of a local council.", "a person who has studied law."],
+        "expl": { "de": "Schöffen sind ehrenamtliche Richter aus dem Volk, die gemeinsam mit Berufsrichtern über Schuld und Strafe in Strafverfahren entscheiden.", "en": "Lay judges are volunteer judges from the community who decide on guilt and punishment in criminal proceedings together with professional judges." }
+    }
+  ]
+}

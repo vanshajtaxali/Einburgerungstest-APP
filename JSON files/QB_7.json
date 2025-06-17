@@ -1,0 +1,342 @@
+{
+  "general": [
+    {
+        "id": 181,
+        "q": "Was wollte Willy Brandt mit seinem {Kniefall} 1970 im ehemaligen jüdischen Ghetto in Warschau {ausdrücken}?",
+        "isImage": true,
+        "o": ["Er hat sich den ehemaligen Alliierten unterworfen.", "Er bat Polen und die polnischen Juden um Vergebung.", "Er zeigte seine Demut vor dem Warschauer Pakt.", "Er sprach ein Gebet am Grab des Unbekannten Soldaten."],
+        "a": "Er bat Polen und die polnischen Juden um Vergebung.",
+        "t": {
+            "Kniefall": "genuflection (kneeling)",
+            "ausdrücken": "to express"
+        },
+        "en": "What did Willy Brandt want to express with his genuflection in the former Jewish ghetto in Warsaw in 1970?",
+        "o_en": ["He submitted to the former Allies.", "He asked Poland and the Polish Jews for forgiveness.", "He showed his humility before the Warsaw Pact.", "He said a prayer at the Tomb of the Unknown Soldier."],
+        "expl": { "de": "Der Kniefall von Warschau war eine Geste der Demut und eine Bitte um Vergebung für die deutschen Verbrechen im Zweiten Weltkrieg, insbesondere gegenüber den Juden.", "en": "The Warsaw Genuflection was a gesture of humility and a plea for forgiveness for the German crimes of World War II, especially towards the Jewish people." }
+    },
+    {
+        "id": 182,
+        "q": "Wie heißt das jüdische {Gebetshaus}?",
+        "o": ["Basilika", "Moschee", "Synagoge", "Kirche"],
+        "a": "Synagoge",
+        "t": {
+            "Gebetshaus": "house of prayer"
+        },
+        "en": "What is the name of the Jewish house of prayer?",
+        "o_en": ["Basilica", "Mosque", "Synagogue", "Church"],
+        "expl": { "de": "Das jüdische Gebets- und Versammlungshaus wird Synagoge genannt.", "en": "The Jewish house of prayer and assembly is called a synagogue." }
+    },
+    {
+        "id": 183,
+        "q": "Wann war in der Bundesrepublik Deutschland das '{Wirtschaftswunder}'?",
+        "o": ["40er Jahre", "50er Jahre", "70er Jahre", "80er Jahre"],
+        "a": "50er Jahre",
+        "t": {
+            "Wirtschaftswunder": "economic miracle"
+        },
+        "en": "When was the 'economic miracle' in the Federal Republic of Germany?",
+        "o_en": ["40s", "50s", "70s", "80s"],
+        "expl": { "de": "Das 'Wirtschaftswunder' bezeichnet den schnellen wirtschaftlichen Aufschwung Westdeutschlands nach dem Zweiten Weltkrieg, hauptsächlich in den 1950er und 1960er Jahren.", "en": "The 'Wirtschaftswunder' (economic miracle) refers to the rapid economic recovery of West Germany after World War II, mainly in the 1950s and 1960s." }
+    },
+    {
+        "id": 184,
+        "q": "Auf welcher {rechtlichen Grundlage} wurde der Staat Israel {gegründet}?",
+        "o": ["eine Resolution der Vereinten Nationen", "ein Beschluss des Zionistenkongresses", "ein Vorschlag der Bundesregierung", "ein Vorschlag der USSR"],
+        "a": "eine Resolution der Vereinten Nationen",
+        "t": {
+            "rechtlichen Grundlage": "legal basis",
+            "gegründet": "founded"
+        },
+        "en": "On what legal basis was the state of Israel founded?",
+        "o_en": ["a resolution of the United Nations", "a decision of the Zionist Congress", "a proposal of the German Federal Government", "a proposal of the USSR"],
+        "expl": { "de": "Der UN-Teilungsplan für Palästina (Resolution 181) von 1947 bildete die völkerrechtliche Grundlage für die Gründung des Staates Israel im Jahr 1948.", "en": "The UN Partition Plan for Palestine (Resolution 181) of 1947 formed the international legal basis for the founding of the state of Israel in 1948." }
+    },
+    {
+        "id": 185,
+        "q": "Wofür stand der Ausdruck '{Eiserner Vorhang}'? Für die {Abschottung} ...",
+        "o": ["des Warschauer Pakts gegen den Westen", "Norddeutschlands gegen Süddeutschland", "Nazi-Deutschlands gegen die Alliierten", "Europas gegen die USA"],
+        "a": "des Warschauer Pakts gegen den Westen",
+        "t": {
+            "Eiserner Vorhang": "Iron Curtain",
+            "Abschottung": "sealing off / isolation"
+        },
+        "en": "What did the expression 'Iron Curtain' stand for? For the sealing off...",
+        "o_en": ["of the Warsaw Pact against the West", "of Northern Germany against Southern Germany", "of Nazi Germany against the Allies", "of Europe against the USA"],
+        "expl": { "de": "Der 'Eiserne Vorhang' war eine Metapher für die ideologische und physische Trennung Europas in den westlichen demokratischen und den östlichen kommunistischen Block während des Kalten Krieges.", "en": "The 'Iron Curtain' was a metaphor for the ideological and physical division of Europe into the Western democratic bloc and the Eastern communist bloc during the Cold War." }
+    },
+    {
+        "id": 186,
+        "q": "Im Jahr 1953 gab es in der DDR einen {Aufstand}, an den lange Zeit in der Bundesrepublik Deutschland ein {Feiertag} erinnerte. Wann war das?",
+        "o": ["1. Mai", "17. Juni", "20. Juli", "9. November"],
+        "a": "17. Juni",
+        "t": {
+            "Aufstand": "uprising",
+            "Feiertag": "public holiday"
+        },
+        "en": "In 1953, there was an uprising in the GDR, which was commemorated for a long time in the Federal Republic of Germany with a public holiday. When was that?",
+        "o_en": ["May 1", "June 17", "July 20", "November 9"],
+        "expl": { "de": "Der 17. Juni war in Westdeutschland bis 1990 der 'Tag der deutschen Einheit' zum Gedenken an den Volksaufstand in der DDR vom 17. Juni 1953.", "en": "June 17 was the 'Day of German Unity' in West Germany until 1990, commemorating the popular uprising in the GDR on June 17, 1953." }
+    },
+    {
+        "id": 187,
+        "q": "Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?",
+        "isImage": true,
+        "o": ["Preußen", "Bundesrepublik Deutschland", "\"Drittes Reich\"", "DDR"],
+        "a": "DDR",
+        "en": "Which German state had a black-red-gold flag with a hammer, compass, and wreath of grain?",
+        "o_en": ["Prussia", "Federal Republic of Germany", "'Third Reich'", "GDR"],
+        "expl": { "de": "Die Flagge der Deutschen Demokratischen Republik (DDR) zeigte die deutschen Nationalfarben mit dem Staatswappen der DDR in der Mitte.", "en": "The flag of the German Democratic Republic (GDR) showed the German national colors with the state coat of arms of the GDR in the center." }
+    },
+    {
+        "id": 188,
+        "q": "In welchem Jahr wurde die Mauer in Berlin gebaut?",
+        "o": ["1953", "1956", "1959", "1961"],
+        "a": "1961",
+        "en": "In which year was the Wall in Berlin built?",
+        "o_en": ["1953", "1956", "1959", "1961"],
+        "expl": { "de": "Die Berliner Mauer wurde am 13. August 1961 von der DDR-Führung errichtet.", "en": "The Berlin Wall was erected by the GDR leadership on August 13, 1961." }
+    },
+    {
+        "id": 189,
+        "q": "Wann baute die DDR die Mauer in Berlin?",
+        "o": ["1919", "1933", "1961", "1990"],
+        "a": "1961",
+        "en": "When did the GDR build the Wall in Berlin?",
+        "o_en": ["1919", "1933", "1961", "1990"]
+    },
+    {
+        "id": 190,
+        "q": "Was bedeutet die {Abkürzung} DDR?",
+        "o": ["Dritter Deutscher Rundfunk", "Die Deutsche Republik", "Dritte Deutsche Republik", "Deutsche Demokratische Republik"],
+        "a": "Deutsche Demokratische Republik",
+        "t": {
+            "Abkürzung": "abbreviation"
+        },
+        "en": "What does the abbreviation GDR mean?",
+        "o_en": ["Third German Broadcasting", "The German Republic", "Third German Republic", "German Democratic Republic"],
+        "expl": { "de": "DDR ist die Abkürzung für Deutsche Demokratische Republik, der Name des ostdeutschen Staates von 1949 bis 1990.", "en": "GDR is the abbreviation for German Democratic Republic (Deutsche Demokratische Republik), the name of the East German state from 1949 to 1990." }
+    },
+    {
+        "id": 191,
+        "q": "Wann wurde die Mauer in Berlin für alle {geöffnet}?",
+        "o": ["1987", "1989", "1992", "1995"],
+        "a": "1989",
+        "t": {
+            "geöffnet": "opened"
+        },
+        "en": "When was the Wall in Berlin opened for everyone?",
+        "o_en": ["1987", "1989", "1992", "1995"],
+        "expl": { "de": "Der Fall der Berliner Mauer ereignete sich am 9. November 1989.", "en": "The fall of the Berlin Wall occurred on November 9, 1989." }
+    },
+    {
+        "id": 192,
+        "q": "Welches heutige deutsche {Bundesland} gehörte früher zum {Gebiet} der DDR?",
+        "o": ["Brandenburg", "Bayern", "Saarland", "Hessen"],
+        "a": "Brandenburg",
+        "t": {
+            "Bundesland": "federal state",
+            "Gebiet": "territory"
+        },
+        "en": "Which of today's German federal states formerly belonged to the territory of the GDR?",
+        "o_en": ["Brandenburg", "Bavaria", "Saarland", "Hesse"],
+        "expl": { "de": "Brandenburg war ein Land der DDR und wurde 1990 als Bundesland der Bundesrepublik Deutschland wiedergegründet.", "en": "Brandenburg was a state of the GDR and was re-established as a federal state of the Federal Republic of Germany in 1990." }
+    },
+    {
+        "id": 193,
+        "q": "Von 1961 bis 1989 war Berlin durch eine Mauer {geteilt}.",
+        "o": ["ohne Bürgermeister.", "ein eigener Staat.", "durch eine Mauer geteilt.", "nur mit dem Flugzeug erreichbar."],
+        "a": "durch eine Mauer geteilt.",
+        "t": {
+            "geteilt": "divided"
+        },
+        "en": "From 1961 to 1989, Berlin was...",
+        "o_en": ["without a mayor.", "a separate state.", "divided by a wall.", "only accessible by plane."],
+        "expl": { "de": "Die Berliner Mauer teilte die Stadt in das von den Westalliierten kontrollierte West-Berlin und das zur DDR gehörende Ost-Berlin.", "en": "The Berlin Wall divided the city into West Berlin, controlled by the Western Allies, and East Berlin, which belonged to the GDR." }
+    },
+    {
+        "id": 194,
+        "q": "Am 3. Oktober feiert man in Deutschland den Tag der Deutschen {Einheit}.",
+        "o": ["Einheit.", "Nation.", "Bundesländer.", "Städte."],
+        "a": "Einheit.",
+        "t": {
+            "Einheit": "Unity"
+        },
+        "en": "On October 3, Germany celebrates the Day of German...",
+        "o_en": ["Unity.", "Nation.", "Federal States.", "Cities."],
+        "expl": { "de": "Der 3. Oktober ist der deutsche Nationalfeiertag und erinnert an die Wiedervereinigung Deutschlands im Jahr 1990.", "en": "October 3 is the German national holiday and commemorates the reunification of Germany in 1990." }
+    },
+    {
+        "id": 195,
+        "q": "Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?",
+        "o": ["Hessen", "Sachsen-Anhalt", "Nordrhein-Westfalen", "Saarland"],
+        "a": "Sachsen-Anhalt",
+        "en": "Which of today's German federal states formerly belonged to the territory of the GDR?",
+        "o_en": ["Hesse", "Saxony-Anhalt", "North Rhine-Westphalia", "Saarland"],
+        "expl": { "de": "Sachsen-Anhalt war eines der fünf Länder auf dem Gebiet der DDR.", "en": "Saxony-Anhalt was one of the five states on the territory of the GDR." }
+    },
+    {
+        "id": 196,
+        "q": "Warum nennt man die Zeit im Herbst 1989 in der DDR '{Die Wende}'? In dieser Zeit veränderte sich die DDR politisch...",
+        "o": ["von einer Diktatur zur Demokratie.", "von einer liberalen Marktwirtschaft zum Sozialismus.", "von einer Monarchie zur Sozialdemokratie.", "von einem religiösen Staat zu einem kommunistischen Staat."],
+        "a": "von einer Diktatur zur Demokratie.",
+        "t": {
+            "Die Wende": "The Change / The Turning Point"
+        },
+        "en": "Why is the period in autumn 1989 in the GDR called 'Die Wende' (The Change)? During this time, the GDR changed politically",
+        "o_en": ["from a dictatorship to a democracy.", "from a liberal market economy to socialism.", "from a monarchy to a social democracy.", "from a religious state to a communist state."],
+        "expl": { "de": "'Die Wende' bezeichnet den Prozess der Friedlichen Revolution, der zum Ende der SED-Diktatur und zur Demokratisierung der DDR führte.", "en": "'Die Wende' refers to the process of the Peaceful Revolution, which led to the end of the SED dictatorship and the democratization of the GDR." }
+    },
+    {
+        "id": 197,
+        "q": "Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?",
+        "o": ["Thüringen", "Hessen", "Bayern", "Bremen"],
+        "a": "Thüringen",
+        "en": "Which of today's German federal states formerly belonged to the territory of the GDR?",
+        "o_en": ["Thuringia", "Hesse", "Bavaria", "Bremen"],
+        "expl": { "de": "Thüringen war eines der fünf Länder auf dem Gebiet der DDR.", "en": "Thuringia was one of the five states on the territory of the GDR." }
+    },
+    {
+        "id": 198,
+        "q": "Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?",
+        "o": ["Bayern", "Niedersachsen", "Sachsen", "Baden-Württemberg"],
+        "a": "Sachsen",
+        "en": "Which of today's German federal states formerly belonged to the territory of the GDR?",
+        "o_en": ["Bavaria", "Lower Saxony", "Saxony", "Baden-Württemberg"],
+        "expl": { "de": "Sachsen war eines der fünf Länder auf dem Gebiet der DDR.", "en": "Saxony was one of the five states on the territory of the GDR." }
+    },
+    {
+        "id": 199,
+        "q": "Mit der Abkürzung '{Stasi}' meinte man in der DDR das Ministerium für {Staatssicherheit}.",
+        "o": ["das Parlament.", "das Ministerium für Staatssicherheit.", "eine regierende Partei.", "das Ministerium für Volksbildung."],
+        "a": "das Ministerium für Staatssicherheit.",
+        "t": {
+            "Stasi": "Stasi (State Security Service)",
+            "Staatssicherheit": "State Security"
+        },
+        "en": "In the GDR, the abbreviation 'Stasi' referred to...",
+        "o_en": ["the parliament.", "the Ministry for State Security.", "a ruling party.", "the Ministry for National Education."],
+        "expl": { "de": "Die 'Stasi' (Staatssicherheitsdienst) war der In- und Auslandsgeheimdienst der DDR und ein zentrales Instrument zur Überwachung der Bevölkerung und Unterdrückung der Opposition.", "en": "The 'Stasi' (State Security Service) was the domestic and foreign intelligence service of the GDR and a central instrument for monitoring the population and suppressing opposition." }
+    },
+    {
+        "id": 200,
+        "q": "Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?",
+        "o": ["Hessen", "Schleswig-Holstein", "Mecklenburg-Vorpommern", "Saarland"],
+        "a": "Mecklenburg-Vorpommern",
+        "en": "Which of today's German federal states formerly belonged to the territory of the GDR?",
+        "o_en": ["Hesse", "Schleswig-Holstein", "Mecklenburg-Vorpommern", "Saarland"],
+        "expl": { "de": "Mecklenburg-Vorpommern war eines der fünf Länder auf dem Gebiet der DDR.", "en": "Mecklenburg-Vorpommern was one of the five states on the territory of the GDR." }
+    },
+    {
+        "id": 201,
+        "q": "Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?",
+        "o": ["Niedersachsen, Nordrhein-Westfalen, Hessen, Schleswig-Holstein, Brandenburg", "Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen", "Bayern, Baden-Württemberg, Rheinland-Pfalz, Thüringen, Sachsen", "Sachsen, Thüringen, Hessen, Niedersachen, Brandenburg"],
+        "a": "Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen",
+        "en": "Which of the following lists contains only federal states that belonged to the territory of the former GDR?",
+        "o_en": ["Lower Saxony, North Rhine-Westphalia, Hesse, Schleswig-Holstein, Brandenburg", "Mecklenburg-Vorpommern, Brandenburg, Saxony, Saxony-Anhalt, Thuringia", "Bavaria, Baden-Württemberg, Rhineland-Palatinate, Thuringia, Saxony", "Saxony, Thuringia, Hesse, Lower Saxony, Brandenburg"],
+        "expl": { "de": "Die fünf neuen Bundesländer, die 1990 der Bundesrepublik beitraten, sind Brandenburg, Mecklenburg-Vorpommern, Sachsen, Sachsen-Anhalt und Thüringen.", "en": "The five new federal states that joined the Federal Republic in 1990 are Brandenburg, Mecklenburg-Vorpommern, Saxony, Saxony-Anhalt, and Thuringia." }
+    },
+    {
+        "id": 202,
+        "q": "Zu wem gehörte die DDR im '{Kalten Krieg}'?",
+        "o": ["zu den Westmächten", "zum Warschauer Pakt", "zur NATO", "zu den blockfreien Staaten"],
+        "a": "zum Warschauer Pakt",
+        "t": {
+            "Kalten Krieg": "Cold War"
+        },
+        "en": "To whom did the GDR belong during the 'Cold War'?",
+        "o_en": ["to the Western powers", "to the Warsaw Pact", "to NATO", "to the non-aligned states"],
+        "expl": { "de": "Die DDR war Mitglied des Warschauer Pakts, des Militärbündnisses der osteuropäischen sozialistischen Staaten unter der Führung der Sowjetunion.", "en": "The GDR was a member of the Warsaw Pact, the military alliance of the Eastern European socialist states under the leadership of the Soviet Union." }
+    },
+    {
+        "id": 203,
+        "q": "Wie hieß das {Wirtschaftssystem} der DDR?",
+        "o": ["Marktwirtschaft", "Planwirtschaft", "Angebot und Nachfrage", "Kapitalismus"],
+        "a": "Planwirtschaft",
+        "t": {
+            "Wirtschaftssystem": "economic system"
+        },
+        "en": "What was the economic system of the GDR called?",
+        "o_en": ["Market economy", "Planned economy", "Supply and demand", "Capitalism"],
+        "expl": { "de": "Die DDR hatte eine sozialistische Planwirtschaft, in der Produktion und Verteilung von Gütern zentral vom Staat geplant wurden.", "en": "The GDR had a socialist planned economy, in which the production and distribution of goods were centrally planned by the state." }
+    },
+    {
+        "id": 204,
+        "q": "Wie wurden die Bundesrepublik Deutschland und die DDR zu einem Staat? Die heutigen fünf östlichen Bundesländer sind der Bundesrepublik Deutschland {beigetreten}.",
+        "o": ["Die Bundesrepublik hat die DDR besetzt.", "Die heutigen fünf östlichen Bundesländer sind der Bundesrepublik Deutschland beigetreten.", "Die westlichen Bundesländer sind der DDR beigetreten.", "Die DDR hat die Bundesrepublik Deutschland besetzt."],
+        "a": "Die heutigen fünf östlichen Bundesländer sind der Bundesrepublik Deutschland beigetreten.",
+        "t": {
+            "beigetreten": "joined"
+        },
+        "en": "How did the Federal Republic of Germany and the GDR become one state?",
+        "o_en": ["The Federal Republic occupied the GDR.", "Today's five eastern federal states joined the Federal Republic of Germany.", "The western federal states joined the GDR.", "The GDR occupied the Federal Republic of Germany."],
+        "expl": { "de": "Die Wiedervereinigung erfolgte durch den Beitritt der wiederhergestellten Länder der DDR zum Geltungsbereich des Grundgesetzes der Bundesrepublik Deutschland gemäß Artikel 23 a.F. GG.", "en": "Reunification took place through the accession of the re-established states of the GDR to the area of applicability of the Basic Law of the Federal Republic of Germany in accordance with Article 23 (old version) of the Basic Law." }
+    },
+    {
+        "id": 205,
+        "q": "Mit dem {Beitritt} der DDR zur Bundesrepublik Deutschland gehören die neuen Bundesländer nun auch zur Europäischen Union.",
+        "o": ["zur Europäischen Union.", "zum Warschauer Pakt.", "zur OPEC.", "zur Europäischen Verteidigungsgemeinschaft."],
+        "a": "zur Europäischen Union.",
+        "t": {
+            "Beitritt": "accession / joining"
+        },
+        "en": "With the accession of the GDR to the Federal Republic of Germany, the new federal states now also belong",
+        "o_en": ["to the European Union.", "to the Warsaw Pact.", "to OPEC.", "to the European Defence Community."],
+        "expl": { "de": "Durch den Beitritt zur Bundesrepublik Deutschland wurde das Gebiet der ehemaligen DDR automatisch Teil der Europäischen Gemeinschaft, der heutigen EU.", "en": "By joining the Federal Republic of Germany, the territory of the former GDR automatically became part of the European Community, today's EU." }
+    },
+    {
+        "id": 206,
+        "q": "Woran erinnern die sogenannten '{Stolpersteine}' in Deutschland?",
+        "o": ["an berühmte deutsche Politikerinnen und Politiker", "an die Opfer des Nationalsozialismus", "an Verkehrstote", "an bekannte jüdische Musiker"],
+        "a": "an die Opfer des Nationalsozialismus",
+        "t": {
+            "Stolpersteine": "stumbling stones"
+        },
+        "en": "What do the so-called 'Stolpersteine' (stumbling stones) in Germany commemorate?",
+        "o_en": ["famous German politicians", "the victims of National Socialism", "traffic fatalities", "famous Jewish musicians"],
+        "expl": { "de": "'Stolpersteine' sind kleine Gedenktafeln im Bürgersteig vor den letzten frei gewählten Wohnhäusern von Opfern des Nationalsozialismus.", "en": "'Stolpersteine' are small commemorative plaques in the pavement in front of the last voluntarily chosen homes of victims of National Socialism." }
+    },
+    {
+        "id": 207,
+        "q": "In welchem {Militärbündnis} war die DDR Mitglied?",
+        "o": ["in der NATO", "im Rheinbund", "im Warschauer Pakt", "im Europabündnis"],
+        "a": "im Warschauer Pakt",
+        "t": {
+            "Militärbündnis": "military alliance"
+        },
+        "en": "In which military alliance was the GDR a member?",
+        "o_en": ["in NATO", "in the Confederation of the Rhine", "in the Warsaw Pact", "in the European Alliance"],
+        "expl": { "de": "Die DDR war als Teil des Ostblocks Mitglied im Warschauer Pakt, dem Gegenstück zur NATO während des Kalten Krieges.", "en": "As part of the Eastern Bloc, the GDR was a member of the Warsaw Pact, the counterpart to NATO during the Cold War." }
+    },
+    {
+        "id": 208,
+        "q": "Was war die '{Stasi}'?",
+        "o": ["der Geheimdienst im \"Dritten Reich\"", "eine berühmte deutsche Gedenkstätte", "der Geheimdienst der DDR", "ein deutscher Sportverein während des Zweiten Weltkrieges"],
+        "a": "der Geheimdienst der DDR",
+        "t": {
+            "Stasi": "Stasi (State Security Service)"
+        },
+        "en": "What was the 'Stasi'?",
+        "o_en": ["the secret service in the 'Third Reich'", "a famous German memorial", "the secret service of the GDR", "a German sports club during the Second World War"],
+        "expl": { "de": "Die 'Stasi' war der allgegenwärtige und repressive Staatssicherheitsdienst der DDR.", "en": "The 'Stasi' was the omnipresent and repressive State Security Service of the GDR." }
+    },
+    {
+        "id": 209,
+        "q": "Welches war das Wappen der Deutschen Demokratischen Republik?",
+        "isImage": true,
+        "o": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
+        "a": "Bild 4",
+        "en": "Which was the coat of arms of the German Democratic Republic?",
+        "o_en": ["Image 1", "Image 2", "Image 3", "Image 4"],
+        "expl": { "de": "Das Wappen der DDR (Bild 4) zeigte Hammer (Symbol für die Arbeiter), Zirkel (Symbol für die Intelligenz) und Ährenkranz (Symbol für die Bauern).", "en": "The coat of arms of the GDR (Image 4) showed a hammer (symbol for the workers), a compass (symbol for the intelligentsia), and a wreath of grain (symbol for the farmers)." }
+    },
+    {
+        "id": 210,
+        "q": "Was ereignete sich am 17. Juni 1953 in der DDR?",
+        "o": ["der feierliche Beitritt zum Warschauer Pakt", "landesweite Streiks und ein Volksaufstand", "der 1. SED-Parteitag", "der erste Besuch Fidel Castros"],
+        "a": "landesweite Streiks und ein Volksaufstand",
+        "en": "What happened on June 17, 1953, in the GDR?",
+        "o_en": ["the formal accession to the Warsaw Pact", "nationwide strikes and a popular uprising", "the 1st SED party congress", "the first visit of Fidel Castro"],
+        "expl": { "de": "Am 17. Juni 1953 kam es in der DDR zu einem Volksaufstand gegen die Regierung, der von sowjetischen Panzern niedergeschlagen wurde.", "en": "On June 17, 1953, a popular uprising against the government took place in the GDR, which was suppressed by Soviet tanks." }
+    }
+  ]
+}

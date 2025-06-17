@@ -1,0 +1,352 @@
+{
+  "general": [
+    {
+        "id": 31,
+        "q": "Die {Zusammenarbeit} von Parteien zur Bildung einer Regierung nennt man in Deutschland ...",
+        "o": ["Einheit.", "Koalition.", "Ministerium.", "Fraktion."],
+        "a": "Koalition.",
+        "t": {
+            "Zusammenarbeit": "cooperation / collaboration"
+        },
+        "en": "The cooperation of parties to form a government in Germany is called...",
+        "o_en": ["Unity.", "Coalition.", "Ministry.", "Parliamentary group."],
+        "expl": { "de": "Wenn keine Partei die absolute Mehrheit hat, müssen mehrere Parteien zusammenarbeiten, um eine Regierung zu bilden. Diese Zusammenarbeit wird Koalition genannt.", "en": "When no single party has an absolute majority, several parties must work together to form a government. This cooperation is called a coalition." }
+    },
+    {
+        "id": 32,
+        "q": "Was ist keine staatliche {Gewalt} in Deutschland?",
+        "o": ["Gesetzgebung", "Regierung", "Presse", "Rechtsprechung"],
+        "a": "Presse",
+        "t": {
+            "Gewalt": "power (in the context of state power)"
+        },
+        "en": "What is not a state power in Germany?",
+        "o_en": ["Legislation", "Government", "Press", "Jurisdiction"],
+        "expl": { "de": "Die Staatsgewalt teilt sich in Legislative (Gesetzgebung), Exekutive (Regierung) und Judikative (Rechtsprechung). Die Presse ist unabhängig und wird als 'vierte Gewalt' bezeichnet, ist aber keine staatliche Gewalt.", "en": "State power is divided into the legislative, executive (government), and judicial branches. The press is independent and is often called the 'fourth estate,' but it is not a state power." }
+    },
+    {
+        "id": 33,
+        "q": "Welche Aussage ist richtig? In Deutschland sind Staat und {Religionsgemeinschaften} voneinander {getrennt}.",
+        "o": ["sind Staat und Religionsgemeinschaften voneinander getrennt.", "bilden die Religionsgemeinschaften den Staat.", "ist der Staat abhängig von den Religionsgemeinschaften.", "bilden Staat und Religionsgemeinschaften eine Einheit."],
+        "a": "sind Staat und Religionsgemeinschaften voneinander getrennt.",
+        "t": {
+            "Religionsgemeinschaften": "religious communities",
+            "getrennt": "separate"
+        },
+        "en": "Which statement is correct? In Germany...",
+        "o_en": ["state and religious communities are separate from each other.", "the religious communities form the state.", "the state is dependent on the religious communities.", "state and religious communities form a unit."],
+        "expl": { "de": "In Deutschland gilt das Prinzip der Trennung von Staat und Kirche. Der Staat ist weltanschaulich neutral, kooperiert aber in bestimmten Bereichen (z.B. Religionsunterricht) mit den Religionsgemeinschaften.", "en": "In Germany, the principle of separation of church and state applies. The state is ideologically neutral but cooperates with religious communities in certain areas (e.g., religious education)." }
+    },
+    {
+        "id": 34,
+        "q": "Was ist Deutschland nicht?",
+        "o": ["eine Demokratie", "ein Rechtsstaat", "eine Monarchie", "ein Sozialstaat"],
+        "a": "eine Monarchie",
+        "en": "What is Germany not?",
+        "o_en": ["a democracy", "a state under the rule of law", "a monarchy", "a social welfare state"],
+        "expl": { "de": "Deutschland ist eine Republik, keine Monarchie. Das bedeutet, das Staatsoberhaupt wird gewählt und der Titel ist nicht erblich.", "en": "Germany is a republic, not a monarchy. This means the head of state is elected and the title is not hereditary." }
+    },
+    {
+        "id": 35,
+        "q": "Womit {finanziert} der deutsche Staat die {Sozialversicherung}?",
+        "o": ["Kirchensteuer", "Sozialabgaben", "Spendengeldern", "Vereinsbeiträgen"],
+        "a": "Sozialabgaben",
+        "t": {
+            "finanziert": "finances",
+            "Sozialversicherung": "social insurance"
+        },
+        "en": "How does the German state finance social insurance?",
+        "o_en": ["Church tax", "Social security contributions", "Donations", "Club membership fees"],
+        "expl": { "de": "Die Sozialversicherungen (Rente, Kranken, Pflege, Arbeitslosen) werden hauptsächlich durch die Sozialabgaben von Arbeitgebern und Arbeitnehmern finanziert.", "en": "The social insurance systems (pension, health, long-term care, unemployment) are primarily financed by social security contributions from employers and employees." }
+    },
+    {
+        "id": 36,
+        "q": "Welche {Maßnahme} schafft in Deutschland soziale {Sicherheit}?",
+        "o": ["die Krankenversicherung", "die Autoversicherung", "die Gebäudeversicherung", "die Haftpflichtversicherung"],
+        "a": "die Krankenversicherung",
+        "t": {
+            "Maßnahme": "measure",
+            "Sicherheit": "security"
+        },
+        "en": "Which measure provides social security in Germany?",
+        "o_en": ["health insurance", "car insurance", "building insurance", "liability insurance"],
+        "expl": { "de": "Die gesetzliche Krankenversicherung ist ein zentraler Bestandteil des sozialen Sicherungssystems und schützt im Krankheitsfall vor hohen Kosten.", "en": "Statutory health insurance is a central component of the social security system, protecting against high costs in the event of illness." }
+    },
+    {
+        "id": 37,
+        "q": "Wie werden die {Regierungschefinnen/Regierungschefs} der meisten Bundesländer in Deutschland genannt?",
+        "o": ["Erste Ministerin/Erster Minister", "Premierministerin/Premierminister", "Senatorin/Senator", "Ministerpräsidentin/Ministerpräsident"],
+        "a": "Ministerpräsidentin/Ministerpräsident",
+        "t": {
+            "Regierungschefinnen/Regierungschefs": "heads of government"
+        },
+        "en": "What are the heads of government of most federal states in Germany called?",
+        "o_en": ["First Minister", "Prime Minister", "Senator", "Minister-President"],
+        "expl": { "de": "Der Regierungschef eines deutschen Bundeslandes (außer den Stadtstaaten) wird Ministerpräsident genannt.", "en": "The head of government of a German federal state (except for the city-states) is called the Minister-President." }
+    },
+    {
+        "id": 38,
+        "q": "Die Bundesrepublik Deutschland ist ein demokratischer und sozialer ...",
+        "o": ["Staatenverbund.", "Bundesstaat.", "Staatenbund.", "Zentralstaat."],
+        "a": "Bundesstaat.",
+        "en": "The Federal Republic of Germany is a democratic and social...",
+        "o_en": ["confederation of states.", "federal state.", "confederation.", "centralized state."],
+        "expl": { "de": "Die Bundesrepublik ist ein Bundesstaat, was bedeutet, dass die politische Macht zwischen dem Zentralstaat (Bund) und den Gliedstaaten (Ländern) aufgeteilt ist.", "en": "The Federal Republic is a federal state, which means that political power is divided between the central government (Federation) and the member states (Länder)." }
+    },
+    {
+        "id": 39,
+        "q": "Was hat jedes deutsche {Bundesland}?",
+        "o": ["eine eigene Außenministerin/einen eigenen Außenminister", "eine eigene Währung", "eine eigene Armee", "eine eigene Regierung"],
+        "a": "eine eigene Regierung",
+        "t": {
+            "Bundesland": "federal state"
+        },
+        "en": "What does every German federal state have?",
+        "o_en": ["its own foreign minister", "its own currency", "its own army", "its own government"],
+        "expl": { "de": "Jedes der 16 Bundesländer hat eine eigene Landesregierung, ein eigenes Parlament (Landtag) und eine eigene Verfassung.", "en": "Each of the 16 federal states has its own state government, its own parliament (Landtag), and its own constitution." }
+    },
+    {
+        "id": 40,
+        "q": "Mit welchen Worten beginnt die deutsche {Nationalhymne}?",
+        "o": ["Völker, hört die Signale", "Einigkeit und Recht und Freiheit ...", "Freude schöner Götterfunken ...", "Deutschland einig Vaterland..."],
+        "a": "Einigkeit und Recht und Freiheit ...",
+        "t": {
+            "Nationalhymne": "national anthem"
+        },
+        "en": "With which words does the German national anthem begin?",
+        "o_en": ["Peoples, hear the signals", "Unity and Justice and Freedom...", "Joy, beautiful spark of divinity...", "Germany, united fatherland..."],
+        "expl": { "de": "Die Nationalhymne der Bundesrepublik Deutschland ist die dritte Strophe des 'Liedes der Deutschen', die mit den Worten 'Einigkeit und Recht und Freiheit' beginnt.", "en": "The national anthem of the Federal Republic of Germany is the third stanza of the 'Lied der Deutschen', which begins with the words 'Einigkeit und Recht und Freiheit' (Unity and Justice and Freedom)." }
+    },
+    {
+        "id": 41,
+        "q": "Warum gibt es in einer {Demokratie} mehr als eine Partei?",
+        "o": ["weil dadurch die unterschiedlichen Meinungen der Bürgerinnen und Bürger vertreten werden", "damit Bestechung in der Politik begrenzt wird", "um politische Demonstrationen zu verhindern", "um wirtschaftlichen Wettbewerb anzuregen"],
+        "a": "weil dadurch die unterschiedlichen Meinungen der Bürgerinnen und Bürger vertreten werden",
+        "t": {
+            "Demokratie": "democracy"
+        },
+        "en": "Why is there more than one party in a democracy?",
+        "o_en": ["because it allows the different opinions of the citizens to be represented", "so that bribery in politics is limited", "to prevent political demonstrations", "to stimulate economic competition"],
+        "expl": { "de": "Der Pluralismus, also die Vielfalt von Meinungen und Interessen, ist ein Kernmerkmal der Demokratie. Verschiedene Parteien repräsentieren diese Vielfalt.", "en": "Pluralism, meaning the diversity of opinions and interests, is a core feature of democracy. Different parties represent this diversity." }
+    },
+    {
+        "id": 42,
+        "q": "Wer {beschließt} in Deutschland ein neues {Gesetz}?",
+        "o": ["die Regierung", "das Parlament", "die Gerichte", "die Polizei"],
+        "a": "das Parlament",
+        "t": {
+            "beschließt": "passes / decides on",
+            "Gesetz": "law"
+        },
+        "en": "Who passes a new law in Germany?",
+        "o_en": ["the government", "the parliament", "the courts", "the police"],
+        "expl": { "de": "Die gesetzgebende Gewalt (Legislative) liegt beim Parlament. In Deutschland sind das der Bundestag und der Bundesrat.", "en": "The legislative power lies with the parliament. In Germany, this is the Bundestag and the Bundesrat." }
+    },
+    {
+        "id": 43,
+        "q": "Wann kann in Deutschland eine Partei {verboten} werden?",
+        "o": ["wenn ihr Wahlkampf zu teuer ist", "wenn sie gegen die Verfassung kämpft", "wenn sie Kritik am Staatsoberhaupt äußert", "wenn ihr Programm eine neue Richtung vorschlägt"],
+        "a": "wenn sie gegen die Verfassung kämpft",
+        "t": {
+            "verboten": "banned / forbidden"
+        },
+        "en": "When can a party be banned in Germany?",
+        "o_en": ["if its election campaign is too expensive", "if it fights against the constitution", "if it expresses criticism of the head of state", "if its program proposes a new direction"],
+        "expl": { "de": "Eine Partei kann nur vom Bundesverfassungsgericht verboten werden, wenn sie aktiv und kämpferisch die freiheitlich-demokratische Grundordnung beseitigen will.", "en": "A party can only be banned by the Federal Constitutional Court if it actively and aggressively seeks to eliminate the free democratic basic order." }
+    },
+    {
+        "id": 44,
+        "q": "Wen kann man als Bürgerin/Bürger in Deutschland nicht {direkt} wählen?",
+        "o": ["Abgeordnete des EU-Parlaments", "Die Bundespräsidentin/den Bundespräsidenten", "Landtagsabgeordnete", "Bundestagsabgeordnete"],
+        "a": "Die Bundespräsidentin/den Bundespräsidenten",
+        "t": {
+            "direkt": "directly"
+        },
+        "en": "Who can a citizen in Germany not elect directly?",
+        "o_en": ["Members of the EU Parliament", "The Federal President", "Members of the state parliament", "Members of the Bundestag"],
+        "expl": { "de": "Der Bundespräsident wird nicht direkt vom Volk, sondern von der Bundesversammlung gewählt. Die anderen genannten Abgeordneten werden direkt gewählt.", "en": "The Federal President is not elected directly by the people, but by the Federal Convention (Bundesversammlung). The other mentioned representatives are directly elected." }
+    },
+    {
+        "id": 45,
+        "q": "Zu welcher Versicherung gehört die {Pflegeversicherung}?",
+        "o": ["Sozialversicherung", "Unfallversicherung", "Hausratsversicherung", "Haftpflicht- und Feuerversicherung"],
+        "a": "Sozialversicherung",
+        "t": {
+            "Pflegeversicherung": "long-term care insurance"
+        },
+        "en": "To which insurance does the long-term care insurance belong?",
+        "o_en": ["Social insurance", "Accident insurance", "Household contents insurance", "Liability and fire insurance"],
+        "expl": { "de": "Die Pflegeversicherung ist eine der fünf Säulen der gesetzlichen Sozialversicherung in Deutschland.", "en": "Long-term care insurance is one of the five pillars of the statutory social insurance system in Germany." }
+    },
+    {
+        "id": 46,
+        "q": "Der deutsche Staat hat viele {Aufgaben}. Welche Aufgabe gehört dazu?",
+        "o": ["Er baut Straßen und Schulen.", "Er verkauft Lebensmittel und Kleidung.", "Er versorgt alle Einwohnerinnen und Einwohner kostenlos mit Zeitungen.", "Er produziert Autos und Busse."],
+        "a": "Er baut Straßen und Schulen.",
+        "t": {
+            "Aufgaben": "tasks"
+        },
+        "en": "The German state has many tasks. Which task is one of them?",
+        "o_en": ["It builds roads and schools.", "It sells food and clothing.", "It provides all inhabitants with free newspapers.", "It produces cars and buses."],
+        "expl": { "de": "Der Staat ist für die öffentliche Infrastruktur verantwortlich, wozu unter anderem der Bau und Unterhalt von Straßen und Schulen gehört.", "en": "The state is responsible for public infrastructure, which includes the construction and maintenance of roads and schools, among other things." }
+    },
+    {
+        "id": 47,
+        "q": "Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört nicht dazu?",
+        "o": ["Er bezahlt für alle Staatsangehörigen Urlaubsreisen.", "Er zahlt Kindergeld.", "Er unterstützt Museen.", "Er fördert Sportlerinnen und Sportler."],
+        "a": "Er bezahlt für alle Staatsangehörigen Urlaubsreisen.",
+        "en": "The German state has many tasks. Which task is not one of them?",
+        "o_en": ["It pays for vacation trips for all citizens.", "It pays child benefit.", "It supports museums.", "It promotes athletes."],
+        "expl": { "de": "Die Finanzierung von privaten Urlaubsreisen gehört nicht zu den Aufgaben des deutschen Staates. Die anderen genannten Punkte sind Beispiele staatlicher Leistungen oder Förderungen.", "en": "Financing private vacation trips is not one of the tasks of the German state. The other points mentioned are examples of state benefits or subsidies." }
+    },
+    {
+        "id": 48,
+        "q": "Welches Organ gehört nicht zu den {Verfassungsorganen} Deutschlands?",
+        "o": ["der Bundesrat", "die Bundespräsidentin/der Bundespräsident", "die Bürgerversammlung", "die Regierung"],
+        "a": "die Bürgerversammlung",
+        "t": {
+            "Verfassungsorganen": "constitutional bodies"
+        },
+        "en": "Which body is not one of Germany's constitutional bodies?",
+        "o_en": ["the Bundesrat", "the Federal President", "the citizens' assembly", "the government"],
+        "expl": { "de": "Die Verfassungsorgane sind Bundestag, Bundesrat, Bundespräsident, Bundesregierung und Bundesverfassungsgericht. Eine Bürgerversammlung ist kein ständiges Verfassungsorgan.", "en": "The constitutional bodies are the Bundestag, Bundesrat, Federal President, Federal Government, and Federal Constitutional Court. A citizens' assembly is not a permanent constitutional body." }
+    },
+    {
+        "id": 49,
+        "q": "Wer bestimmt in Deutschland die {Schulpolitik}?",
+        "o": ["die Lehrer und Lehrerinnen", "die Bundesländer", "das Familienministerium", "die Universitäten"],
+        "a": "die Bundesländer",
+        "t": {
+            "Schulpolitik": "school policy"
+        },
+        "en": "Who determines school policy in Germany?",
+        "o_en": ["the teachers", "the federal states", "the Ministry of Family Affairs", "the universities"],
+        "expl": { "de": "Bildungspolitik ist in Deutschland Ländersache. Man spricht hier von 'Kulturhoheit der Länder'.", "en": "In Germany, education policy is a matter for the federal states. This is referred to as 'cultural sovereignty of the states'." }
+    },
+    {
+        "id": 50,
+        "q": "Die {Wirtschaftsform} in Deutschland nennt man ...",
+        "o": ["freie Zentralwirtschaft.", "soziale Marktwirtschaft.", "gelenkte Zentralwirtschaft.", "Planwirtschaft."],
+        "a": "soziale Marktwirtschaft.",
+        "t": {
+            "Wirtschaftsform": "economic system"
+        },
+        "en": "The economic system in Germany is called...",
+        "o_en": ["free central economy.", "social market economy.", "managed central economy.", "planned economy."],
+        "expl": { "de": "Die Wirtschaftsordnung in Deutschland ist die soziale Marktwirtschaft. Sie verbindet das Prinzip der Marktfreiheit mit dem Prinzip des sozialen Ausgleichs.", "en": "The economic order in Germany is the social market economy. It combines the principle of market freedom with the principle of social balance." }
+    },
+    {
+        "id": 51,
+        "q": "Zu einem demokratischen Rechtsstaat gehört es nicht, dass Menschen von einer {Privatpolizei} ohne Grund {verhaftet} werden.",
+        "o": ["Menschen sich kritisch über die Regierung äußern können.", "Bürger friedlich demonstrieren gehen dürfen.", "Menschen von einer Privatpolizei ohne Grund verhaftet werden.", "jemand ein Verbrechen begeht und deshalb verhaftet wird."],
+        "a": "Menschen von einer Privatpolizei ohne Grund verhaftet werden.",
+        "t": {
+            "Privatpolizei": "private police force",
+            "verhaftet": "arrested"
+        },
+        "en": "It is not part of a democratic state under the rule of law that...",
+        "o_en": ["people can express criticism of the government.", "citizens are allowed to demonstrate peacefully.", "people are arrested by a private police force for no reason.", "someone commits a crime and is therefore arrested."],
+        "expl": { "de": "In einem Rechtsstaat liegt das Gewaltmonopol beim Staat. Verhaftungen dürfen nur durch staatliche Organe (Polizei) auf gesetzlicher Grundlage erfolgen.", "en": "In a state governed by the rule of law, the state has the monopoly on the use of force. Arrests may only be carried out by state bodies (police) on a legal basis." }
+    },
+    {
+        "id": 52,
+        "q": "Was bedeutet '{Volkssouveränität}'? Alle Staatsgewalt geht vom ...",
+        "o": ["Volke aus.", "Bundestag aus.", "preußischen König aus.", "Bundesverfassungsgericht aus."],
+        "a": "Volke aus.",
+        "t": {
+            "Volkssouveränität": "popular sovereignty"
+        },
+        "en": "What does 'popular sovereignty' mean? All state power emanates from",
+        "o_en": ["the people.", "the Bundestag.", "the Prussian king.", "the Federal Constitutional Court."],
+        "expl": { "de": "Volkssouveränität ist das Prinzip, dass die oberste Gewalt im Staat vom Volk ausgeht. Dies wird in Deutschland durch Wahlen und Abstimmungen umgesetzt.", "en": "Popular sovereignty is the principle that the supreme power in the state emanates from the people. In Germany, this is implemented through elections and referendums." }
+    },
+    {
+        "id": 53,
+        "q": "Was bedeutet '{Rechtsstaat}' in Deutschland?",
+        "o": ["Der Staat hat Recht.", "Es gibt nur rechte Parteien.", "Die Bürgerinnen und Bürger entscheiden über Gesetze.", "Der Staat muss die Gesetze einhalten."],
+        "a": "Der Staat muss die Gesetze einhalten.",
+        "t": {
+            "Rechtsstaat": "rule of law"
+        },
+        "en": "What does 'rule of law' mean in Germany?",
+        "o_en": ["The state is right.", "There are only right-wing parties.", "The citizens decide on laws.", "The state must comply with the laws."],
+        "expl": { "de": "Das Prinzip des Rechtsstaats bedeutet, dass nicht nur die Bürger, sondern auch der Staat selbst an Recht und Gesetz gebunden ist.", "en": "The principle of the rule of law means that not only the citizens but also the state itself is bound by law and justice." }
+    },
+    {
+        "id": 54,
+        "q": "Was ist keine staatliche Gewalt in Deutschland?",
+        "o": ["Legislative", "Judikative", "Exekutive", "Direktive"],
+        "a": "Direktive",
+        "en": "What is not a state power in Germany?",
+        "o_en": ["Legislative", "Judicial", "Executive", "Directive"],
+        "expl": { "de": "Die drei staatlichen Gewalten sind Legislative (gesetzgebende), Judikative (rechtsprechende) und Exekutive (vollziehende). 'Direktive' ist kein solcher Begriff.", "en": "The three state powers are legislative, judicial, and executive. 'Directive' is not such a term." }
+    },
+    {
+        "id": 55,
+        "q": "Was zeigt dieses Bild?",
+        "isImage": true,
+        "o": ["den Bundestagssitz in Berlin", "das Bundesverfassungsgericht in Karlsruhe", "das Bundesratsgebäude in Berlin", "das Bundeskanzleramt in Berlin"],
+        "a": "den Bundestagssitz in Berlin",
+        "en": "What does this picture show?",
+        "o_en": ["the seat of the Bundestag in Berlin", "the Federal Constitutional Court in Karlsruhe", "the Bundesrat building in Berlin", "the Federal Chancellery in Berlin"],
+        "expl": { "de": "Das Bild zeigt das Reichstagsgebäude in Berlin, den Sitz des Deutschen Bundestages.", "en": "The picture shows the Reichstag building in Berlin, the seat of the German Bundestag." }
+    },
+    {
+        "id": 56,
+        "q": "Welches Amt gehört in Deutschland zur {Gemeindeverwaltung}?",
+        "o": ["Pfarramt", "Ordnungsamt", "Finanzamt", "Auswärtiges Amt"],
+        "a": "Ordnungsamt",
+        "t": {
+            "Gemeindeverwaltung": "municipal administration"
+        },
+        "en": "Which office in Germany belongs to the municipal administration?",
+        "o_en": ["Parish office", "Public order office", "Tax office", "Foreign office"],
+        "expl": { "de": "Das Ordnungsamt ist eine kommunale Behörde, die für die Aufrechterhaltung der öffentlichen Sicherheit und Ordnung zuständig ist.", "en": "The public order office (Ordnungsamt) is a municipal authority responsible for maintaining public safety and order." }
+    },
+    {
+        "id": 57,
+        "q": "Wer wird meistens zur Präsidentin/zum Präsidenten des Deutschen Bundestages {gewählt}?",
+        "o": ["die/der älteste Abgeordnete im Parlament", "die Ministerpräsidentin/der Ministerpräsident des größten Bundeslandes", "eine ehemalige Bundeskanzlerin/ein ehemaliger Bundeskanzler", "eine Abgeordnete/ein Abgeordneter der stärksten Fraktion"],
+        "a": "eine Abgeordnete/ein Abgeordneter der stärksten Fraktion",
+        "t": {
+            "gewählt": "elected"
+        },
+        "en": "Who is usually elected as the President of the German Bundestag?",
+        "o_en": ["the oldest member of parliament", "the minister-president of the largest federal state", "a former chancellor", "a member of the strongest parliamentary group"],
+        "expl": { "de": "Traditionell stellt die stärkste Fraktion (Partei) im Bundestag den Bundestagspräsidenten oder die Bundestagspräsidentin.", "en": "Traditionally, the strongest parliamentary group (party) in the Bundestag provides the President of the Bundestag." }
+    },
+    {
+        "id": 58,
+        "q": "Wer {ernennt} in Deutschland die Ministerinnen/die Minister der Bundesregierung?",
+        "o": ["die Präsidentin/der Präsident des Bundesverfassungsgerichtes", "die Bundespräsidentin/der Bundespräsident", "die Bundesratspräsidentin/der Bundesratspräsident", "die Bundestagspräsidentin/der Bundestagspräsident"],
+        "a": "die Bundespräsidentin/der Bundespräsident",
+        "t": {
+            "ernennt": "appoints"
+        },
+        "en": "Who appoints the ministers of the federal government in Germany?",
+        "o_en": ["the President of the Federal Constitutional Court", "the Federal President", "the President of the Bundesrat", "the President of the Bundestag"],
+        "expl": { "de": "Die Bundesminister werden auf Vorschlag der Bundeskanzlerin/des Bundeskanzlers von der Bundespräsidentin/dem Bundespräsidenten ernannt.", "en": "The federal ministers are appointed by the Federal President upon the proposal of the Federal Chancellor." }
+    },
+    {
+        "id": 59,
+        "q": "Vor wie vielen Jahren gab es erstmals eine {jüdische} Gemeinde auf dem Gebiet des heutigen Deutschlands?",
+        "o": ["vor etwa 300 Jahren", "vor etwa 700 Jahren", "vor etwa 1150 Jahren", "vor etwa 1700 Jahren"],
+        "a": "vor etwa 1700 Jahren",
+        "t": {
+            "jüdische": "Jewish"
+        },
+        "en": "How many years ago did the first Jewish community exist on the territory of present-day Germany?",
+        "o_en": ["about 300 years ago", "about 700 years ago", "about 1150 years ago", "about 1700 years ago"],
+        "expl": { "de": "Die jüdische Geschichte in Deutschland reicht bis in die Spätantike zurück. Ein Dekret von Kaiser Konstantin aus dem Jahr 321 n. Chr. belegt eine jüdische Gemeinde in Köln.", "en": "Jewish history in Germany dates back to late antiquity. A decree by Emperor Constantine from 321 AD proves the existence of a Jewish community in Cologne." }
+    },
+    {
+        "id": 60,
+        "q": "In Deutschland gehören der Bundestag und der Bundesrat zur ...",
+        "o": ["Exekutive.", "Legislative.", "Direktive.", "Judikative."],
+        "a": "Legislative.",
+        "en": "In Germany, the Bundestag and the Bundesrat belong to the...",
+        "o_en": ["Executive.", "Legislative.", "Directive.", "Judicial."],
+        "expl": { "de": "Bundestag und Bundesrat sind die gesetzgebenden Körperschaften des Bundes und bilden somit die Legislative (gesetzgebende Gewalt).", "en": "The Bundestag and the Bundesrat are the legislative bodies of the federation and thus form the legislative branch." }
+    }
+  ]
+}

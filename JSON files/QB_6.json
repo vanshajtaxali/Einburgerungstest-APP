@@ -1,0 +1,346 @@
+{
+  "general": [
+    {
+        "id": 151,
+        "q": "Wer baute die {Mauer} in Berlin?",
+        "o": ["Großbritannien", "die DDR", "die Bundesrepublik Deutschland", "die USA"],
+        "a": "die DDR",
+        "t": {
+            "Mauer": "Wall"
+        },
+        "en": "Who built the Wall in Berlin?",
+        "o_en": ["Great Britain", "the GDR", "the Federal Republic of Germany", "the USA"],
+        "expl": { "de": "Die Mauer wurde 1961 auf Anordnung der Führung der DDR (Deutsche Demokratische Republik) gebaut, um die Flucht von Ost- nach West-Berlin zu verhindern.", "en": "The Wall was built in 1961 on the orders of the leadership of the GDR (German Democratic Republic) to prevent escapes from East to West Berlin." }
+    },
+    {
+        "id": 152,
+        "q": "Wann waren die {Nationalsozialisten} mit Adolf Hitler in Deutschland an der {Macht}?",
+        "o": ["1918 bis 1923", "1932 bis 1950", "1933 bis 1945", "1945 bis 1989"],
+        "a": "1933 bis 1945",
+        "t": {
+            "Nationalsozialisten": "National Socialists",
+            "Macht": "power"
+        },
+        "en": "When were the National Socialists with Adolf Hitler in power in Germany?",
+        "o_en": ["1918 to 1923", "1932 to 1950", "1933 to 1945", "1945 to 1989"],
+        "expl": { "de": "Die Zeit der nationalsozialistischen Diktatur in Deutschland dauerte von der Machtergreifung Hitlers am 30. Januar 1933 bis zum Ende des Zweiten Weltkriegs am 8. Mai 1945.", "en": "The period of the National Socialist dictatorship in Germany lasted from Hitler's seizure of power on January 30, 1933, until the end of World War II on May 8, 1945." }
+    },
+    {
+        "id": 153,
+        "q": "Was war am 8. Mai 1945?",
+        "o": ["Tod Adolf Hitlers", "Beginn des Berliner Mauerbaus", "Wahl von Konrad Adenauer zum Bundeskanzler", "Ende des Zweiten Weltkriegs in Europa"],
+        "a": "Ende des Zweiten Weltkriegs in Europa",
+        "en": "What happened on May 8, 1945?",
+        "o_en": ["Death of Adolf Hitler", "Beginning of the construction of the Berlin Wall", "Election of Konrad Adenauer as Federal Chancellor", "End of the Second World War in Europe"],
+        "expl": { "de": "Am 8. Mai 1945 unterzeichnete die deutsche Wehrmacht die bedingungslose Kapitulation, was das Ende des Zweiten Weltkriegs in Europa markierte.", "en": "On May 8, 1945, the German Wehrmacht signed the unconditional surrender, which marked the end of the Second World War in Europe." }
+    },
+    {
+        "id": 154,
+        "q": "Wann war der {Zweite Weltkrieg} zu Ende?",
+        "o": ["1933", "1945", "1949", "1961"],
+        "a": "1945",
+        "t": {
+            "Zweite Weltkrieg": "Second World War"
+        },
+        "en": "When did the Second World War end?",
+        "o_en": ["1933", "1945", "1949", "1961"],
+        "expl": { "de": "Der Zweite Weltkrieg endete 1945 mit der Kapitulation Deutschlands im Mai und der Kapitulation Japans im September.", "en": "The Second World War ended in 1945 with the surrender of Germany in May and the surrender of Japan in September." }
+    },
+    {
+        "id": 155,
+        "q": "Wann waren die Nationalsozialisten in Deutschland an der Macht?",
+        "o": ["1888 bis 1918", "1921 bis 1934", "1933 bis 1945", "1949 bis 1963"],
+        "a": "1933 bis 1945",
+        "en": "When were the National Socialists in power in Germany?",
+        "o_en": ["1888 to 1918", "1921 to 1934", "1933 to 1945", "1949 to 1963"]
+    },
+    {
+        "id": 156,
+        "q": "In welchem Jahr wurde Hitler {Reichskanzler}?",
+        "o": ["1923", "1927", "1933", "1936"],
+        "a": "1933",
+        "t": {
+            "Reichskanzler": "Chancellor of the Reich"
+        },
+        "en": "In which year did Hitler become Chancellor of the Reich?",
+        "o_en": ["1923", "1927", "1933", "1936"],
+        "expl": { "de": "Adolf Hitler wurde am 30. Januar 1933 zum Reichskanzler ernannt, was den Beginn der NS-Diktatur markiert.", "en": "Adolf Hitler was appointed Chancellor of the Reich on January 30, 1933, which marks the beginning of the Nazi dictatorship." }
+    },
+    {
+        "id": 157,
+        "q": "Die Nationalsozialisten mit Adolf Hitler {errichteten} 1933 in Deutschland ...",
+        "o": ["eine Diktatur.", "einen demokratischen Staat.", "eine Monarchie.", "ein Fürstentum."],
+        "a": "eine Diktatur.",
+        "t": {
+            "errichteten": "established"
+        },
+        "en": "The National Socialists with Adolf Hitler established in Germany in 1933...",
+        "o_en": ["a dictatorship.", "a democratic state.", "a monarchy.", "a principality."],
+        "expl": { "de": "Nach der Machtergreifung 1933 schafften die Nationalsozialisten die Demokratie ab und errichteten eine totalitäre Diktatur.", "en": "After seizing power in 1933, the National Socialists abolished democracy and established a totalitarian dictatorship." }
+    },
+    {
+        "id": 158,
+        "q": "Das '{Dritte Reich}' war eine ...",
+        "o": ["Diktatur.", "Demokratie.", "Monarchie.", "Räterepublik."],
+        "a": "Diktatur.",
+        "t": {
+            "Dritte Reich": "Third Reich"
+        },
+        "en": "The 'Third Reich' was a...",
+        "o_en": ["Dictatorship.", "Democracy.", "Monarchy.", "Soviet republic."],
+        "expl": { "de": "Das 'Dritte Reich' ist die Selbstbezeichnung des nationalsozialistischen Deutschlands von 1933 bis 1945, das eine Diktatur war.", "en": "The 'Third Reich' is the self-designation of National Socialist Germany from 1933 to 1945, which was a dictatorship." }
+    },
+    {
+        "id": 159,
+        "q": "Was gab es in Deutschland nicht während der Zeit des {Nationalsozialismus}?",
+        "o": ["freie Wahlen", "Pressezensur", "willkürliche Verhaftungen", "Verfolgung von Juden"],
+        "a": "freie Wahlen",
+        "t": {
+            "Nationalsozialismus": "National Socialism"
+        },
+        "en": "What did not exist in Germany during the time of National Socialism?",
+        "o_en": ["free elections", "press censorship", "arbitrary arrests", "persecution of Jews"],
+        "expl": { "de": "In einer Diktatur gibt es keine freien Wahlen. Die anderen drei Punkte waren zentrale Merkmale der NS-Herrschaft.", "en": "In a dictatorship, there are no free elections. The other three points were central features of Nazi rule." }
+    },
+    {
+        "id": 160,
+        "q": "Welcher Krieg dauerte von 1939 bis 1945?",
+        "o": ["der Erste Weltkrieg", "der Zweite Weltkrieg", "der Vietnamkrieg", "der Golfkrieg"],
+        "a": "der Zweite Weltkrieg",
+        "en": "Which war lasted from 1939 to 1945?",
+        "o_en": ["the First World War", "the Second World War", "the Vietnam War", "the Gulf War"],
+        "expl": { "de": "Der Zweite Weltkrieg begann mit dem deutschen Überfall auf Polen am 1. September 1939 und endete 1945.", "en": "The Second World War began with the German invasion of Poland on September 1, 1939, and ended in 1945." }
+    },
+    {
+        "id": 161,
+        "q": "Was kennzeichnete den NS-Staat? Eine Politik des staatlichen {Rassismus}",
+        "o": ["des staatlichen Rassismus", "der Meinungsfreiheit", "der allgemeinen Religionsfreiheit", "der Entwicklung der Demokratie"],
+        "a": "des staatlichen Rassismus",
+        "t": {
+            "Rassismus": "racism"
+        },
+        "en": "What characterized the Nazi state? A policy",
+        "o_en": ["of state racism", "of freedom of speech", "of general freedom of religion", "of the development of democracy"],
+        "expl": { "de": "Die Ideologie des Nationalsozialismus basierte auf einem extremen, staatlich organisierten Rassismus, der zur Verfolgung und Ermordung von Millionen Menschen, insbesondere Juden, führte.", "en": "The ideology of National Socialism was based on extreme, state-organized racism, which led to the persecution and murder of millions of people, especially Jews." }
+    },
+    {
+        "id": 162,
+        "q": "Claus Schenk Graf von Stauffenberg wurde bekannt durch das {Attentat} auf Hitler am 20. Juli 1944.",
+        "o": ["eine Goldmedaille bei den Olympischen Spielen 1936.", "den Bau des Reichstagsgebäudes.", "den Aufbau der Wehrmacht.", "das Attentat auf Hitler am 20. Juli 1944."],
+        "a": "das Attentat auf Hitler am 20. Juli 1944.",
+        "t": {
+            "Attentat": "assassination attempt"
+        },
+        "en": "Claus Schenk Graf von Stauffenberg became famous for...",
+        "o_en": ["a gold medal at the 1936 Olympic Games.", "the construction of the Reichstag building.", "the buildup of the Wehrmacht.", "the assassination attempt on Hitler on July 20, 1944."],
+        "expl": { "de": "Stauffenberg war eine zentrale Figur des militärischen Widerstands und verübte das gescheiterte Bombenattentat auf Adolf Hitler am 20. Juli 1944.", "en": "Stauffenberg was a central figure of the military resistance and carried out the failed bomb attack on Adolf Hitler on July 20, 1944." }
+    },
+    {
+        "id": 163,
+        "q": "In welchem Jahr {zerstörten} die Nationalsozialisten {Synagogen} und jüdische {Geschäfte} in Deutschland?",
+        "o": ["1925", "1930", "1938", "1945"],
+        "a": "1938",
+        "t": {
+            "zerstörten": "destroyed",
+            "Synagogen": "synagogues",
+            "Geschäfte": "businesses"
+        },
+        "en": "In which year did the National Socialists destroy synagogues and Jewish businesses in Germany?",
+        "o_en": ["1925", "1930", "1938", "1945"],
+        "expl": { "de": "Dies geschah während der Novemberpogrome (auch 'Reichskristallnacht' genannt) am 9. November 1938.", "en": "This happened during the November pogroms (also known as 'Kristallnacht' or Night of Broken Glass) on November 9, 1938." }
+    },
+    {
+        "id": 164,
+        "q": "Was passierte am 9. November 1938 in Deutschland?",
+        "o": ["Mit dem Angriff auf Polen beginnt der Zweite Weltkrieg.", "Die Nationalsozialisten verlieren eine Wahl und lösen den Reichstag auf.", "Jüdische Geschäfte und Synagogen werden durch Nationalsozialisten und ihre Anhänger zerstört.", "Hitler wird Reichspräsident und lässt alle Parteien verbieten."],
+        "a": "Jüdische Geschäfte und Synagogen werden durch Nationalsozialisten und ihre Anhänger zerstört.",
+        "en": "What happened on November 9, 1938, in Germany?",
+        "o_en": ["The Second World War begins with the attack on Poland.", "The National Socialists lose an election and dissolve the Reichstag.", "Jewish businesses and synagogues are destroyed by National Socialists and their supporters.", "Hitler becomes Reich President and has all parties banned."],
+        "expl": { "de": "Am 9. November 1938 organisierten die Nationalsozialisten die Novemberpogrome, bei denen jüdisches Eigentum zerstört und Juden misshandelt und ermordet wurden.", "en": "On November 9, 1938, the National Socialists organized the November pogroms, during which Jewish property was destroyed and Jews were abused and murdered." }
+    },
+    {
+        "id": 165,
+        "q": "Wie hieß der erste {Bundeskanzler} der Bundesrepublik Deutschland?",
+        "o": ["Konrad Adenauer", "Kurt Georg Kiesinger", "Helmut Schmidt", "Willy Brandt"],
+        "a": "Konrad Adenauer",
+        "t": {
+            "Bundeskanzler": "Federal Chancellor"
+        },
+        "en": "What was the name of the first Federal Chancellor of the Federal Republic of Germany?",
+        "o_en": ["Konrad Adenauer", "Kurt Georg Kiesinger", "Helmut Schmidt", "Willy Brandt"],
+        "expl": { "de": "Konrad Adenauer (CDU) war von 1949 bis 1963 der erste Bundeskanzler der Bundesrepublik Deutschland.", "en": "Konrad Adenauer (CDU) was the first Federal Chancellor of the Federal Republic of Germany from 1949 to 1963." }
+    },
+    {
+        "id": 166,
+        "q": "Bei welchen {Demonstrationen} in Deutschland riefen die Menschen \"Wir sind das Volk\"?",
+        "o": ["beim Arbeiteraufstand 1953 in der DDR", "bei den Demonstrationen 1968 in der Bundesrepublik Deutschland", "bei den Anti-Atomkraft-Demonstrationen 1985 in der Bundesrepublik Deutschland", "bei den Montagsdemonstrationen 1989 in der DDR"],
+        "a": "bei den Montagsdemonstrationen 1989 in der DDR",
+        "t": {
+            "Demonstrationen": "demonstrations"
+        },
+        "en": "During which demonstrations in Germany did people chant 'We are the people'?",
+        "o_en": ["during the workers' uprising in 1953 in the GDR", "during the demonstrations in 1968 in the Federal Republic of Germany", "during the anti-nuclear power demonstrations in 1985 in the Federal Republic of Germany", "during the Monday demonstrations in 1989 in the GDR"],
+        "expl": { "de": "'Wir sind das Volk' war der zentrale Slogan der Montagsdemonstrationen in der DDR 1989, die zur Friedlichen Revolution und zum Fall der Berliner Mauer führten.", "en": "'We are the people' was the central slogan of the Monday demonstrations in the GDR in 1989, which led to the Peaceful Revolution and the fall of the Berlin Wall." }
+    },
+    {
+        "id": 167,
+        "q": "Welche Länder wurden nach dem Zweiten Weltkrieg in Deutschland als '{Alliierte Besatzungsmächte}' bezeichnet?",
+        "o": ["Sowjetunion, Großbritannien, Polen, Schweden", "Frankreich, Sowjetunion, Italien, Japan", "USA, Sowjetunion, Spanien, Portugal", "USA, Sowjetunion, Großbritannien, Frankreich"],
+        "a": "USA, Sowjetunion, Großbritannien, Frankreich",
+        "t": {
+            "Alliierte Besatzungsmächte": "Allied occupying powers"
+        },
+        "en": "Which countries were referred to as the 'Allied occupying powers' in Germany after the Second World War?",
+        "o_en": ["Soviet Union, Great Britain, Poland, Sweden", "France, Soviet Union, Italy, Japan", "USA, Soviet Union, Spain, Portugal", "USA, Soviet Union, Great Britain, France"],
+        "expl": { "de": "Die vier Siegermächte des Zweiten Weltkriegs, die Deutschland besetzten, waren die USA, die Sowjetunion, Großbritannien und Frankreich.", "en": "The four victorious powers of the Second World War that occupied Germany were the USA, the Soviet Union, Great Britain, and France." }
+    },
+    {
+        "id": 168,
+        "q": "Welches Land war keine '{Alliierte Besatzungsmacht}' in Deutschland?",
+        "o": ["USA", "Sowjetunion", "Frankreich", "Japan"],
+        "a": "Japan",
+        "t": {
+            "Alliierte Besatzungsmacht": "Allied occupying power"
+        },
+        "en": "Which country was not an 'Allied occupying power' in Germany?",
+        "o_en": ["USA", "Soviet Union", "France", "Japan"],
+        "expl": { "de": "Japan war im Zweiten Weltkrieg ein Verbündeter Deutschlands und gehörte nicht zu den Alliierten, die Deutschland nach dem Krieg besetzten.", "en": "Japan was an ally of Germany in World War II and was not among the Allies that occupied Germany after the war." }
+    },
+    {
+        "id": 169,
+        "q": "Wann wurde die {Bundesrepublik Deutschland} gegründet?",
+        "o": ["1939", "1945", "1949", "1951"],
+        "a": "1949",
+        "t": {
+            "Bundesrepublik Deutschland": "Federal Republic of Germany"
+        },
+        "en": "When was the Federal Republic of Germany founded?",
+        "o_en": ["1939", "1945", "1949", "1951"],
+        "expl": { "de": "Die Bundesrepublik Deutschland wurde mit der Verkündung des Grundgesetzes am 23. Mai 1949 gegründet.", "en": "The Federal Republic of Germany was founded with the promulgation of the Basic Law on May 23, 1949." }
+    },
+    {
+        "id": 170,
+        "q": "Was gab es während der Zeit des Nationalsozialismus in Deutschland? das {Verbot} von Parteien",
+        "o": ["das Verbot von Parteien", "das Recht zur freien Entfaltung der Persönlichkeit", "Pressefreiheit", "den Schutz der Menschenwürde"],
+        "a": "das Verbot von Parteien",
+        "t": {
+            "Verbot": "banning"
+        },
+        "en": "What existed in Germany during the time of National Socialism?",
+        "o_en": ["the banning of parties", "the right to free development of personality", "freedom of the press", "the protection of human dignity"],
+        "expl": { "de": "Kurz nach der Machtergreifung verboten die Nationalsozialisten alle anderen politischen Parteien und errichteten einen Einparteienstaat.", "en": "Shortly after seizing power, the National Socialists banned all other political parties and established a one-party state." }
+    },
+    {
+        "id": 171,
+        "q": "Soziale {Marktwirtschaft} bedeutet, die Wirtschaft richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen {Ausgleich}.",
+        "o": ["steuert sich allein nach Angebot und Nachfrage.", "wird vom Staat geplant und gesteuert, Angebot und Nachfrage werden nicht berücksichtigt.", "richtet sich nach der Nachfrage im Ausland.", "richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich."],
+        "a": "richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich.",
+        "t": {
+            "Marktwirtschaft": "market economy",
+            "Ausgleich": "balance / compensation"
+        },
+        "en": "Social market economy means the economy...",
+        "o_en": ["is controlled solely by supply and demand.", "is planned and controlled by the state, supply and demand are not taken into account.", "is based on demand from abroad.", "is based on supply and demand, but the state ensures a social balance."],
+        "expl": { "de": "Die soziale Marktwirtschaft kombiniert die Effizienz des freien Marktes mit staatlichen Eingriffen, um soziale Härten abzufedern und für Gerechtigkeit zu sorgen.", "en": "The social market economy combines the efficiency of the free market with state intervention to cushion social hardship and ensure justice." }
+    },
+    {
+        "id": 172,
+        "q": "In welcher {Besatzungszone} wurde die DDR gegründet? In der ...",
+        "o": ["amerikanischen Besatzungszone", "französischen Besatzungszone", "britischen Besatzungszone", "sowjetischen Besatzungszone"],
+        "a": "sowjetischen Besatzungszone",
+        "t": {
+            "Besatzungszone": "occupation zone"
+        },
+        "en": "In which occupation zone was the GDR founded? In the...",
+        "o_en": ["American occupation zone", "French occupation zone", "British occupation zone", "Soviet occupation zone"],
+        "expl": { "de": "Die Deutsche Demokratische Republik (DDR) wurde 1949 auf dem Gebiet der sowjetischen Besatzungszone gegründet.", "en": "The German Democratic Republic (GDR) was founded in 1949 on the territory of the Soviet occupation zone." }
+    },
+    {
+        "id": 173,
+        "q": "Die Bundesrepublik Deutschland ist ein {Gründungsmitglied} der Europäischen Union (EU).",
+        "o": ["des Nordatlantikpakts (NATO).", "der Vereinten Nationen (VN).", "der Europäischen Union (EU).", "des Warschauer Pakts."],
+        "a": "der Europäischen Union (EU).",
+        "t": {
+            "Gründungsmitglied": "founding member"
+        },
+        "en": "The Federal Republic of Germany is a founding member...",
+        "o_en": ["of the North Atlantic Treaty Organization (NATO).", "of the United Nations (UN).", "of the European Union (EU).", "of the Warsaw Pact."],
+        "expl": { "de": "Deutschland war 1957 eines der sechs Gründungsmitglieder der Europäischen Wirtschaftsgemeinschaft (EWG), der Vorläuferorganisation der heutigen EU.", "en": "In 1957, Germany was one of the six founding members of the European Economic Community (EEC), the predecessor organization of today's EU." }
+    },
+    {
+        "id": 174,
+        "q": "Wann wurde die DDR gegründet?",
+        "o": ["1947", "1949", "1953", "1956"],
+        "a": "1949",
+        "en": "When was the GDR founded?",
+        "o_en": ["1947", "1949", "1953", "1956"],
+        "expl": { "de": "Die Deutsche Demokratische Republik (DDR) wurde am 7. Oktober 1949 gegründet, wenige Monate nach der Gründung der Bundesrepublik Deutschland.", "en": "The German Democratic Republic (GDR) was founded on October 7, 1949, a few months after the founding of the Federal Republic of Germany." }
+    },
+    {
+        "id": 175,
+        "q": "Wie viele Besatzungszonen gab es in Deutschland nach dem Zweiten Weltkrieg?",
+        "o": ["3", "4", "5", "6"],
+        "a": "4",
+        "en": "How many occupation zones were there in Germany after the Second World War?",
+        "o_en": ["3", "4", "5", "6"],
+        "expl": { "de": "Deutschland wurde von den vier Siegermächten USA, Großbritannien, Frankreich und Sowjetunion in vier Besatzungszonen aufgeteilt.", "en": "Germany was divided into four occupation zones by the four victorious powers: the USA, Great Britain, France, and the Soviet Union." }
+    },
+    {
+        "id": 176,
+        "q": "Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt?",
+        "isImage": true,
+        "o": ["1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA", "1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich", "1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich", "1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich"],
+        "a": "1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich",
+        "en": "How were the occupation zones of Germany distributed after 1945?",
+        "o_en": ["1=Great Britain, 2=Soviet Union, 3=France, 4=USA", "1=Soviet Union, 2=Great Britain, 3=USA, 4=France", "1=Great Britain, 2=Soviet Union, 3=USA, 4=France", "1=Great Britain, 2=USA, 3=Soviet Union, 4=France"],
+        "expl": { "de": "Die Karte zeigt die vier Zonen: 1 (Nordwest) war britisch, 2 (Ost) war sowjetisch, 3 (Südwest) war französisch und 4 (Südost) war amerikanisch.", "en": "The map shows the four zones: 1 (northwest) was British, 2 (east) was Soviet, 3 (southwest) was French, and 4 (southeast) was American." }
+    },
+    {
+        "id": 177,
+        "q": "Welche deutsche Stadt wurde nach dem Zweiten Weltkrieg in vier {Sektoren} aufgeteilt?",
+        "o": ["München", "Berlin", "Dresden", "Frankfurt/Oder"],
+        "a": "Berlin",
+        "t": {
+            "Sektoren": "sectors"
+        },
+        "en": "Which German city was divided into four sectors after the Second World War?",
+        "o_en": ["Munich", "Berlin", "Dresden", "Frankfurt/Oder"],
+        "expl": { "de": "Die ehemalige Reichshauptstadt Berlin wurde, obwohl sie komplett in der sowjetischen Zone lag, ebenfalls unter den vier Alliierten in vier Sektoren aufgeteilt.", "en": "The former Reich capital, Berlin, although located entirely within the Soviet zone, was also divided among the four Allies into four sectors." }
+    },
+    {
+        "id": 178,
+        "q": "Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine {Luftbrücke} {versorgt}. Welcher Umstand war dafür verantwortlich?",
+        "o": ["Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.", "Die amerikanischen Soldatinnen und Soldaten hatten beim Landtransport Angst vor Überfällen.", "Für Großbritannien war die Versorgung über die Luftbrücke schneller.", "Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege."],
+        "a": "Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege.",
+        "t": {
+            "Luftbrücke": "airlift",
+            "versorgt": "supplied",
+            "Umstand": "circumstance"
+        },
+        "en": "From June 1948 to May 1949, the citizens of West Berlin were supplied by an airlift. What circumstance was responsible for this?",
+        "o_en": ["For France, supplying the West Berlin population by plane was cheaper.", "The American soldiers were afraid of attacks during land transport.", "For Great Britain, the supply via the airlift was faster.", "The Soviet Union cut off all traffic on the land routes."],
+        "expl": { "de": "Die Berliner Blockade durch die Sowjetunion führte zur Einrichtung der Berliner Luftbrücke durch die Westalliierten, um die Bevölkerung West-Berlins zu versorgen.", "en": "The Berlin Blockade by the Soviet Union led to the establishment of the Berlin Airlift by the Western Allies to supply the population of West Berlin." }
+    },
+    {
+        "id": 179,
+        "q": "Wie endete der Zweite Weltkrieg in Europa offiziell? durch die bedingungslose {Kapitulation} Deutschlands",
+        "o": ["mit dem Tod Adolf Hitlers", "durch die bedingungslose Kapitulation Deutschlands", "mit dem Rückzug der Deutschen aus den besetzten Gebieten", "durch eine Revolution in Deutschland"],
+        "a": "durch die bedingungslose Kapitulation Deutschlands",
+        "t": {
+            "Kapitulation": "surrender"
+        },
+        "en": "How did the Second World War officially end in Europe?",
+        "o_en": ["with the death of Adolf Hitler", "with the unconditional surrender of Germany", "with the withdrawal of the Germans from the occupied territories", "through a revolution in Germany"],
+        "expl": { "de": "Der Krieg in Europa endete mit der Unterzeichnung der bedingungslosen Kapitulation der deutschen Wehrmacht am 8. Mai 1945.", "en": "The war in Europe ended with the signing of the unconditional surrender of the German Wehrmacht on May 8, 1945." }
+    },
+    {
+        "id": 180,
+        "q": "Der erste Bundeskanzler der Bundesrepublik Deutschland war ...",
+        "o": ["Ludwig Erhard.", "Willy Brandt.", "Konrad Adenauer.", "Gerhard Schröder."],
+        "a": "Konrad Adenauer.",
+        "en": "The first Federal Chancellor of the Federal Republic of Germany was...",
+        "o_en": ["Ludwig Erhard.", "Willy Brandt.", "Konrad Adenauer.", "Gerhard Schröder."],
+        "expl": { "de": "Konrad Adenauer war von 1949 bis 1963 der erste Bundeskanzler und prägte die Nachkriegszeit in Westdeutschland maßgeblich.", "en": "Konrad Adenauer was the first Federal Chancellor from 1949 to 1963 and significantly shaped the post-war era in West Germany." }
+    }
+  ]
+}

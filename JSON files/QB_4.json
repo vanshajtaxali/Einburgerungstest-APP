@@ -1,0 +1,341 @@
+{
+  "general": [
+    {
+        "id": 91,
+        "q": "In Deutschland kann ein {Regierungswechsel} in einem Bundesland {Auswirkungen} auf die Bundespolitik haben. Das Regieren wird...",
+        "o": ["schwieriger, wenn sich dadurch die Mehrheit im Bundestag ändert.", "leichter, wenn dadurch neue Parteien in den Bundesrat kommen.", "schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.", "leichter, wenn es sich um ein reiches Bundesland handelt."],
+        "a": "schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.",
+        "t": {
+            "Regierungswechsel": "change of government",
+            "Auswirkungen": "impact / effects"
+        },
+        "en": "In Germany, a change of government in a federal state can have an impact on federal policy. Governing becomes...",
+        "o_en": ["more difficult if it changes the majority in the Bundestag.", "easier if new parties enter the Bundesrat as a result.", "more difficult if the majority in the Bundesrat is changed as a result.", "easier if it is a rich federal state."],
+        "expl": { "de": "Wenn sich durch eine Landtagswahl die Mehrheitsverhältnisse im Bundesrat ändern, kann die Oppositionspartei auf Bundesebene dort eine Mehrheit haben und Bundesgesetze blockieren. Dies erschwert das Regieren für die Bundesregierung.", "en": "If a state election changes the balance of power in the Bundesrat, the opposition party at the federal level can gain a majority there and block federal laws. This makes governing more difficult for the federal government." }
+    },
+    {
+        "id": 92,
+        "q": "Was bedeutet die {Abkürzung} CSU in Deutschland?",
+        "o": ["Christlich Sichere Union", "Christlich Süddeutsche Union", "Christlich Sozialer Unternehmerverband", "Christlich Soziale Union"],
+        "a": "Christlich Soziale Union",
+        "t": {
+            "Abkürzung": "abbreviation"
+        },
+        "en": "What does the abbreviation CSU in Germany?",
+        "o_en": ["Christian Secure Union", "Christian South German Union", "Christian Social Entrepreneurs Association", "Christian Social Union"],
+        "expl": { "de": "CSU steht für Christlich Soziale Union. Sie ist die Schwesterpartei der CDU und tritt nur in Bayern an.", "en": "CSU stands for Christian Social Union. It is the sister party of the CDU and only competes in Bavaria." }
+    },
+    {
+        "id": 93,
+        "q": "Je mehr '{Zweitstimmen}' eine Partei bei einer Bundestagswahl bekommt, desto ...",
+        "o": ["weniger Erststimmen kann sie haben.", "mehr Direktkandidaten der Partei ziehen ins Parlament ein.", "größer ist das Risiko, eine Koalition bilden zu müssen.", "mehr Sitze erhält die Partei im Parlament."],
+        "a": "mehr Sitze erhält die Partei im Parlament.",
+        "t": {
+            "Zweitstimmen": "second votes"
+        },
+        "en": "The more 'second votes' a party gets in a federal election, the...",
+        "o_en": ["fewer first votes it can have.", "more direct candidates from the party enter parliament.", "greater the risk of having to form a coalition.", "more seats the party receives in parliament."],
+        "expl": { "de": "Die Zweitstimme entscheidet über die prozentuale Verteilung der Sitze im Bundestag. Je mehr Zweitstimmen eine Partei erhält, desto mehr Abgeordnete kann sie insgesamt ins Parlament entsenden.", "en": "The second vote determines the percentage distribution of seats in the Bundestag. The more second votes a party receives, the more members it can send to parliament in total." }
+    },
+    {
+        "id": 94,
+        "q": "Ab welchem {Alter} darf man in Deutschland an der Wahl zum Deutschen Bundestag {teilnehmen}?",
+        "o": ["16", "18", "21", "23"],
+        "a": "18",
+        "t": {
+            "Alter": "age",
+            "teilnehmen": "participate"
+        },
+        "en": "At what age are you allowed to participate in the election for the German Bundestag in Germany?",
+        "o_en": ["16", "18", "21", "23"],
+        "expl": { "de": "Das aktive Wahlalter für die Bundestagswahl ist 18 Jahre. Man muss also volljährig sein.", "en": "The active voting age for the federal election is 18. This means you must be of legal adult age." }
+    },
+    {
+        "id": 95,
+        "q": "Was gilt für die meisten Kinder in Deutschland?",
+        "o": ["Wahlpflicht", "Schulpflicht", "Schweigepflicht", "Religionspflicht"],
+        "a": "Schulpflicht",
+        "en": "What applies to most children in Germany?",
+        "o_en": ["Compulsory voting", "Compulsory schooling", "Duty of confidentiality", "Religious duty"],
+        "expl": { "de": "In Deutschland besteht eine allgemeine Schulpflicht. Alle Kinder müssen für eine bestimmte Anzahl von Jahren eine Schule besuchen.", "en": "In Germany, there is compulsory schooling. All children must attend school for a certain number of years." }
+    },
+    {
+        "id": 96,
+        "q": "Wie kann jemand, der den Holocaust {leugnet}, {bestraft} werden?",
+        "o": ["Kürzung sozialer Leistungen", "bis zu 100 Sozialstunden", "gar nicht, Holocaustleugnung ist erlaubt", "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe"],
+        "a": "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe",
+        "t": {
+            "leugnet": "denies",
+            "bestraft": "punished"
+        },
+        "en": "How can someone who denies the Holocaust be punished?",
+        "o_en": ["Reduction of social benefits", "up to 100 hours of community service", "not at all, Holocaust denial is permitted", "with imprisonment up to five years or with a fine"],
+        "expl": { "de": "Die Leugnung des Holocaust ist in Deutschland ein Straftatbestand der Volksverhetzung (§ 130 StGB) und wird mit Freiheits- oder Geldstrafe geahndet.", "en": "Holocaust denial is a criminal offense of incitement to hatred in Germany (§ 130 of the Criminal Code) and is punishable by imprisonment or a fine." }
+    },
+    {
+        "id": 97,
+        "q": "Was bezahlt man in Deutschland automatisch, wenn man fest {angestellt} ist?",
+        "o": ["Sozialversicherung", "Sozialhilfe", "Kindergeld", "Wohngeld"],
+        "a": "Sozialversicherung",
+        "t": {
+            "angestellt": "employed"
+        },
+        "en": "What do you automatically pay in Germany when you are permanently employed?",
+        "o_en": ["Social insurance", "Social assistance", "Child benefit", "Housing benefit"],
+        "expl": { "de": "Arbeitnehmer in Deutschland zahlen automatisch Beiträge zur Sozialversicherung (Renten-, Kranken-, Pflege-, Arbeitslosenversicherung), die direkt vom Gehalt abgeführt werden.", "en": "Employees in Germany automatically pay social insurance contributions (pension, health, long-term care, unemployment insurance), which are deducted directly from their salary." }
+    },
+    {
+        "id": 98,
+        "q": "Wenn Abgeordnete im Deutschen Bundestag ihre {Fraktion} wechseln, kann die Regierung ihre {Mehrheit} verlieren.",
+        "o": ["dürfen sie nicht mehr an den Sitzungen des Parlaments teilnehmen.", "kann die Regierung ihre Mehrheit verlieren.", "muss die Bundespräsidentin/der Bundespräsident zuvor ihr/sein Einverständnis geben.", "dürfen die Wählerinnen/Wähler dieser Abgeordneten noch einmal wählen."],
+        "a": "kann die Regierung ihre Mehrheit verlieren.",
+        "t": {
+            "Fraktion": "parliamentary group",
+            "Mehrheit": "majority"
+        },
+        "en": "If members of the German Bundestag change their parliamentary group...",
+        "o_en": ["they are no longer allowed to participate in the sessions of the parliament.", "the government can lose its majority.", "the Federal President must give his/her consent beforehand.", "the voters of these members are allowed to vote again."],
+        "expl": { "de": "Wenn genügend Abgeordnete die Regierungsfraktion verlassen, kann die Regierung ihre parlamentarische Mehrheit verlieren, was das Regieren erschwert oder zu Neuwahlen führen kann.", "en": "If enough members leave the governing parliamentary group, the government can lose its parliamentary majority, which can make governing difficult or lead to new elections." }
+    },
+    {
+        "id": 99,
+        "q": "Wer bezahlt in Deutschland die {Sozialversicherungen}?",
+        "o": ["Arbeitgeberinnen/Arbeitgeber und Arbeitnehmerinnen/Arbeitnehmer", "nur Arbeitnehmerinnen/Arbeitnehmer", "alle Staatsangehörigen", "nur Arbeitgeberinnen/Arbeitgeber"],
+        "a": "Arbeitgeberinnen/Arbeitgeber und Arbeitnehmerinnen/Arbeitnehmer",
+        "t": {
+            "Sozialversicherungen": "social insurances"
+        },
+        "en": "Who pays for social insurance in Germany?",
+        "o_en": ["Employers and employees", "only employees", "all citizens", "only employers"],
+        "expl": { "de": "Die Beiträge zur Sozialversicherung werden in der Regel je zur Hälfte von den Arbeitgebern und den Arbeitnehmern getragen (Solidarprinzip).", "en": "The contributions to the social insurance system are generally shared equally between employers and employees (principle of solidarity)." }
+    },
+    {
+        "id": 100,
+        "q": "Was gehört nicht zur {gesetzlichen} Sozialversicherung?",
+        "o": ["die Lebensversicherung", "die gesetzliche Rentenversicherung", "die Arbeitslosenversicherung", "die Pflegeversicherung"],
+        "a": "die Lebensversicherung",
+        "t": {
+            "gesetzlichen": "statutory / legal"
+        },
+        "en": "What is not part of the statutory social insurance?",
+        "o_en": ["life insurance", "the statutory pension insurance", "the unemployment insurance", "the long-term care insurance"],
+        "expl": { "de": "Eine Lebensversicherung ist eine private Versicherung. Die anderen drei sind Pflichtversicherungen und Teil der gesetzlichen Sozialversicherung.", "en": "Life insurance is a private insurance. The other three are compulsory insurances and part of the statutory social insurance system." }
+    },
+    {
+        "id": 101,
+        "q": "{Gewerkschaften} sind Interessenverbände der ...",
+        "o": ["Jugendlichen.", "Arbeitnehmerinnen und Arbeitnehmer.", "Rentnerinnen und Rentner.", "Arbeitgeberinnen und Arbeitgeber."],
+        "a": "Arbeitnehmerinnen und Arbeitnehmer.",
+        "t": {
+            "Gewerkschaften": "Trade unions"
+        },
+        "en": "Trade unions are interest groups of the...",
+        "o_en": ["youth.", "employees.", "pensioners.", "employers."],
+        "expl": { "de": "Gewerkschaften vertreten die Interessen von Arbeitnehmern gegenüber den Arbeitgebern, z.B. bei Lohnverhandlungen.", "en": "Trade unions represent the interests of employees towards employers, for example, in wage negotiations." }
+    },
+    {
+        "id": 102,
+        "q": "Womit kann man in der Bundesrepublik Deutschland {geehrt} werden, wenn man eine besondere {Leistung} erbracht hat? Mit dem ...",
+        "o": ["Bundesverdienstkreuz", "Bundesadler", "Vaterländischen Verdienstorden", "Ehrentitel \"Held der Deutschen Demokratischen Republik\""],
+        "a": "Bundesverdienstkreuz",
+        "t": {
+            "geehrt": "honored",
+            "Leistung": "achievement"
+        },
+        "en": "With what can one be honored in the Federal Republic of Germany for a special achievement in the political, economic, cultural, intellectual, or social field? With the...",
+        "o_en": ["Federal Cross of Merit", "Federal Eagle", "Patriotic Order of Merit", "Honorary title 'Hero of the German Democratic Republic'"],
+        "expl": { "de": "Das Bundesverdienstkreuz ist der einzige allgemeine Verdienstorden in Deutschland und wird für besondere Leistungen zum Wohle der Allgemeinheit verliehen.", "en": "The Federal Cross of Merit is the only general order of merit in Germany and is awarded for special achievements for the common good." }
+    },
+    {
+        "id": 103,
+        "q": "Was wird in Deutschland als '{Ampelkoalition}' bezeichnet? Die Zusammenarbeit...",
+        "o": ["der Bundestagsfraktionen von CDU und CSU", "von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung", "von CSU, Die LINKE und Bündnis 90/Die Grünen in einer Regierung", "der Bundestagsfraktionen von CDU und SPD"],
+        "a": "von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung",
+        "t": {
+            "Ampelkoalition": "traffic light coalition"
+        },
+        "en": "What is referred to in Germany as a 'traffic light coalition'? The cooperation...",
+        "o_en": ["of the CDU and CSU parliamentary groups in the Bundestag", "of SPD, FDP, and Alliance 90/The Greens in a government", "of CSU, The Left, and Alliance 90/The Greens in a government", "of the CDU and SPD parliamentary groups in the Bundestag"],
+        "expl": { "de": "Eine Koalition aus SPD (rot), FDP (gelb) und den Grünen (grün) wird wegen der Parteifarben als 'Ampelkoalition' bezeichnet.", "en": "A coalition of the SPD (red), FDP (yellow), and the Greens (green) is called a 'traffic light coalition' because of the party colors." }
+    },
+    {
+        "id": 104,
+        "q": "Eine Frau in Deutschland verliert ihre Arbeit. Was darf nicht der Grund für diese {Entlassung} sein?",
+        "o": ["Die Frau ist lange krank und arbeitsunfähig.", "Die Frau kam oft zu spät zur Arbeit.", "Die Frau erledigt private Sachen während der Arbeitszeit.", "Die Frau bekommt ein Kind und ihr Chef weiß das."],
+        "a": "Die Frau bekommt ein Kind und ihr Chef weiß das.",
+        "t": {
+            "Entlassung": "dismissal"
+        },
+        "en": "A woman in Germany loses her job. What cannot be the reason for this dismissal?",
+        "o_en": ["The woman is ill for a long time and unable to work.", "The woman was often late for work.", "The woman does private things during working hours.", "The woman is having a child and her boss knows it."],
+        "expl": { "de": "Das Mutterschutzgesetz verbietet die Kündigung einer Frau während der Schwangerschaft und bis vier Monate nach der Geburt. Dies ist eine Form des Diskriminierungsschutzes.", "en": "The Maternity Protection Act prohibits the dismissal of a woman during pregnancy and up to four months after childbirth. This is a form of protection against discrimination." }
+    },
+    {
+        "id": 105,
+        "q": "Was ist eine Aufgabe von {Wahlhelferinnen/Wahlhelfern} in Deutschland?",
+        "o": ["Sie helfen alten Menschen bei der Stimmabgabe in der Wahlkabine.", "Sie schreiben die Wahlbenachrichtigungen vor der Wahl.", "Sie geben Zwischenergebnisse an die Medien weiter.", "Sie zählen die Stimmen nach dem Ende der Wahl."],
+        "a": "Sie zählen die Stimmen nach dem Ende der Wahl.",
+        "t": {
+            "Wahlhelferinnen/Wahlhelfern": "election volunteers"
+        },
+        "en": "What is a task of election volunteers in Germany?",
+        "o_en": ["They help elderly people cast their votes in the voting booth.", "They write the voter notification cards before the election.", "They pass on interim results to the media.", "They count the votes after the end of the election."],
+        "expl": { "de": "Wahlhelfer sind ehrenamtliche Bürger, die für den ordnungsgemäßen Ablauf der Wahl im Wahllokal sorgen und nach Schließung die Stimmen auszählen.", "en": "Election volunteers are volunteer citizens who ensure the proper conduct of the election at the polling station and count the votes after it closes." }
+    },
+    {
+        "id": 106,
+        "q": "In Deutschland helfen {ehrenamtliche} Wahlhelferinnen und Wahlhelfer bei den Wahlen. Was ist eine Aufgabe von Wahlhelferinnen/Wahlhelfern?",
+        "o": ["Sie helfen Kindern und alten Menschen beim Wählen.", "Sie schreiben Karten und Briefe mit der Angabe des Wahllokals.", "Sie geben Zwischenergebnisse an Journalisten weiter.", "Sie zählen die Stimmen nach dem Ende der Wahl."],
+        "a": "Sie zählen die Stimmen nach dem Ende der Wahl.",
+        "t": {
+            "ehrenamtliche": "volunteer"
+        },
+        "en": "In Germany, volunteer election workers help with the elections. What is a task of election workers?",
+        "o_en": ["They help children and elderly people to vote.", "They write cards and letters with the address of the polling station.", "They pass on interim results to journalists.", "They count the votes after the end of the election."],
+        "expl": { "de": "Die zentrale Aufgabe nach Schließung der Wahllokale ist die öffentliche Auszählung der abgegebenen Stimmen durch die Wahlhelfer.", "en": "The central task after the polling stations close is the public counting of the cast votes by the election workers." }
+    },
+    {
+        "id": 107,
+        "q": "Für wie viele Jahre wird der Bundestag in Deutschland gewählt?",
+        "o": ["2 Jahre", "4 Jahre", "6 Jahre", "8 Jahre"],
+        "a": "4 Jahre",
+        "en": "For how many years is the Bundestag elected in Germany?",
+        "o_en": ["2 years", "4 years", "6 years", "8 years"],
+        "expl": { "de": "Die Legislaturperiode, also die Amtszeit des Deutschen Bundestages, beträgt vier Jahre.", "en": "The legislative period, i.e., the term of office of the German Bundestag, is four years." }
+    },
+    {
+        "id": 108,
+        "q": "Bei einer Bundestagswahl in Deutschland darf jede/jeder wählen, die/der {Bürgerin/Bürger} der Bundesrepublik Deutschland ist und mindestens 18 Jahre alt ist.",
+        "o": ["in der Bundesrepublik Deutschland wohnt und wählen möchte.", "Bürgerin/Bürger der Bundesrepublik Deutschland ist und mindestens 18 Jahre alt ist.", "seit mindestens 3 Jahren in der Bundesrepublik Deutschland lebt.", "Bürgerin/Bürger der Bundesrepublik Deutschland ist und mindestens 21 Jahre alt ist."],
+        "a": "Bürgerin/Bürger der Bundesrepublik Deutschland ist und mindestens 18 Jahre alt ist.",
+        "t": {
+            "Bürgerin/Bürger": "citizen"
+        },
+        "en": "In a federal election in Germany, everyone is allowed to vote who...",
+        "o_en": ["lives in the Federal Republic of Germany and wants to vote.", "is a citizen of the Federal Republic of Germany and is at least 18 years old.", "has lived in the Federal Republic of Germany for at least 3 years.", "is a citizen of the Federal Republic of Germany and is at least 21 years old."],
+        "expl": { "de": "Die Voraussetzungen für das aktive Wahlrecht bei Bundestagswahlen sind die deutsche Staatsbürgerschaft und die Vollendung des 18. Lebensjahres.", "en": "The requirements for the right to vote in federal elections are German citizenship and having reached the age of 18." }
+    },
+    {
+        "id": 109,
+        "q": "Wie oft gibt es normalerweise Bundestagswahlen in Deutschland?",
+        "o": ["alle drei Jahre", "alle vier Jahre", "alle fünf Jahre", "alle sechs Jahre"],
+        "a": "alle vier Jahre",
+        "en": "How often are there normally federal elections in Germany?",
+        "o_en": ["every three years", "every four years", "every five years", "every six years"],
+        "expl": { "de": "Die regelmäßige Legislaturperiode des Bundestages beträgt vier Jahre, daher finden Bundestagswahlen normalerweise alle vier Jahre statt.", "en": "The regular legislative period of the Bundestag is four years, so federal elections normally take place every four years." }
+    },
+    {
+        "id": 110,
+        "q": "Für wie viele Jahre wird der Bundestag in Deutschland gewählt?",
+        "o": ["2 Jahre", "3 Jahre", "4 Jahre", "5 Jahre"],
+        "a": "4 Jahre",
+        "en": "For how many years is the Bundestag elected in Germany?",
+        "o_en": ["2 years", "3 years", "4 years", "5 years"]
+    },
+    {
+        "id": 111,
+        "q": "Welche Handlungen mit Bezug auf den Staat Israel sind in Deutschland {verboten}?",
+        "o": ["die Politik Israels öffentlich kritisieren", "das Aufhängen einer israelischen Flagge auf dem Privatgrundstück", "eine Diskussion über die Politik Israels", "der öffentliche Aufruf zur Vernichtung Israels"],
+        "a": "der öffentliche Aufruf zur Vernichtung Israels",
+        "t": {
+            "verboten": "prohibited / forbidden"
+        },
+        "en": "Which actions related to the state of Israel are prohibited in Germany?",
+        "o_en": ["publicly criticizing Israeli policy", "hanging an Israeli flag on private property", "a discussion about Israeli policy", "the public call for the destruction of Israel"],
+        "expl": { "de": "Der öffentliche Aufruf zur Vernichtung Israels ist eine Form der Volksverhetzung und des Antisemitismus und steht unter Strafe. Sachliche Kritik an der Politik einer Regierung ist hingegen erlaubt.", "en": "The public call for the destruction of Israel is a form of incitement to hatred and anti-Semitism and is a punishable offense. Factual criticism of a government's policy, however, is permitted." }
+    },
+    {
+        "id": 112,
+        "q": "Die Wahlen in Deutschland sind {geheim}.",
+        "o": ["speziell.", "geheim.", "berufsbezogen.", "geschlechtsabhängig."],
+        "a": "geheim.",
+        "t": {
+            "geheim": "secret"
+        },
+        "en": "Elections in Germany are",
+        "o_en": ["special.", "secret.", "job-related.", "gender-dependent."],
+        "expl": { "de": "Einer der fünf Wahlrechtsgrundsätze in Deutschland ist die geheime Wahl. Das bedeutet, niemand darf erfahren, wie eine Person gewählt hat.", "en": "One of the five principles of electoral law in Germany is the secret ballot. This means that no one is allowed to know how a person has voted." }
+    },
+    {
+        "id": 113,
+        "q": "Wahlen in Deutschland gewinnt die Partei, die ...",
+        "o": ["die meisten Stimmen bekommt.", "die meisten Männer mehrheitlich gewählt haben.", "die meisten Stimmen bei den Arbeiterinnen/Arbeitern bekommen hat.", "die meisten Erststimmen für ihre Kanzlerkandidatin/ihren Kanzlerkandidaten erhalten hat."],
+        "a": "die meisten Stimmen bekommt.",
+        "en": "Elections in Germany are won by the party that...",
+        "o_en": ["gets the most votes.", "the majority of men have voted for.", "has received the most votes from the workers.", "has received the most first votes for its chancellor candidate."],
+        "expl": { "de": "In der Regel wird die Partei zur stärksten Kraft, die die meisten Zweitstimmen erhält, da diese über die Gesamtzahl der Sitze entscheiden.", "en": "As a rule, the party that receives the most second votes becomes the strongest force, as these determine the total number of seats." }
+    },
+    {
+        "id": 114,
+        "q": "An demokratischen Wahlen in Deutschland teilzunehmen ist...",
+        "o": ["eine Pflicht.", "ein Recht.", "ein Zwang.", "eine Last."],
+        "a": "ein Recht.",
+        "en": "Participating in democratic elections in Germany is...",
+        "o_en": ["a duty.", "a right.", "a compulsion.", "a burden."],
+        "expl": { "de": "Es gibt in Deutschland keine Wahlpflicht. Die Teilnahme an Wahlen ist ein grundlegendes Bürgerrecht in einer Demokratie.", "en": "There is no compulsory voting in Germany. Participating in elections is a fundamental right of citizens in a democracy." }
+    },
+    {
+        "id": 115,
+        "q": "Was bedeutet '{aktives Wahlrecht}' in Deutschland?",
+        "o": ["Man kann gewählt werden.", "Man muss wählen gehen.", "Man kann wählen.", "Man muss zur Auszählung der Stimmen gehen."],
+        "a": "Man kann wählen.",
+        "t": {
+            "aktives Wahlrecht": "active right to vote"
+        },
+        "en": "What does 'active right to vote' mean in Germany?",
+        "o_en": ["One can be elected.", "One must go to vote.", "One can vote.", "One must go to the counting of the votes."],
+        "expl": { "de": "Das aktive Wahlrecht ist das Recht, seine Stimme bei einer Wahl abzugeben. Das Recht, selbst gewählt zu werden, nennt man passives Wahlrecht.", "en": "The active right to vote is the right to cast one's vote in an election. The right to be elected oneself is called the passive right to vote." }
+    },
+    {
+        "id": 116,
+        "q": "Wenn Sie bei einer Bundestagswahl in Deutschland wählen dürfen, heißt das ...",
+        "o": ["aktive Wahlkampagne.", "aktives Wahlverfahren.", "aktiver Wahlkampf.", "aktives Wahlrecht."],
+        "a": "aktives Wahlrecht.",
+        "en": "If you are allowed to vote in a federal election in Germany, this is called...",
+        "o_en": ["active election campaign.", "active electoral process.", "active electioneering.", "active right to vote."],
+        "expl": { "de": "Die Berechtigung, an einer Wahl teilzunehmen und seine Stimme abzugeben, ist das aktive Wahlrecht.", "en": "The eligibility to participate in an election and cast one's vote is the active right to vote." }
+    },
+    {
+        "id": 117,
+        "q": "Wie viel Prozent der {Zweitstimmen} müssen Parteien mindestens bekommen, um in den Deutschen Bundestag gewählt zu werden?",
+        "o": ["3%", "4%", "5%", "6%"],
+        "a": "5%",
+        "t": {
+            "Zweitstimmen": "second votes"
+        },
+        "en": "What is the minimum percentage of second votes a party must receive to be elected to the German Bundestag?",
+        "o_en": ["3%", "4%", "5%", "6%"],
+        "expl": { "de": "Um in den Bundestag einzuziehen, muss eine Partei bundesweit mindestens 5% der Zweitstimmen erhalten (oder mindestens drei Direktmandate gewinnen). Dies nennt man die 5%-Hürde.", "en": "To enter the Bundestag, a party must receive at least 5% of the second votes nationwide (or win at least three direct mandates). This is called the 5% hurdle." }
+    },
+    {
+        "id": 118,
+        "q": "Wer darf bei den rund 40 jüdischen Makkabi-Sportvereinen Mitglied werden?",
+        "o": ["nur Deutsche", "nur Israelis", "nur religiöse Menschen", "alle Menschen"],
+        "a": "alle Menschen",
+        "en": "Who can become a member of the approximately 40 Jewish Makkabi sports clubs?",
+        "o_en": ["only Germans", "only Israelis", "only religious people", "all people"],
+        "expl": { "de": "Die Makkabi-Vereine stehen allen Menschen offen, unabhängig von ihrer Religion oder Herkunft, und fördern Integration durch Sport.", "en": "The Makkabi clubs are open to all people, regardless of their religion or origin, and promote integration through sport." }
+    },
+    {
+        "id": 119,
+        "q": "Wahlen in Deutschland sind frei. Was bedeutet das?",
+        "o": ["Alle verurteilten Straftäterinnen/Straftäter dürfen nicht wählen.", "Wenn ich wählen gehen möchte, muss meine Arbeitgeberin/mein Arbeitgeber mir frei geben.", "Jede Person kann ohne Zwang entscheiden, ob sie wählen möchte und wen sie wählen möchte.", "Ich kann frei entscheiden, wo ich wählen gehen möchte."],
+        "a": "Jede Person kann ohne Zwang entscheiden, ob sie wählen möchte und wen sie wählen möchte.",
+        "en": "Elections in Germany are free. What does that mean?",
+        "o_en": ["All convicted criminals are not allowed to vote.", "If I want to go vote, my employer must give me time off.", "Every person can decide without coercion whether they want to vote and who they want to vote for.", "I can freely decide where I want to go to vote."],
+        "expl": { "de": "Freiheit der Wahl bedeutet, dass die Entscheidung zu wählen und die Wahlentscheidung selbst ohne unzulässigen Druck getroffen werden können.", "en": "Freedom of election means that the decision to vote and the voting choice itself can be made without undue pressure." }
+    },
+    {
+        "id": 120,
+        "q": "Das {Wahlsystem} in Deutschland ist ein ...",
+        "o": ["Zensuswahlrecht.", "Dreiklassenwahlrecht.", "Mehrheits- und Verhältniswahlrecht.", "allgemeines Männerwahlrecht."],
+        "a": "Mehrheits- und Verhältniswahlrecht.",
+        "t": {
+            "Wahlsystem": "electoral system"
+        },
+        "en": "The electoral system in Germany is a",
+        "o_en": ["census suffrage.", "three-class franchise.", "majority and proportional representation system.", "general male suffrage."],
+        "expl": { "de": "Deutschland hat ein personalisiertes Verhältniswahlrecht, das Elemente der Mehrheitswahl (mit der Erststimme für einen Direktkandidaten) und der Verhältniswahl (mit der Zweitstimme für eine Parteiliste) kombiniert.", "en": "Germany has a personalized proportional representation system, which combines elements of majority voting (with the first vote for a direct candidate) and proportional representation (with the second vote for a party list)." }
+    }
+  ]
+}

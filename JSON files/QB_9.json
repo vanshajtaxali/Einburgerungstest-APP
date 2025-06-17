@@ -1,0 +1,365 @@
+{
+  "general": [
+    {
+        "id": 241,
+        "q": "Frau Seger bekommt ein Kind. Was muss sie tun, um {Elterngeld} zu {erhalten}?",
+        "o": ["Sie muss an ihre Krankenkasse schreiben.", "Sie muss einen Antrag bei der Elterngeldstelle stellen.", "Sie muss nichts tun, denn sie bekommt automatisch Elterngeld.", "Sie muss das Arbeitsamt um Erlaubnis bitten."],
+        "a": "Sie muss einen Antrag bei der Elterngeldstelle stellen.",
+        "t": {
+            "Elterngeld": "parental allowance",
+            "erhalten": "to receive"
+        },
+        "en": "Ms. Seger is having a child. What must she do to receive parental allowance?",
+        "o_en": ["She must write to her health insurance company.", "She must submit an application to the parental allowance office.", "She must do nothing, as she will receive parental allowance automatically.", "She must ask the employment office for permission."],
+        "expl": { "de": "Elterngeld ist eine staatliche Leistung, die beantragt werden muss. Zuständig sind die Elterngeldstellen bei den Kommunen oder Kreisen.", "en": "Parental allowance is a state benefit that must be applied for. The responsible authorities are the parental allowance offices at the municipal or district level." }
+    },
+    {
+        "id": 242,
+        "q": "Wer {entscheidet}, ob ein Kind in Deutschland in den Kindergarten geht?",
+        "o": ["der Staat", "die Bundesländer", "die Eltern/die Erziehungsberechtigten", "die Schulen"],
+        "a": "die Eltern/die Erziehungsberechtigten",
+        "t": {
+            "entscheidet": "decides"
+        },
+        "en": "Who decides whether a child in Germany goes to kindergarten?",
+        "o_en": ["the state", "the federal states", "the parents/the legal guardians", "the schools"],
+        "expl": { "de": "Die Entscheidung über den Besuch eines Kindergartens liegt allein bei den Eltern bzw. den Erziehungsberechtigten.", "en": "The decision about attending kindergarten lies solely with the parents or legal guardians." }
+    },
+    {
+        "id": 243,
+        "q": "Maik und Sybille wollen mit Freunden an ihrem deutschen {Wohnort} eine {Demonstration} auf der Straße {abhalten}. Was müssen sie vorher tun?",
+        "o": ["Sie müssen die Demonstration anmelden.", "Sie müssen nichts tun. Man darf in Deutschland jederzeit überall demonstrieren.", "Sie können gar nichts tun, denn Demonstrationen sind in Deutschland grundsätzlich verboten.", "Maik und Sybille müssen einen neuen Verein gründen, weil nur Vereine demonstrieren dürfen."],
+        "a": "Sie müssen die Demonstration anmelden.",
+        "t": {
+            "Wohnort": "place of residence",
+            "Demonstration": "demonstration",
+            "abhalten": "to hold"
+        },
+        "en": "Maik and Sybille want to hold a demonstration on the street with friends at their German place of residence. What must they do beforehand?",
+        "o_en": ["They must register the demonstration.", "They don't have to do anything. In Germany, one can demonstrate anywhere at any time.", "They can do nothing at all, because demonstrations are generally forbidden in Germany.", "Maik and Sybille must found a new association because only associations are allowed to demonstrate."],
+        "expl": { "de": "Das Versammlungsrecht (Artikel 8 GG) ist ein Grundrecht, aber Demonstrationen unter freiem Himmel müssen bei der zuständigen Behörde (meist Polizei oder Ordnungsamt) angemeldet werden.", "en": "The right of assembly (Article 8 of the Basic Law) is a fundamental right, but open-air demonstrations must be registered with the competent authority (usually the police or public order office)." }
+    },
+    {
+        "id": 244,
+        "q": "Welchen {Schulabschluss} braucht man normalerweise, um an einer Universität in Deutschland ein {Studium} zu {beginnen}?",
+        "o": ["das Abitur", "ein Diplom", "die Prokura", "eine Gesellenprüfung"],
+        "a": "das Abitur",
+        "t": {
+            "Schulabschluss": "school-leaving certificate",
+            "Studium": "course of study",
+            "beginnen": "to begin"
+        },
+        "en": "Which school-leaving certificate does one normally need to begin a course of study at a university in Germany?",
+        "o_en": ["the Abitur", "a diploma", "the power of attorney (Prokura)", "a journeyman's examination"],
+        "expl": { "de": "Die allgemeine Hochschulreife (Abitur) ist die Voraussetzung für den Zugang zu einem Studium an einer deutschen Universität.", "en": "The general higher education entrance qualification (Abitur) is the prerequisite for admission to a course of study at a German university." }
+    },
+    {
+        "id": 245,
+        "q": "Wer darf in Deutschland nicht als Paar zusammenleben?",
+        "o": ["Hans (20 Jahre) und Marie (19 Jahre)", "Tom (20 Jahre) und Klaus (45 Jahre)", "Sofie (35 Jahre) und Lisa (40 Jahre)", "Anne (13 Jahre) und Tim (25 Jahre)"],
+        "a": "Anne (13 Jahre) und Tim (25 Jahre)",
+        "en": "Who is not allowed to live together as a couple in Germany?",
+        "o_en": ["Hans (20 years) and Marie (19 years)", "Tom (20 years) and Klaus (45 years)", "Sofie (35 years) and Lisa (40 years)", "Anne (13 years) and Tim (25 years)"],
+        "expl": { "de": "Aufgrund des Jugendschutzgesetzes und des Strafrechts ist eine sexuelle Beziehung zwischen einem Erwachsenen und einem 13-jährigen Kind verboten. Anne ist noch ein Kind (Schutzalter 14 Jahre).", "en": "Due to the Youth Protection Act and criminal law, a sexual relationship between an adult and a 13-year-old child is prohibited. Anne is still a child (age of consent is 14)." }
+    },
+    {
+        "id": 246,
+        "q": "Ab welchem Alter ist man in Deutschland {volljährig}?",
+        "o": ["16", "18", "19", "21"],
+        "a": "18",
+        "t": {
+            "volljährig": "of legal age / adult"
+        },
+        "en": "At what age is one considered a legal adult in Germany?",
+        "o_en": ["16", "18", "19", "21"],
+        "expl": { "de": "Die Volljährigkeit tritt in Deutschland mit der Vollendung des 18. Lebensjahres ein.", "en": "In Germany, one reaches the age of legal majority upon completion of the 18th year of life." }
+    },
+    {
+        "id": 247,
+        "q": "Eine Frau ist {schwanger}. Sie ist kurz vor und nach der Geburt ihres Kindes vom {Gesetz} besonders {beschützt}. Wie heißt dieser {Schutz}?",
+        "o": ["Elternzeit", "Mutterschutz", "Geburtsvorbereitung", "Wochenbett"],
+        "a": "Mutterschutz",
+        "t": {
+            "schwanger": "pregnant",
+            "Gesetz": "law",
+            "beschützt": "protected",
+            "Schutz": "protection"
+        },
+        "en": "A woman is pregnant. She is specially protected by law shortly before and after the birth of her child. What is this protection called?",
+        "o_en": ["Parental leave", "Maternity protection", "Birth preparation", "Postpartum period"],
+        "expl": { "de": "Der Mutterschutz umfasst Schutzfristen vor und nach der Geburt, in denen die Frau nicht arbeiten darf, sowie einen besonderen Kündigungsschutz.", "en": "Maternity protection includes protective periods before and after childbirth, during which the woman is not allowed to work, as well as special protection against dismissal." }
+    },
+    {
+        "id": 248,
+        "q": "Die {Erziehung} der Kinder ist in Deutschland ist vor allem Aufgabe der {Eltern}.",
+        "o": ["des Staates.", "der Eltern.", "der Großeltern.", "der Schulen."],
+        "a": "der Eltern.",
+        "t": {
+            "Erziehung": "upbringing / education",
+            "Eltern": "parents"
+        },
+        "en": "In Germany, the upbringing of children is primarily the task of...",
+        "o_en": ["the state.", "the parents.", "the grandparents.", "the schools."],
+        "expl": { "de": "Laut Grundgesetz (Artikel 6) sind Pflege und Erziehung der Kinder das natürliche Recht der Eltern und die zuvörderst ihnen obliegende Pflicht.", "en": "According to the Basic Law (Article 6), the care and upbringing of children are the natural right of the parents and the duty primarily incumbent upon them." }
+    },
+    {
+        "id": 249,
+        "q": "Wer ist in Deutschland hauptsächlich {verantwortlich} für die Kindererziehung?",
+        "o": ["der Staat", "die Eltern", "die Verwandten", "die Schulen"],
+        "a": "die Eltern",
+        "t": {
+            "verantwortlich": "responsible"
+        },
+        "en": "Who is mainly responsible for child-rearing in Germany?",
+        "o_en": ["the state", "the parents", "the relatives", "the schools"]
+    },
+    {
+        "id": 250,
+        "q": "In Deutschland hat man die besten Chancen auf einen gut bezahlten Arbeitsplatz, wenn man gut {ausgebildet} ist.",
+        "o": ["katholisch ist.", "gut ausgebildet ist.", "eine Frau ist.", "Mitglied einer Partei ist."],
+        "a": "gut ausgebildet ist.",
+        "t": {
+            "ausgebildet": "educated / trained"
+        },
+        "en": "In Germany, one has the best chances of getting a well-paid job if one",
+        "o_en": ["is Catholic.", "is well-educated.", "is a woman.", "is a member of a party."],
+        "expl": { "de": "Eine gute Ausbildung und hohe Qualifikation sind in der Regel die wichtigsten Voraussetzungen für gute berufliche Chancen und ein hohes Einkommen.", "en": "A good education and high qualifications are generally the most important prerequisites for good career opportunities and a high income." }
+    },
+    {
+        "id": 251,
+        "q": "Wenn man in Deutschland ein Kind {schlägt}, kann man dafür {bestraft} werden.",
+        "o": ["geht das niemanden etwas an.", "geht das nur die Familie etwas an.", "kann man dafür nicht bestraft werden.", "kann man dafür bestraft werden."],
+        "a": "kann man dafür bestraft werden.",
+        "t": {
+            "schlägt": "hits",
+            "bestraft": "punished"
+        },
+        "en": "If you hit a child in Germany...",
+        "o_en": ["it is nobody's business.", "it is only the family's business.", "you cannot be punished for it.", "you can be punished for it."],
+        "expl": { "de": "Kinder haben in Deutschland ein Recht auf eine gewaltfreie Erziehung. Körperliche Bestrafungen sind verboten und können als Körperverletzung strafrechtlich verfolgt werden.", "en": "In Germany, children have a right to a non-violent upbringing. Corporal punishment is prohibited and can be prosecuted as bodily harm." }
+    },
+    {
+        "id": 252,
+        "q": "In Deutschland darf man zur gleichen Zeit nur mit einer Partnerin/einem Partner {verheiratet} sein.",
+        "o": ["darf man zur gleichen Zeit nur mit einer Partnerin/einem Partner verheiratet sein.", "kann man mehrere Ehepartnerinnen/Ehepartner gleichzeitig haben.", "darf man nicht wieder heiraten, wenn man einmal verheiratet war.", "darf eine Frau nicht wieder heiraten, wenn ihr Mann gestorben ist."],
+        "a": "darf man zur gleichen Zeit nur mit einer Partnerin/einem Partner verheiratet sein.",
+        "t": {
+            "verheiratet": "married"
+        },
+        "en": "In Germany...",
+        "o_en": ["one may only be married to one partner at a time.", "one can have several spouses at the same time.", "one is not allowed to remarry if one has been married once.", "a woman is not allowed to remarry if her husband has died."],
+        "expl": { "de": "Das Prinzip der Monogamie ist gesetzlich verankert. Bigamie, also die Ehe mit mehreren Partnern gleichzeitig, ist verboten und strafbar.", "en": "The principle of monogamy is legally established. Bigamy, i.e., being married to several partners at the same time, is prohibited and punishable by law." }
+    },
+    {
+        "id": 253,
+        "q": "Wo müssen Sie sich {anmelden}, wenn Sie in Deutschland {umziehen}?",
+        "o": ["beim Einwohnermeldeamt", "beim Standesamt", "beim Ordnungsamt", "beim Gewerbeamt"],
+        "a": "beim Einwohnermeldeamt",
+        "t": {
+            "anmelden": "to register",
+            "umziehen": "to move house"
+        },
+        "en": "Where must you register when you move house in Germany?",
+        "o_en": ["at the residents' registration office", "at the registry office", "at the public order office", "at the trade office"],
+        "expl": { "de": "In Deutschland besteht eine Meldepflicht. Jeder Umzug muss innerhalb einer bestimmten Frist (meist zwei Wochen) beim Einwohnermeldeamt (auch Bürgeramt genannt) des neuen Wohnortes gemeldet werden.", "en": "In Germany, there is a legal requirement to register. Every change of address must be reported to the residents' registration office (also called Bürgeramt) of the new place of residence within a certain period (usually two weeks)." }
+    },
+    {
+        "id": 254,
+        "q": "In Deutschland dürfen Ehepaare sich {scheiden} lassen. Meistens müssen sie dazu das '{Trennungsjahr}' einhalten. Was bedeutet das?",
+        "o": ["Der Scheidungsprozess dauert ein Jahr.", "Die Ehegatten sind ein Jahr verheiratet, dann ist die Scheidung möglich.", "Das Besuchsrecht für die Kinder gilt ein Jahr.", "Die Ehegatten führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich."],
+        "a": "Die Ehegatten führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich.",
+        "t": {
+            "scheiden": "to divorce",
+            "Trennungsjahr": "separation year"
+        },
+        "en": "In Germany, married couples are allowed to divorce. Usually, they must observe the 'separation year'. What does that mean?",
+        "o_en": ["The divorce process takes one year.", "The spouses have been married for one year, then divorce is possible.", "The visiting right for the children is valid for one year.", "The spouses live their own lives separately for at least one year. After that, divorce is possible."],
+        "expl": { "de": "Vor einer Scheidung müssen die Ehepartner in der Regel ein Jahr getrennt leben, um nachzuweisen, dass die Ehe endgültig gescheitert ist.", "en": "Before a divorce, the spouses generally have to live separately for one year to prove that the marriage has irretrievably broken down." }
+    },
+    {
+        "id": 255,
+        "q": "Bei {Erziehungsproblemen} können Eltern in Deutschland Hilfe erhalten vom...",
+        "o": ["Ordnungsamt.", "Schulamt.", "Jugendamt.", "Gesundheitsamt."],
+        "a": "Jugendamt.",
+        "t": {
+            "Erziehungsproblemen": "parenting problems"
+        },
+        "en": "In Germany, parents can get help with parenting problems from the...",
+        "o_en": ["Public order office.", "School board.", "Youth welfare office.", "Public health office."],
+        "expl": { "de": "Das Jugendamt bietet Familien Beratung und Unterstützung bei Erziehungsfragen, Konflikten und Krisen an.", "en": "The Youth Welfare Office (Jugendamt) offers families advice and support on parenting issues, conflicts, and crises." }
+    },
+    {
+        "id": 256,
+        "q": "Ein Ehepaar möchte in Deutschland ein Restaurant eröffnen. Was braucht es dazu unbedingt?",
+        "o": ["eine Erlaubnis der Polizei", "eine Genehmigung einer Partei", "eine Genehmigung des Einwohnermeldeamts", "eine Gaststättenerlaubnis von der zuständigen Behörde"],
+        "a": "eine Gaststättenerlaubnis von der zuständigen Behörde",
+        "en": "A married couple wants to open a restaurant in Germany. What do they absolutely need for this?",
+        "o_en": ["a permit from the police", "a permit from a political party", "a permit from the residents' registration office", "a restaurant license from the competent authority"],
+        "expl": { "de": "Für den Betrieb eines Restaurants ist eine Gaststättenkonzession (oder Gaststättenerlaubnis) erforderlich, die vom zuständigen Ordnungs- oder Gewerbeamt ausgestellt wird.", "en": "To operate a restaurant, a restaurant license (Gaststättenkonzession) is required, which is issued by the competent public order office or trade office." }
+    },
+    {
+        "id": 257,
+        "q": "Eine erwachsene Frau möchte in Deutschland das Abitur {nachholen}. Das kann sie an einem {Abendgymnasium}.",
+        "o": ["einer Hochschule.", "einem Abendgymnasium.", "einer Hauptschule.", "einer Privatuniversität."],
+        "a": "einem Abendgymnasium.",
+        "t": {
+            "nachholen": "to obtain later in life / catch up on",
+            "Abendgymnasium": "evening grammar school"
+        },
+        "en": "An adult woman in Germany wants to obtain her Abitur later in life. She can do this at...",
+        "o_en": ["a university of applied sciences.", "an evening grammar school.", "a secondary general school.", "a private university."],
+        "expl": { "de": "Das Abitur kann auf dem zweiten Bildungsweg nachgeholt werden, zum Beispiel an einem Abendgymnasium, einem Kolleg oder per Fernstudium.", "en": "The Abitur can be obtained through second-chance education, for example, at an evening grammar school (Abendgymnasium), a college, or through distance learning." }
+    },
+    {
+        "id": 258,
+        "q": "Was darf das {Jugendamt} in Deutschland?",
+        "o": ["Es entscheidet, welche Schule das Kind besucht.", "Es kann ein Kind, das geschlagen wird oder hungern muss, aus der Familie nehmen.", "Es bezahlt das Kindergeld an die Eltern.", "Es kontrolliert, ob das Kind einen Kindergarten besucht."],
+        "a": "Es kann ein Kind, das geschlagen wird oder hungern muss, aus der Familie nehmen.",
+        "t": {
+            "Jugendamt": "Youth Welfare Office"
+        },
+        "en": "What is the Youth Welfare Office allowed to do in Germany?",
+        "o_en": ["It decides which school the child attends.", "It can take a child who is being beaten or is starving away from the family.", "It pays the child benefit to the parents.", "It checks whether the child attends a kindergarten."],
+        "expl": { "de": "Bei einer akuten Kindeswohlgefährdung (z.B. durch Gewalt oder Vernachlässigung) hat das Jugendamt die Pflicht und das Recht, ein Kind zum Schutz in Obhut zu nehmen.", "en": "In the event of an acute endangerment of a child's welfare (e.g., through violence or neglect), the Youth Welfare Office has the duty and the right to take a child into care for their protection." }
+    },
+    {
+        "id": 259,
+        "q": "Das {Berufsinformationszentrum} BIZ bei der Bundesagentur für Arbeit in Deutschland hilft bei der {Lehrstellensuche}.",
+        "o": ["Rentenberechnung.", "Lehrstellensuche.", "Steuererklärung.", "Krankenversicherung."],
+        "a": "Lehrstellensuche.",
+        "t": {
+            "Berufsinformationszentrum": "Career Information Center",
+            "Lehrstellensuche": "search for an apprenticeship"
+        },
+        "en": "The Career Information Center (BIZ) at the Federal Employment Agency in Germany helps with",
+        "o_en": ["pension calculation.", "the search for an apprenticeship.", "the tax return.", "health insurance."],
+        "expl": { "de": "Das BIZ bietet Informationen und Beratung zu Ausbildung, Beruf, Studium und Arbeitsmarkt.", "en": "The BIZ offers information and advice on apprenticeships, careers, studies, and the job market." }
+    },
+    {
+        "id": 260,
+        "q": "In Deutschland hat ein Kind in der Schule ...",
+        "o": ["Recht auf unbegrenzte Freizeit.", "Wahlfreiheit für alle Fächer.", "Anspruch auf Schulgeld.", "Anwesenheitspflicht."],
+        "a": "Anwesenheitspflicht.",
+        "en": "In Germany, a child at school has...",
+        "o_en": ["the right to unlimited free time.", "freedom of choice for all subjects.", "a claim to school fees.", "a duty to attend."],
+        "expl": { "de": "Mit der allgemeinen Schulpflicht geht die Pflicht zur regelmäßigen Anwesenheit im Unterricht einher.", "en": "Compulsory schooling is accompanied by the duty of regular attendance in class." }
+    },
+    {
+        "id": 261,
+        "q": "Ein Mann möchte mit 30 Jahren in Deutschland sein Abitur nachholen. Wo kann er das tun? An...",
+        "o": ["einer Hochschule.", "einem Abendgymnasium.", "einer Hauptschule.", "einer Privatuniversität."],
+        "a": "einem Abendgymnasium.",
+        "en": "A 30-year-old man in Germany wants to obtain his Abitur. Where can he do that? At",
+        "o_en": ["a university of applied sciences.", "an evening grammar school.", "a secondary general school.", "a private university."]
+    },
+    {
+        "id": 262,
+        "q": "Was bedeutet in Deutschland der {Grundsatz} der {Gleichbehandlung}?",
+        "o": ["Niemand darf z.B. wegen einer Behinderung benachteiligt werden.", "Man darf andere Personen benachteiligen, wenn ausreichende persönliche Gründe hierfür vorliegen.", "Niemand darf gegen Personen klagen, wenn sie benachteiligt wurden.", "Es ist für alle Gesetz, benachteiligten Gruppen jährlich Geld zu spenden."],
+        "a": "Niemand darf z.B. wegen einer Behinderung benachteiligt werden.",
+        "t": {
+            "Grundsatz": "principle",
+            "Gleichbehandlung": "equal treatment"
+        },
+        "en": "What does the principle of equal treatment mean in Germany?",
+        "o_en": ["No one may be disadvantaged, e.g., because of a disability.", "One may disadvantage other persons if there are sufficient personal reasons for doing so.", "No one is allowed to sue persons if they have been disadvantaged.", "It is law for everyone to donate money to disadvantaged groups annually."],
+        "expl": { "de": "Der Grundsatz der Gleichbehandlung, verankert in Artikel 3 des Grundgesetzes, verbietet Diskriminierung aufgrund von Merkmalen wie Geschlecht, Herkunft, Religion oder Behinderung.", "en": "The principle of equal treatment, enshrined in Article 3 of the Basic Law, prohibits discrimination based on characteristics such as gender, origin, religion, or disability." }
+    },
+    {
+        "id": 263,
+        "q": "In Deutschland sind Jugendliche ab 14 Jahren {strafmündig}. Das bedeutet: Jugendliche, die 14 Jahre und älter sind und gegen Strafgesetze verstoßen, werden {bestraft}.",
+        "o": ["werden bestraft.", "werden wie Erwachsene behandelt.", "teilen die Strafe mit ihren Eltern.", "werden nicht bestraft."],
+        "a": "werden bestraft.",
+        "t": {
+            "strafmündig": "criminally responsible",
+            "bestraft": "punished"
+        },
+        "en": "In Germany, young people are criminally responsible from the age of 14. This means: young people who are 14 years and older and violate criminal laws...",
+        "o_en": ["will be punished.", "are treated like adults.", "share the punishment with their parents.", "are not punished."],
+        "expl": { "de": "Mit 14 Jahren beginnt die bedingte Strafmündigkeit. Jugendliche können bestraft werden, allerdings nach dem milderen Jugendstrafrecht.", "en": "At the age of 14, conditional criminal responsibility begins. Adolescents can be punished, but according to the more lenient juvenile criminal law." }
+    },
+    {
+        "id": 264,
+        "q": "Zu welchem Fest tragen Menschen in Deutschland bunte {Kostüme} und {Masken}?",
+        "o": ["am Rosenmontag", "am Maifeiertag", "beim Oktoberfest", "an Pfingsten"],
+        "a": "am Rosenmontag",
+        "t": {
+            "Kostüme": "costumes",
+            "Masken": "masks"
+        },
+        "en": "At which festival do people in Germany wear colorful costumes and masks?",
+        "o_en": ["on Rose Monday (Rosenmontag)", "on May Day", "at Oktoberfest", "at Pentecost"],
+        "expl": { "de": "Rosenmontag ist der Höhepunkt des Karnevals (auch Fasching oder Fastnacht genannt), bei dem Verkleiden und Umzüge üblich sind.", "en": "Rose Monday (Rosenmontag) is the high point of Carnival (also called Fasching or Fastnacht), during which costumes and parades are common." }
+    },
+    {
+        "id": 265,
+        "q": "Wohin muss man in Deutschland zuerst gehen, wenn man {heiraten} möchte?",
+        "o": ["zum Einwohnermeldeamt", "zum Ordnungsamt", "zur Agentur für Arbeit", "zum Standesamt"],
+        "a": "zum Standesamt",
+        "t": {
+            "heiraten": "to get married"
+        },
+        "en": "Where must one first go in Germany if one wants to get married?",
+        "o_en": ["to the residents' registration office", "to the public order office", "to the employment agency", "to the registry office"],
+        "expl": { "de": "Die Eheschließung muss beim Standesamt angemeldet werden. Nur die standesamtliche Trauung ist in Deutschland rechtlich bindend.", "en": "The marriage must be registered at the registry office (Standesamt). Only the civil marriage ceremony is legally binding in Germany." }
+    },
+    {
+        "id": 266,
+        "q": "Wann beginnt die gesetzliche {Nachtruhe} in Deutschland?",
+        "o": ["wenn die Sonne untergeht", "wenn die Nachbarn schlafen gehen", "um 0 Uhr, Mitternacht", "um 22 Uhr"],
+        "a": "um 22 Uhr",
+        "t": {
+            "Nachtruhe": "nighttime quiet period"
+        },
+        "en": "When does the legally mandated quiet time (Nachtruhe) begin in Germany?",
+        "o_en": ["when the sun goes down", "when the neighbors go to sleep", "at 0 o'clock, midnight", "at 10 p.m."],
+        "expl": { "de": "Die allgemeine Nachtruhe, in der Lärm vermieden werden muss, beginnt in Deutschland in der Regel um 22:00 Uhr und dauert bis 6:00 oder 7:00 Uhr morgens.", "en": "The general nighttime quiet period, during which noise must be avoided, usually begins in Germany at 10:00 p.m. and lasts until 6:00 or 7:00 a.m." }
+    },
+    {
+        "id": 267,
+        "q": "Eine junge Frau in Deutschland, 22 Jahre alt, lebt mit ihrem Freund zusammen. Die Eltern der Frau finden das nicht gut, weil ihnen der Freund nicht gefällt. Was können die Eltern tun?",
+        "o": ["Sie müssen die Entscheidung der volljährigen Tochter respektieren.", "Sie haben das Recht, die Tochter in die elterliche Wohnung zurückzuholen.", "Sie können zur Polizei gehen und die Tochter anzeigen.", "Sie suchen einen anderen Mann für die Tochter."],
+        "a": "Sie müssen die Entscheidung der volljährigen Tochter respektieren.",
+        "en": "A young woman in Germany, 22 years old, lives with her boyfriend. The woman's parents do not approve because they do not like the boyfriend. What can the parents do?",
+        "o_en": ["They must respect the decision of their adult daughter.", "They have the right to bring the daughter back to the parental home.", "They can go to the police and report the daughter.", "They look for another man for the daughter."],
+        "expl": { "de": "Da die Tochter mit 22 Jahren volljährig ist, hat sie das Recht, ihr Leben selbst zu bestimmen. Die Eltern haben kein Recht, sich in ihre Lebensführung einzumischen.", "en": "Since the daughter is a legal adult at 22, she has the right to determine her own life. The parents have no right to interfere in her way of life." }
+    },
+    {
+        "id": 268,
+        "q": "Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre {Muttersprache} nicht Deutsch ist. Was ist richtig?",
+        "o": ["Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den Führerschein machen kann.", "Wenn sie kein Deutsch kann, darf sie keinen Führerschein haben.", "Sie muss den Führerschein in dem Land machen, in dem man ihre Sprache spricht.", "Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl."],
+        "a": "Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.",
+        "t": {
+            "Muttersprache": "native language"
+        },
+        "en": "A young woman wants to get a driver's license. She is afraid of the test because her native language is not German. What is correct?",
+        "o_en": ["She must live in Germany for at least ten years before she can get a driver's license.", "If she does not speak German, she is not allowed to have a driver's license.", "She must get her driver's license in the country where her language is spoken.", "She may be able to take the theory test in her native language. There are more than ten languages to choose from."],
+        "expl": { "de": "Die theoretische Führerscheinprüfung kann in Deutschland in 12 verschiedenen Fremdsprachen abgelegt werden, um die Sprachbarriere zu senken.", "en": "In Germany, the theoretical driver's license test can be taken in 12 different foreign languages to lower the language barrier." }
+    },
+    {
+        "id": 269,
+        "q": "In Deutschland haben Kinder ab dem Alter von drei Jahren bis zur Ersteinschulung einen {Anspruch} auf einen Kindergartenplatz.",
+        "o": ["monatliches Taschengeld.", "einen Platz in einem Sportverein.", "einen Kindergartenplatz.", "einen Ferienpass."],
+        "a": "einen Kindergartenplatz.",
+        "t": {
+            "Anspruch": "right / claim"
+        },
+        "en": "In Germany, children from the age of three until they start school have a right to...",
+        "o_en": ["monthly pocket money.", "a place in a sports club.", "a kindergarten spot.", "a vacation pass."],
+        "expl": { "de": "Seit 2013 gibt es in Deutschland einen Rechtsanspruch auf einen Kindergartenplatz für alle Kinder ab dem vollendeten ersten Lebensjahr (Anmerkung: Die Frage ist ungenau, der Anspruch beginnt schon mit 1 Jahr, aber die Antwort ist die einzig sinnvolle).", "en": "Since 2013, there has been a legal right to a kindergarten spot in Germany for all children from the age of one (Note: The question is imprecise, the right begins at age 1, but the answer is the only one that makes sense)." }
+    },
+    {
+        "id": 270,
+        "q": "Die {Volkshochschule} in Deutschland ist eine Einrichtung zur {Weiterbildung}.",
+        "o": ["für den Religionsunterricht.", "nur für Jugendliche.", "zur Weiterbildung.", "nur für Rentnerinnen und Rentner."],
+        "a": "zur Weiterbildung.",
+        "t": {
+            "Volkshochschule": "adult education center",
+            "Weiterbildung": "further education"
+        },
+        "en": "The Volkshochschule (adult education center) in Germany is an institution",
+        "o_en": ["for religious education.", "only for young people.", "for further education.", "only for pensioners."],
+        "expl": { "de": "Volkshochschulen (VHS) sind öffentliche Einrichtungen der Erwachsenen- und Weiterbildung, die Kurse in vielen verschiedenen Bereichen für alle Altersgruppen anbieten.", "en": "Volkshochschulen (VHS) are public institutions for adult and further education that offer courses in many different areas for all age groups." }
+    }
+  ]
+}

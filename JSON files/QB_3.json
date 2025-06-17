@@ -1,0 +1,359 @@
+{
+  "general": [
+    {
+        "id": 61,
+        "q": "Was bedeutet '{Volkssouveränität}'?",
+        "o": ["Die Königin/der König herrscht über das Volk.", "Das Bundesverfassungsgericht steht über der Verfassung.", "Die Interessenverbände üben die Souveränität zusammen mit der Regierung aus.", "Die Staatsgewalt geht vom Volke aus."],
+        "a": "Die Staatsgewalt geht vom Volke aus.",
+        "t": {
+            "Volkssouveränität": "popular sovereignty"
+        },
+        "en": "What does 'popular sovereignty' mean?",
+        "o_en": ["The queen/king rules over the people.", "The Federal Constitutional Court is above the constitution.", "Interest groups exercise sovereignty together with the government.", "All state authority emanates from the people."],
+        "expl": { "de": "Volkssouveränität bedeutet, dass das Volk die oberste Gewalt im Staat ist und seine Macht durch Wahlen und Abstimmungen ausübt.", "en": "Popular sovereignty means that the people are the supreme authority in the state and exercise their power through elections and voting." }
+    },
+    {
+        "id": 62,
+        "q": "Wenn das {Parlament} eines deutschen Bundeslandes gewählt wird, nennt man das...",
+        "o": ["Kommunalwahl", "Landtagswahl", "Europawahl", "Bundestagswahl"],
+        "a": "Landtagswahl",
+        "t": {
+            "Parlament": "parliament"
+        },
+        "en": "When the parliament of a German federal state is elected, it is called a",
+        "o_en": ["municipal election", "state election", "European election", "federal election"],
+        "expl": { "de": "Die Wahl zum Parlament eines Bundeslandes wird Landtagswahl genannt. Der Landtag ist die Volksvertretung auf Länderebene.", "en": "The election for the parliament of a federal state is called a state election (Landtagswahl). The state parliament is the representation of the people at the state level." }
+    },
+    {
+        "id": 63,
+        "q": "Was gehört in Deutschland nicht zur {Exekutive}?",
+        "o": ["die Polizei", "die Gerichte", "das Finanzamt", "die Ministerien"],
+        "a": "die Gerichte",
+        "t": {
+            "Exekutive": "executive branch"
+        },
+        "en": "What is not part of the executive branch in Germany?",
+        "o_en": ["the police", "the courts", "the tax office", "the ministries"],
+        "expl": { "de": "Die Gerichte gehören zur Judikative (rechtsprechende Gewalt). Die Polizei, Finanzämter und Ministerien sind Teil der Exekutive (vollziehende Gewalt).", "en": "The courts belong to the judicial branch. The police, tax offices, and ministries are part of the executive branch." }
+    },
+    {
+        "id": 64,
+        "q": "Die Bundesrepublik Deutschland ist heute {gegliedert} in ...",
+        "o": ["vier Besatzungszonen.", "einen Oststaat und einen Weststaat.", "16 Kantone.", "Bund, Länder und Kommunen."],
+        "a": "Bund, Länder und Kommunen.",
+        "t": {
+            "gegliedert": "structured / divided"
+        },
+        "en": "The Federal Republic of Germany is structured today into...",
+        "o_en": ["four occupation zones.", "an eastern state and a western state.", "16 cantons.", "Federation, states, and municipalities."],
+        "expl": { "de": "Der föderale Aufbau Deutschlands besteht aus drei politischen Ebenen: dem Bund (Gesamtstaat), den 16 Ländern und den Kommunen (Städte und Gemeinden).", "en": "The federal structure of Germany consists of three political levels: the Federation (the national government), the 16 states (Länder), and the municipalities (cities and communities)." }
+    },
+    {
+        "id": 65,
+        "q": "Es gehört nicht zu den {Aufgaben} des Deutschen Bundestages, das {Bundeskabinett} zu bilden.",
+        "o": ["Gesetze zu entwerfen.", "die Bundesregierung zu kontrollieren.", "die Bundeskanzlerin/den Bundeskanzler zu wählen.", "das Bundeskabinett zu bilden."],
+        "a": "das Bundeskabinett zu bilden.",
+        "t": {
+            "Aufgaben": "tasks",
+            "Bundeskabinett": "federal cabinet"
+        },
+        "en": "It is not one of the tasks of the German Bundestag to...",
+        "o_en": ["draft laws.", "scrutinize the federal government.", "elect the Federal Chancellor.", "form the federal cabinet."],
+        "expl": { "de": "Das Bundeskabinett (die Bundesminister) wird vom Bundeskanzler gebildet und vom Bundespräsidenten ernannt. Der Bundestag wählt nur den Kanzler.", "en": "The federal cabinet (the federal ministers) is formed by the Federal Chancellor and appointed by the Federal President. The Bundestag only elects the Chancellor." }
+    },
+    {
+        "id": 66,
+        "q": "Welche Städte haben die größten {jüdischen} Gemeinden in Deutschland?",
+        "o": ["Berlin und München", "Hamburg und Essen", "Nürnberg und Stuttgart", "Worms und Speyer"],
+        "a": "Berlin und München",
+        "t": {
+            "jüdischen": "Jewish"
+        },
+        "en": "Which cities have the largest Jewish communities in Germany?",
+        "o_en": ["Berlin and Munich", "Hamburg and Essen", "Nuremberg and Stuttgart", "Worms and Speyer"],
+        "expl": { "de": "Berlin hat die größte jüdische Gemeinde in Deutschland, gefolgt von München. Diese Städte sind wichtige Zentren jüdischen Lebens.", "en": "Berlin has the largest Jewish community in Germany, followed by Munich. These cities are important centers of Jewish life." }
+    },
+    {
+        "id": 67,
+        "q": "Was ist in Deutschland vor allem eine Aufgabe der {Bundesländer}?",
+        "o": ["Verteidigungspolitik", "Außenpolitik", "Wirtschaftspolitik", "Schulpolitik"],
+        "a": "Schulpolitik",
+        "t": {
+            "Bundesländer": "federal states"
+        },
+        "en": "In Germany, what is primarily a task of the federal states?",
+        "o_en": ["Defense policy", "Foreign policy", "Economic policy", "Education policy"],
+        "expl": { "de": "Aufgrund der 'Kulturhoheit der Länder' ist die Bildung- und Schulpolitik eine der wichtigsten eigenen Aufgaben der 16 Bundesländer.", "en": "Due to the 'cultural sovereignty of the states,' education and school policy is one of the most important responsibilities of the 16 federal states." }
+    },
+    {
+        "id": 68,
+        "q": "Warum {kontrolliert} der Staat in Deutschland das {Schulwesen}?",
+        "o": ["weil es in Deutschland nur staatliche Schulen gibt", "weil alle Schülerinnen und Schüler einen Schulabschluss haben müssen", "weil es in den Bundesländern verschiedene Schulen gibt", "weil es nach dem Grundgesetz seine Aufgabe ist"],
+        "a": "weil es nach dem Grundgesetz seine Aufgabe ist",
+        "t": {
+            "kontrolliert": "controls",
+            "Schulwesen": "school system"
+        },
+        "en": "Why does the state in Germany control the school system?",
+        "o_en": ["because there are only state schools in Germany", "because all pupils must have a school-leaving certificate", "because there are different schools in the federal states", "because it is its task according to the Basic Law"],
+        "expl": { "de": "Artikel 7 des Grundgesetzes legt fest, dass das gesamte Schulwesen unter der Aufsicht des Staates steht, um einheitliche Standards und die Erfüllung des Bildungsauftrags zu sichern.", "en": "Article 7 of the Basic Law stipulates that the entire school system is under the supervision of the state to ensure uniform standards and the fulfillment of the educational mandate." }
+    },
+    {
+        "id": 69,
+        "q": "Die Bundesrepublik Deutschland hat einen dreistufigen {Verwaltungsaufbau}. Wie heißt die unterste politische Stufe?",
+        "o": ["Stadträte", "Landräte", "Gemeinden", "Bezirksämter"],
+        "a": "Gemeinden",
+        "t": {
+            "Verwaltungsaufbau": "administrative structure"
+        },
+        "en": "The Federal Republic of Germany has a three-tier administrative structure. What is the lowest political level called?",
+        "o_en": ["City councils", "District administrators", "Municipalities", "District offices"],
+        "expl": { "de": "Die politische Gliederung ist Bund, Länder und Kommunen. Die Kommunen (Gemeinden und Städte) bilden die unterste Stufe der Verwaltung.", "en": "The political structure is Federation, States, and Municipalities. The municipalities (communities and cities) form the lowest level of administration." }
+    },
+    {
+        "id": 70,
+        "q": "Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die {Ernennungsurkunde} zum deutschen Bundeskanzler. Was gehört zu den Aufgaben der deutschen Bundespräsidentin/des deutschen Bundespräsidenten?",
+        "isImage": true,
+        "o": ["Sie/Er führt die Regierungsgeschäfte.", "Sie/Er kontrolliert die Regierungspartei.", "Sie/Er wählt die Ministerinnen/Minister aus.", "Sie/Er schlägt die Kanzlerin/den Kanzler zur Wahl vor."],
+        "a": "Sie/Er schlägt die Kanzlerin/den Kanzler zur Wahl vor.",
+        "t": {
+            "Ernennungsurkunde": "certificate of appointment"
+        },
+        "en": "The German Federal President Gustav Heinemann gives Helmut Schmidt the certificate of appointment as German Federal Chancellor in 1974. What is one of the tasks of the German Federal President?",
+        "o_en": ["He/She runs the government's business.", "He/She controls the governing party.", "He/She selects the ministers.", "He/She proposes the Chancellor for election."],
+        "expl": { "de": "Nach einer Bundestagswahl schlägt der Bundespräsident dem Bundestag einen Kandidaten für das Amt des Bundeskanzlers vor. Er ernennt den Kanzler und auf dessen Vorschlag die Minister, führt aber nicht die Regierung.", "en": "After a federal election, the Federal President proposes a candidate for the office of Federal Chancellor to the Bundestag. He appoints the Chancellor and, upon the Chancellor's proposal, the ministers, but does not lead the government." }
+    },
+    {
+        "id": 71,
+        "q": "Wo hält sich die deutsche Bundeskanzlerin/der deutsche Bundeskanzler am {häufigsten} auf? Am häufigsten ist sie/er ...",
+        "o": ["in Bonn, weil sich dort das Bundeskanzleramt und der Bundestag befinden.", "auf Schloss Meseberg, dem Gästehaus der Bundesregierung, um Staatsgäste zu empfangen.", "auf Schloss Bellevue, dem Amtssitz der Bundespräsidentin/des Bundespräsidenten, um Staatsgäste zu empfangen.", "in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden."],
+        "a": "in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",
+        "t": {
+            "häufigsten": "most often"
+        },
+        "en": "Where does the German Chancellor spend most of his/her time? Most often he/she is...",
+        "o_en": ["in Bonn, because the Federal Chancellery and the Bundestag are located there.", "at Meseberg Palace, the government's guest house, to receive state guests.", "at Bellevue Palace, the official residence of the Federal President, to receive state guests.", "in Berlin, because the Federal Chancellery and the Bundestag are located there."],
+        "expl": { "de": "Seit dem Regierungsumzug ist Berlin die Hauptstadt und der politische Mittelpunkt Deutschlands. Hier befinden sich sowohl das Bundeskanzleramt als auch der Bundestag.", "en": "Since the government moved, Berlin has been the capital and political center of Germany. Both the Federal Chancellery and the Bundestag are located here." }
+    },
+    {
+        "id": 72,
+        "q": "Wie heißt der {jetzige} Bundeskanzler von Deutschland?",
+        "o": ["Gerhard Schröder", "Olaf Scholz", "Angela Merkel", "Friedrich Merz"],
+        "a": "Olaf Scholz",
+        "t": {
+            "jetzige": "current"
+        },
+        "en": "What is the name of the current Chancellor of Germany?",
+        "o_en": ["Gerhard Schröder", "Olaf Scholz", "Angela Merkel", "Friedrich Merz"],
+        "expl": { "de": "Seit Dezember 2021 ist Olaf Scholz der Bundeskanzler der Bundesrepublik Deutschland.", "en": "Since December 2021, Olaf Scholz has been the Chancellor of the Federal Republic of Germany." }
+    },
+    {
+        "id": 73,
+        "q": "Die beiden größten {Fraktionen} im Deutschen Bundestag heißen zurzeit ...",
+        "o": ["CDU/CSU und SPD", "Die Linke und Bündnis 90/Die Grünen", "SPD und FDP", "CDU/CSU und Die Grünen"],
+        "a": "CDU/CSU und SPD",
+        "t": {
+            "Fraktionen": "parliamentary groups"
+        },
+        "en": "The two largest parliamentary groups in the German Bundestag are currently called...",
+        "o_en": ["CDU/CSU and SPD", "The Left and Alliance 90/The Greens", "SPD and FDP", "CDU/CSU and The Greens"],
+        "expl": { "de": "Basierend auf dem Ergebnis der Bundestagswahl 2021 sind die SPD und die CDU/CSU die beiden fraktionsstärksten Parteien im Bundestag.", "en": "Based on the results of the 2021 federal election, the SPD and the CDU/CSU are the two parties with the largest parliamentary groups in the Bundestag." }
+    },
+    {
+        "id": 74,
+        "q": "Wie heißt das {Parlament} für ganz Deutschland?",
+        "o": ["Bundesversammlung", "Volkskammer", "Bundestag", "Bundesgerichtshof"],
+        "a": "Bundestag",
+        "t": {
+            "Parlament": "parliament"
+        },
+        "en": "What is the name of the parliament for all of Germany?",
+        "o_en": ["Federal Convention", "People's Chamber", "Bundestag", "Federal Court of Justice"],
+        "expl": { "de": "Der Deutsche Bundestag ist die Volksvertretung der Bundesrepublik Deutschland und somit das Parlament.", "en": "The German Bundestag is the people's representation of the Federal Republic of Germany and thus its parliament." }
+    },
+    {
+        "id": 75,
+        "q": "Wie heißt Deutschlands heutiges {Staatsoberhaupt}?",
+        "o": ["Frank-Walter Steinmeier", "Bärbel Bas", "Olaf Scholz", "Joachim Gauck"],
+        "a": "Frank-Walter Steinmeier",
+        "t": {
+            "Staatsoberhaupt": "head of state"
+        },
+        "en": "What is the name of Germany's current head of state?",
+        "o_en": ["Frank-Walter Steinmeier", "Bärbel Bas", "Olaf Scholz", "Joachim Gauck"],
+        "expl": { "de": "Das Staatsoberhaupt der Bundesrepublik Deutschland ist der Bundespräsident, aktuell Frank-Walter Steinmeier.", "en": "The head of state of the Federal Republic of Germany is the Federal President, currently Frank-Walter Steinmeier." }
+    },
+    {
+        "id": 76,
+        "q": "Was bedeutet die {Abkürzung} CDU in Deutschland?",
+        "o": ["Christliche Deutsche Union", "Club Deutscher Unternehmer", "Christlicher Deutscher Umweltschutz", "Christlich Demokratische Union"],
+        "a": "Christlich Demokratische Union",
+        "t": {
+            "Abkürzung": "abbreviation"
+        },
+        "en": "What does the abbreviation CDU mean in Germany?",
+        "o_en": ["Christian German Union", "Club of German Entrepreneurs", "Christian German Environmental Protection", "Christian Democratic Union"],
+        "expl": { "de": "CDU steht für Christlich Demokratische Union.", "en": "CDU stands for Christian Democratic Union." }
+    },
+    {
+        "id": 77,
+        "q": "Was ist die {Bundeswehr}?",
+        "o": ["die deutsche Polizei", "ein deutscher Hafen", "eine deutsche Bürgerinitiative", "die deutsche Armee"],
+        "a": "die deutsche Armee",
+        "t": {
+            "Bundeswehr": "German army / armed forces"
+        },
+        "en": "What is the Bundeswehr?",
+        "o_en": ["the German police", "a German port", "a German citizens' initiative", "the German army"],
+        "expl": { "de": "Die Bundeswehr sind die Streitkräfte der Bundesrepublik Deutschland.", "en": "The Bundeswehr is the armed forces of the Federal Republic of Germany." }
+    },
+    {
+        "id": 78,
+        "q": "Was bedeutet die {Abkürzung} SPD?",
+        "o": ["Sozialistische Partei Deutschlands", "Sozialpolitische Partei Deutschlands", "Sozialdemokratische Partei Deutschlands", "Sozialgerechte Partei Deutschlands"],
+        "a": "Sozialdemokratische Partei Deutschlands",
+        "t": {
+            "Abkürzung": "abbreviation"
+        },
+        "en": "What does the abbreviation SPD mean?",
+        "o_en": ["Socialist Party of Germany", "Social-Political Party of Germany", "Social Democratic Party of Germany", "Social Justice Party of Germany"],
+        "expl": { "de": "SPD steht für Sozialdemokratische Partei Deutschlands.", "en": "SPD stands for Social Democratic Party of Germany." }
+    },
+    {
+        "id": 79,
+        "q": "Was bedeutet die {Abkürzung} FDP in Deutschland?",
+        "o": ["Friedliche Demonstrative Partei", "Freie Deutschland Partei", "Führende Demokratische Partei", "Freie Demokratische Partei"],
+        "a": "Freie Demokratische Partei",
+        "t": {
+            "Abkürzung": "abbreviation"
+        },
+        "en": "What does the abbreviation FDP mean in Germany?",
+        "o_en": ["Peaceful Demonstrative Party", "Free Germany Party", "Leading Democratic Party", "Free Democratic Party"],
+        "expl": { "de": "FDP steht für Freie Demokratische Partei.", "en": "FDP stands for Free Democratic Party." }
+    },
+    {
+        "id": 80,
+        "q": "Welches {Gericht} in Deutschland ist zuständig für die {Auslegung} des Grundgesetzes?",
+        "o": ["Oberlandesgericht", "Amtsgericht", "Bundesverfassungsgericht", "Verwaltungsgericht"],
+        "a": "Bundesverfassungsgericht",
+        "t": {
+            "Gericht": "court",
+            "Auslegung": "interpretation"
+        },
+        "en": "Which court in Germany is responsible for the interpretation of the Basic Law?",
+        "o_en": ["Higher Regional Court", "Local Court", "Federal Constitutional Court", "Administrative Court"],
+        "expl": { "de": "Das Bundesverfassungsgericht in Karlsruhe wacht über die Einhaltung des Grundgesetzes und legt seine Artikel verbindlich aus.", "en": "The Federal Constitutional Court in Karlsruhe monitors compliance with the Basic Law and interprets its articles in a binding manner." }
+    },
+    {
+        "id": 81,
+        "q": "Wer wählt die {Bundeskanzlerin/den Bundeskanzler} in Deutschland?",
+        "o": ["der Bundesrat", "die Bundesversammlung", "das Volk", "der Bundestag"],
+        "a": "der Bundestag",
+        "t": {
+            "Bundeskanzlerin/den Bundeskanzler": "Federal Chancellor"
+        },
+        "en": "Who elects the Federal Chancellor in Germany?",
+        "o_en": ["the Bundesrat", "the Federal Convention", "the people", "the Bundestag"],
+        "expl": { "de": "Der Bundeskanzler wird auf Vorschlag des Bundespräsidenten vom Bundestag gewählt.", "en": "The Federal Chancellor is elected by the Bundestag upon the proposal of the Federal President." }
+    },
+    {
+        "id": 82,
+        "q": "Wer leitet das deutsche {Bundeskabinett}?",
+        "o": ["die Bundestagspräsidentin/der Bundestagspräsident", "die Bundespräsidentin/der Bundespräsident", "die Bundesratspräsidentin/der Bundesratspräsident", "die Bundeskanzlerin/der Bundeskanzler"],
+        "a": "die Bundeskanzlerin/der Bundeskanzler",
+        "t": {
+            "Bundeskabinett": "federal cabinet"
+        },
+        "en": "Who leads the German federal cabinet?",
+        "o_en": ["the President of the Bundestag", "the Federal President", "the President of the Bundesrat", "the Federal Chancellor"],
+        "expl": { "de": "Die Bundeskanzlerin oder der Bundeskanzler leitet die Bundesregierung (das Kabinett) und bestimmt die Richtlinien der Politik.", "en": "The Federal Chancellor leads the federal government (the cabinet) and determines the guidelines of policy." }
+    },
+    {
+        "id": 83,
+        "q": "Wer wählt die deutsche Bundeskanzlerin/den deutschen Bundeskanzler?",
+        "o": ["das Volk", "die Bundesversammlung", "der Bundestag", "die Bundesregierung"],
+        "a": "der Bundestag",
+        "en": "Who elects the German Federal Chancellor?",
+        "o_en": ["the people", "the Federal Convention", "the Bundestag", "the federal government"],
+        "expl": { "de": "Das Volk wählt den Bundestag, und der Bundestag wählt dann den Bundeskanzler.", "en": "The people elect the Bundestag, and the Bundestag then elects the Federal Chancellor." }
+    },
+    {
+        "id": 84,
+        "q": "Welche {Hauptaufgabe} hat die deutsche Bundespräsidentin/der deutsche Bundespräsident? Sie/Er ...",
+        "o": ["regiert das Land.", "entwirft die Gesetze.", "repräsentiert das Land.", "überwacht die Einhaltung der Gesetze."],
+        "a": "repräsentiert das Land.",
+        "t": {
+            "Hauptaufgabe": "main task"
+        },
+        "en": "What is the main task of the German Federal President? He/She...",
+        "o_en": ["governs the country.", "drafts the laws.", "represents the country.", "monitors compliance with the laws."],
+        "expl": { "de": "Der Bundespräsident hat hauptsächlich repräsentative Aufgaben. Er vertritt Deutschland nach innen und außen. Die Regierungsgeschäfte führt der Bundeskanzler.", "en": "The Federal President mainly has representative duties. He/She represents Germany at home and abroad. The Federal Chancellor conducts the business of government." }
+    },
+    {
+        "id": 85,
+        "q": "Wer bildet den deutschen {Bundesrat}?",
+        "o": ["die Abgeordneten des Bundestages", "die Ministerinnen und Minister der Bundesregierung", "die Regierungsvertreter der Bundesländer", "die Parteimitglieder"],
+        "a": "die Regierungsvertreter der Bundesländer",
+        "t": {
+            "Bundesrat": "German Bundesrat (Federal Council)"
+        },
+        "en": "Who makes up the German Bundesrat?",
+        "o_en": ["the members of the Bundestag", "the ministers of the federal government", "the government representatives of the federal states", "the party members"],
+        "expl": { "de": "Der Bundesrat ist die Vertretung der 16 Bundesländer auf Bundesebene. Er besteht aus Mitgliedern der Landesregierungen.", "en": "The Bundesrat is the representation of the 16 federal states at the federal level. It consists of members of the state governments." }
+    },
+    {
+        "id": 86,
+        "q": "Wer wählt in Deutschland die Bundespräsidentin/den Bundespräsidenten?",
+        "o": ["die Bundesversammlung", "der Bundesrat", "das Bundesparlament", "das Bundesverfassungsgericht"],
+        "a": "die Bundesversammlung",
+        "en": "Who elects the Federal President in Germany?",
+        "o_en": ["the Federal Convention", "the Bundesrat", "the Federal Parliament", "the Federal Constitutional Court"],
+        "expl": { "de": "Die Bundesversammlung ist ein Verfassungsorgan, das nur zur Wahl des Bundespräsidenten zusammentritt. Es besteht aus den Mitgliedern des Bundestages und einer gleichen Anzahl von Delegierten, die von den Landtagen gewählt werden.", "en": "The Federal Convention (Bundesversammlung) is a constitutional body that convenes only to elect the Federal President. It consists of the members of the Bundestag and an equal number of delegates elected by the state parliaments." }
+    },
+    {
+        "id": 87,
+        "q": "Wer ist das {Staatsoberhaupt} der Bundesrepublik Deutschland?",
+        "o": ["die Bundeskanzlerin/der Bundeskanzler", "die Bundespräsidentin/der Bundespräsident", "die Bundesratspräsidentin/der Bundesratspräsident", "die Bundestagspräsidentin/der Bundestagspräsident"],
+        "a": "die Bundespräsidentin/der Bundespräsident",
+        "t": {
+            "Staatsoberhaupt": "head of state"
+        },
+        "en": "Who is the head of state of the Federal Republic of Germany?",
+        "o_en": ["the Federal Chancellor", "the Federal President", "the President of the Bundesrat", "the President of the Bundestag"],
+        "expl": { "de": "Das Staatsoberhaupt ist der Bundespräsident. Der Regierungschef ist der Bundeskanzler.", "en": "The head of state is the Federal President. The head of government is the Federal Chancellor." }
+    },
+    {
+        "id": 88,
+        "q": "Die parlamentarische {Opposition} im Deutschen Bundestag ...",
+        "o": ["kontrolliert die Regierung.", "entscheidet, wer Bundesministerin/Bundesminister wird.", "bestimmt, wer im Bundesrat sitzt.", "schlägt die Regierungschefinnen/Regierungschefs der Länder vor."],
+        "a": "kontrolliert die Regierung.",
+        "t": {
+            "Opposition": "opposition"
+        },
+        "en": "The parliamentary opposition in the German Bundestag...",
+        "o_en": ["scrutinizes the government.", "decides who becomes a federal minister.", "determines who sits in the Bundesrat.", "proposes the heads of government of the states."],
+        "expl": { "de": "Eine der wichtigsten Aufgaben der Opposition in einer parlamentarischen Demokratie ist die Kontrolle der Regierung durch Anfragen, Debatten und Untersuchungsausschüsse.", "en": "One of the most important tasks of the opposition in a parliamentary democracy is to scrutinize the government through inquiries, debates, and committees of investigation." }
+    },
+    {
+        "id": 89,
+        "q": "Wie nennt man in Deutschland die Vereinigung von Abgeordneten einer Partei im Parlament?",
+        "o": ["Verband", "Ältestenrat", "Fraktion", "Opposition"],
+        "a": "Fraktion",
+        "en": "What is the association of members of a party in the parliament called in Germany?",
+        "o_en": ["Association", "Council of Elders", "Parliamentary group (Fraktion)", "Opposition"],
+        "expl": { "de": "Abgeordnete der gleichen Partei oder von Parteien mit ähnlichen Zielen schließen sich zu einer Fraktion zusammen, um ihre Arbeit im Parlament zu koordinieren.", "en": "Members of the same party, or parties with similar goals, form a parliamentary group (Fraktion) to coordinate their work in parliament." }
+    },
+    {
+        "id": 90,
+        "q": "Die deutschen Bundesländer wirken an der {Gesetzgebung} des Bundes mit durch ...",
+        "o": ["den Bundesrat.", "die Bundesversammlung.", "den Bundestag.", "die Bundesregierung."],
+        "a": "den Bundesrat.",
+        "t": {
+            "Gesetzgebung": "legislation"
+        },
+        "en": "The German federal states participate in the legislation of the Federation through...",
+        "o_en": ["the Bundesrat.", "the Federal Convention.", "the Bundestag.", "the federal government."],
+        "expl": { "de": "Der Bundesrat ist das Organ, durch das die Länder an der Gesetzgebung und Verwaltung des Bundes beteiligt sind. Viele Gesetze benötigen die Zustimmung des Bundesrates.", "en": "The Bundesrat is the body through which the states are involved in the legislation and administration of the Federation. Many laws require the approval of the Bundesrat." }
+    }
+  ]
+}

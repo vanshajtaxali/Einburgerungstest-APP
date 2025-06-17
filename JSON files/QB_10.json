@@ -1,0 +1,370 @@
+{
+  "general": [
+    {
+        "id": 271,
+        "q": "Was ist in Deutschland ein {Brauch} zu {Weihnachten}?",
+        "o": ["bunte Eier verstecken", "einen Tannenbaum schmücken", "sich mit Masken und Kostümen verkleiden", "Kürbisse vor die Tür stellen"],
+        "a": "einen Tannenbaum schmücken",
+        "t": {
+            "Brauch": "custom",
+            "Weihnachten": "Christmas"
+        },
+        "en": "What is a Christmas custom in Germany?",
+        "o_en": ["hiding colorful eggs", "decorating a Christmas tree", "dressing up in masks and costumes", "placing pumpkins in front of the door"],
+        "expl": { "de": "Das Schmücken eines Tannenbaums ist ein weit verbreiteter und zentraler Weihnachtsbrauch in Deutschland.", "en": "Decorating a fir tree is a widespread and central Christmas custom in Germany." }
+    },
+    {
+        "id": 272,
+        "q": "Welche {Lebensform} ist in Deutschland nicht {erlaubt}?",
+        "o": ["Mann und Frau sind geschieden und leben mit neuen Partnern zusammen.", "Zwei Frauen leben zusammen.", "Ein alleinerziehender Vater lebt mit seinen zwei Kindern zusammen.", "Ein Mann ist mit zwei Frauen zur selben Zeit verheiratet."],
+        "a": "Ein Mann ist mit zwei Frauen zur selben Zeit verheiratet.",
+        "t": {
+            "Lebensform": "form of living",
+            "erlaubt": "allowed"
+        },
+        "en": "Which form of living is not allowed in Germany?",
+        "o_en": ["A man and a woman are divorced and live with new partners.", "Two women live together.", "A single father lives with his two children.", "A man is married to two women at the same time."],
+        "expl": { "de": "Bigamie, die Ehe mit mehr als einer Person gleichzeitig, ist in Deutschland gesetzlich verboten und strafbar.", "en": "Bigamy, being married to more than one person at the same time, is legally prohibited and punishable by law in Germany." }
+    },
+    {
+        "id": 273,
+        "q": "Bei {Erziehungsproblemen} gehen Sie in Deutschland zum {Jugendamt}.",
+        "o": ["zur Ärztin/zum Arzt.", "zum Gesundheitsamt.", "zum Einwohnermeldeamt.", "zum Jugendamt."],
+        "a": "zum Jugendamt.",
+        "t": {
+            "Erziehungsproblemen": "parenting problems",
+            "Jugendamt": "Youth Welfare Office"
+        },
+        "en": "In Germany, if you have parenting problems, you go to...",
+        "o_en": ["the doctor.", "the public health office.", "the residents' registration office.", "the youth welfare office."],
+        "expl": { "de": "Das Jugendamt ist die zentrale Anlaufstelle für Eltern und bietet Beratung und Unterstützung bei allen Fragen und Problemen rund um die Erziehung.", "en": "The Youth Welfare Office (Jugendamt) is the central point of contact for parents and offers advice and support on all questions and problems related to child-rearing." }
+    },
+    {
+        "id": 274,
+        "q": "Sie haben in Deutschland {absichtlich} einen Brief geöffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet? Das {Briefgeheimnis}",
+        "o": ["das Schweigerecht", "das Briefgeheimnis", "die Schweigepflicht", "die Meinungsfreiheit"],
+        "a": "das Briefgeheimnis",
+        "t": {
+            "absichtlich": "intentionally",
+            "Briefgeheimnis": "secrecy of correspondence"
+        },
+        "en": "You have intentionally opened a letter in Germany that was addressed to another person. What have you disregarded?",
+        "o_en": ["the right to remain silent", "the secrecy of correspondence", "the duty of confidentiality", "the freedom of speech"],
+        "expl": { "de": "Das unbefugte Öffnen von fremden Briefen ist eine Verletzung des Briefgeheimnisses, welches durch das Grundgesetz (Artikel 10) geschützt ist.", "en": "The unauthorized opening of other people's letters is a violation of the secrecy of correspondence, which is protected by the Basic Law (Article 10)." }
+    },
+    {
+        "id": 275,
+        "q": "Was braucht man in Deutschland für eine {Ehescheidung}?",
+        "o": ["die Einwilligung der Eltern", "ein Attest einer Ärztin/eines Arztes", "die Einwilligung der Kinder", "die Unterstützung einer Anwältin/eines Anwalts"],
+        "a": "die Unterstützung einer Anwältin/eines Anwalts",
+        "t": {
+            "Ehescheidung": "divorce"
+        },
+        "en": "What do you need in Germany for a divorce?",
+        "o_en": ["the consent of the parents", "a certificate from a doctor", "the consent of the children", "the assistance of a lawyer"],
+        "expl": { "de": "In Deutschland herrscht bei Ehescheidungen vor dem Familiengericht Anwaltszwang. Mindestens einer der Ehepartner muss anwaltlich vertreten sein.", "en": "In Germany, representation by a lawyer is compulsory in divorce proceedings before the family court. At least one of the spouses must be represented by a lawyer." }
+    },
+    {
+        "id": 276,
+        "q": "Was sollten Sie tun, wenn Sie von Ihrer Ansprechpartnerin/Ihrem Ansprechpartner in einer deutschen {Behörde} schlecht behandelt werden?",
+        "o": ["Ich kann nichts tun.", "Ich muss mir diese Behandlung gefallen lassen.", "Ich drohe der Person.", "Ich kann mich bei der Behördenleiterin/beim Behördenleiter beschweren."],
+        "a": "Ich kann mich bei der Behördenleiterin/beim Behördenleiter beschweren.",
+        "t": {
+            "Behörde": "authority / public office"
+        },
+        "en": "What should you do if you are treated poorly by your contact person in a German authority?",
+        "o_en": ["I can do nothing.", "I have to put up with this treatment.", "I threaten the person.", "I can complain to the head of the authority."],
+        "expl": { "de": "Bei unangemessenem Verhalten eines Behördenmitarbeiters hat man das Recht, eine Dienstaufsichtsbeschwerde bei dessen Vorgesetzten bzw. der Behördenleitung einzulegen.", "en": "In the case of inappropriate behavior by a public official, one has the right to file a disciplinary complaint (Dienstaufsichtsbeschwerde) with their supervisor or the head of the authority." }
+    },
+    {
+        "id": 277,
+        "q": "Eine Frau, die ein zweijähriges Kind hat, {bewirbt sich} in Deutschland um eine Stelle. Was ist ein Beispiel für {Diskriminierung}? Sie bekommt die Stelle nur deshalb nicht, weil sie Mutter ist.",
+        "o": ["kein Englisch spricht.", "zu hohe Gehaltsvorstellungen hat.", "keine Erfahrungen in diesem Beruf hat.", "Mutter ist."],
+        "a": "Mutter ist.",
+        "t": {
+            "bewirbt sich": "applies for",
+            "Diskriminierung": "discrimination"
+        },
+        "en": "A woman who has a two-year-old child applies for a job in Germany. What is an example of discrimination? She does not get the job solely because she...",
+        "o_en": ["does not speak English.", "has salary expectations that are too high.", "has no experience in this profession.", "is a mother."],
+        "expl": { "de": "Eine Benachteiligung allein aufgrund der Tatsache, dass jemand Mutter ist, verstößt gegen das Allgemeine Gleichbehandlungsgesetz (AGG).", "en": "Disadvantage solely due to the fact that someone is a mother violates the General Equal Treatment Act (AGG)." }
+    },
+    {
+        "id": 278,
+        "q": "Ein Mann im Rollstuhl hat sich auf eine Stelle als Buchhalter beworben. Was ist ein Beispiel für {Diskriminierung}? Er bekommt die Stelle nur deshalb nicht, weil er im Rollstuhl sitzt.",
+        "o": ["im Rollstuhl sitzt.", "keine Erfahrung hat.", "zu hohe Gehaltsvorstellungen hat.", "kein Englisch spricht."],
+        "a": "im Rollstuhl sitzt.",
+        "t": {
+            "Diskriminierung": "discrimination"
+        },
+        "en": "A man in a wheelchair has applied for a job as an accountant. What is an example of discrimination? He does not get the job solely because he...",
+        "o_en": ["is in a wheelchair.", "has no experience.", "has salary expectations that are too high.", "does not speak English."],
+        "expl": { "de": "Eine Benachteiligung allein aufgrund einer Behinderung verstößt gegen das Allgemeine Gleichbehandlungsgesetz (AGG), solange die Behinderung die Ausübung der Tätigkeit nicht unmöglich macht.", "en": "Disadvantage solely due to a disability violates the General Equal Treatment Act (AGG), as long as the disability does not make it impossible to perform the job." }
+    },
+    {
+        "id": 279,
+        "q": "In den meisten Mietshäusern in Deutschland gibt es eine '{Hausordnung}'. Was steht in einer solchen '{Hausordnung}'? Sie nennt Regeln, an die sich alle Bewohnerinnen und Bewohner halten müssen.",
+        "o": ["Regeln für die Benutzung öffentlicher Verkehrsmittel.", "alle Mieterinnen und Mieter im Haus.", "Regeln, an die sich alle Bewohnerinnen und Bewohner halten müssen.", "die Adresse des nächsten Ordnungsamtes."],
+        "a": "Regeln, an die sich alle Bewohnerinnen und Bewohner halten müssen.",
+        "t": {
+            "Hausordnung": "house rules"
+        },
+        "en": "In most apartment buildings in Germany, there is a 'Hausordnung' (house rules). What is in such a 'Hausordnung'? It names...",
+        "o_en": ["rules for the use of public transport.", "all tenants in the building.", "rules that all residents must adhere to.", "the address of the nearest public order office."],
+        "expl": { "de": "Die Hausordnung regelt das Zusammenleben der Bewohner in einem Mietshaus, z.B. Ruhezeiten, Reinigung von Gemeinschaftsflächen oder Mülltrennung.", "en": "The house rules regulate the cohabitation of residents in an apartment building, e.g., quiet hours, cleaning of common areas, or waste separation." }
+    },
+    {
+        "id": 280,
+        "q": "Wenn Sie sich in Deutschland gegen einen falschen {Steuerbescheid} {wehren} wollen, müssen Sie {Einspruch einlegen}.",
+        "o": ["nichts machen.", "den Bescheid wegwerfen.", "Einspruch einlegen.", "warten, bis ein anderer Bescheid kommt."],
+        "a": "Einspruch einlegen.",
+        "t": {
+            "Steuerbescheid": "tax assessment notice",
+            "wehren": "to defend oneself",
+            "Einspruch einlegen": "to file an objection"
+        },
+        "en": "If you want to defend yourself against an incorrect tax assessment in Germany, you must...",
+        "o_en": ["do nothing.", "throw the notice away.", "file an objection.", "wait for another notice to arrive."],
+        "expl": { "de": "Gegen einen Steuerbescheid kann man innerhalb eines Monats nach Erhalt schriftlich Einspruch beim zuständigen Finanzamt einlegen.", "en": "One can file a written objection with the responsible tax office within one month of receiving a tax assessment notice." }
+    },
+    {
+        "id": 281,
+        "q": "Zwei Freunde wollen in ein öffentliches Schwimmbad in Deutschland. Beide haben eine dunkle Hautfarbe und werden deshalb nicht hineingelassen. Welches {Recht} wird in dieser Situation {verletzt}? Das Recht auf {Gleichbehandlung}",
+        "o": ["Meinungsfreiheit", "Gleichbehandlung", "Versammlungsfreiheit", "Freizügigkeit"],
+        "a": "Gleichbehandlung",
+        "t": {
+            "Recht": "right",
+            "verletzt": "violated",
+            "Gleichbehandlung": "equal treatment"
+        },
+        "en": "Two friends want to go to a public swimming pool in Germany. Both have dark skin and are therefore not allowed in. Which right is violated in this situation? The right to...",
+        "o_en": ["freedom of speech", "equal treatment", "freedom of assembly", "freedom of movement"],
+        "expl": { "de": "Die Abweisung aufgrund der Hautfarbe ist eine rassistische Diskriminierung und verletzt den Grundsatz der Gleichbehandlung (Artikel 3 GG).", "en": "Refusal of entry based on skin color is racist discrimination and violates the principle of equal treatment (Article 3 of the Basic Law)." }
+    },
+    {
+        "id": 282,
+        "q": "Welches {Ehrenamt} müssen deutsche Staatsbürgerinnen und Staatsbürger übernehmen, wenn sie dazu aufgefordert werden?",
+        "o": ["Vereinstrainerin/Vereinstrainer", "Wahlhelferin/Wahlhelfer", "Bibliotheksaufsicht", "Lehrerin/Lehrer"],
+        "a": "Wahlhelferin/Wahlhelfer",
+        "t": {
+            "Ehrenamt": "honorary office / volunteer position"
+        },
+        "en": "Which honorary office must German citizens take on if they are called upon to do so?",
+        "o_en": ["Club coach", "Election volunteer", "Library supervisor", "Teacher"],
+        "expl": { "de": "Die Tätigkeit als Wahlhelfer ist eine staatsbürgerliche Ehrenpflicht. Die Ablehnung ist nur aus wichtigen Gründen möglich.", "en": "Serving as an election volunteer is a civic honorary duty. Refusal is only possible for important reasons." }
+    },
+    {
+        "id": 283,
+        "q": "Was tun Sie, wenn Sie eine falsche {Rechnung} von einer deutschen {Behörde} bekommen? Ich lege {Widerspruch} bei der Behörde ein.",
+        "o": ["Ich lasse die Rechnung liegen.", "Ich lege Widerspruch bei der Behörde ein.", "Ich schicke die Rechnung an die Behörde zurück.", "Ich gehe mit der Rechnung zum Finanzamt."],
+        "a": "Ich lege Widerspruch bei der Behörde ein.",
+        "t": {
+            "Rechnung": "bill / invoice",
+            "Behörde": "authority",
+            "Widerspruch": "objection / appeal"
+        },
+        "en": "What do you do if you receive an incorrect bill from a German authority?",
+        "o_en": ["I leave the bill.", "I file an objection with the authority.", "I send the bill back to the authority.", "I go to the tax office with the bill."],
+        "expl": { "de": "Gegen einen fehlerhaften Bescheid oder eine Rechnung einer Behörde kann man innerhalb der angegebenen Frist (meist ein Monat) Widerspruch einlegen.", "en": "One can file an objection against an incorrect notice or bill from a public authority within the specified period (usually one month)." }
+    },
+    {
+        "id": 284,
+        "q": "Was man für die Arbeit können muss, ändert sich in Zukunft sehr schnell. Was kann man tun? {Erwachsene} müssen auch nach der {Ausbildung} immer weiter lernen.",
+        "o": ["Es ist egal, was man lernt.", "Erwachsene müssen auch nach der Ausbildung immer weiter lernen.", "Kinder lernen in der Schule alles, was im Beruf wichtig ist. Nach der Schule muss man nicht weiter lernen.", "Alle müssen früher aufhören zu arbeiten, weil sich alles ändert."],
+        "a": "Erwachsene müssen auch nach der Ausbildung immer weiter lernen.",
+        "t": {
+            "Erwachsene": "Adults",
+            "Ausbildung": "training / education"
+        },
+        "en": "What one needs to be able to do for work will change very quickly in the future. What can one do?",
+        "o_en": ["It doesn't matter what you learn.", "Adults must always continue to learn, even after their training.", "Children learn everything in school that is important for a career. After school, one does not need to continue learning.", "Everyone must stop working earlier because everything is changing."],
+        "expl": { "de": "Lebenslanges Lernen ist in der modernen Arbeitswelt unerlässlich, um mit technologischen und gesellschaftlichen Veränderungen Schritt zu halten.", "en": "Lifelong learning is essential in the modern world of work to keep pace with technological and social changes." }
+    },
+    {
+        "id": 285,
+        "q": "Frau Frost arbeitet als fest {angestellte} Mitarbeiterin in einem Büro. Was muss sie nicht von ihrem {Gehalt} bezahlen?",
+        "o": ["Lohnsteuer", "Beiträge zur Arbeitslosenversicherung", "Beiträge zur Renten- und Krankenversicherung", "Umsatzsteuer"],
+        "a": "Umsatzsteuer",
+        "t": {
+            "angestellte": "employed",
+            "Gehalt": "salary"
+        },
+        "en": "Ms. Frost works as a permanent employee in an office. What does she not have to pay from her salary?",
+        "o_en": ["Income tax", "Contributions to unemployment insurance", "Contributions to pension and health insurance", "Value-added tax (VAT)"],
+        "expl": { "de": "Die Umsatzsteuer (Mehrwertsteuer) wird nicht vom Gehalt abgeführt, sondern ist bereits in den Preisen von Waren und Dienstleistungen enthalten, die man kauft.", "en": "Value-added tax (VAT) is not deducted from salary but is already included in the prices of goods and services that one buys." }
+    },
+    {
+        "id": 286,
+        "q": "Welche Organisation in einer Firma hilft den Arbeitnehmerinnen und Arbeitnehmern bei Problemen mit der Arbeitgeberin/dem Arbeitgeber?",
+        "o": ["der Betriebsrat", "die Betriebsprüferin/der Betriebsprüfer", "die Betriebsgruppe", "das Betriebsmanagement"],
+        "a": "der Betriebsrat",
+        "en": "Which organization in a company helps employees with problems with the employer?",
+        "o_en": ["the works council", "the company auditor", "the company group", "the company management"],
+        "expl": { "de": "Der Betriebsrat ist die gewählte Interessenvertretung der Arbeitnehmer in einem Betrieb. Er hat Mitbestimmungsrechte und hilft bei Konflikten.", "en": "The works council is the elected representation of employees in a company. It has co-determination rights and helps in case of conflicts." }
+    },
+    {
+        "id": 287,
+        "q": "Sie möchten bei einer Firma in Deutschland ihr Arbeitsverhältnis {beenden}. Was müssen Sie beachten? die {Kündigungsfrist}",
+        "o": ["die Gehaltszahlungen", "die Arbeitszeit", "die Kündigungsfrist", "die Versicherungspflicht"],
+        "a": "die Kündigungsfrist",
+        "t": {
+            "beenden": "to terminate",
+            "Kündigungsfrist": "notice period"
+        },
+        "en": "You want to terminate your employment relationship with a company in Germany. What must you observe?",
+        "o_en": ["the salary payments", "the working hours", "the notice period", "the insurance obligation"],
+        "expl": { "de": "Sowohl Arbeitnehmer als auch Arbeitgeber müssen sich bei einer Kündigung an die vertraglich oder gesetzlich festgelegten Kündigungsfristen halten.", "en": "Both employees and employers must adhere to the contractually or legally stipulated notice periods when terminating employment." }
+    },
+    {
+        "id": 288,
+        "q": "Woraus begründet sich Deutschlands besondere {Verantwortung} für Israel?",
+        "o": ["aus der Mitgliedschaft in der Europäischen Union (EU)", "aus den nationalsozialistischen Verbrechen gegen Juden", "aus dem Grundgesetz der Bundesrepublik Deutschland", "aus der christlichen Tradition"],
+        "a": "aus den nationalsozialistischen Verbrechen gegen Juden",
+        "t": {
+            "Verantwortung": "responsibility"
+        },
+        "en": "On what is Germany's special responsibility for Israel based?",
+        "o_en": ["on its membership in the European Union (EU)", "on the National Socialist crimes against Jews", "on the Basic Law of the Federal Republic of Germany", "on the Christian tradition"],
+        "expl": { "de": "Deutschlands besondere Verantwortung für die Sicherheit Israels ergibt sich aus der historischen Verantwortung für den Holocaust, den von den Nationalsozialisten begangenen Völkermord an den europäischen Juden.", "en": "Germany's special responsibility for the security of Israel arises from its historical responsibility for the Holocaust, the genocide of European Jews committed by the National Socialists." }
+    },
+    {
+        "id": 289,
+        "q": "Ein Mann mit dunkler Hautfarbe bewirbt sich um eine Stelle als Kellner in einem Restaurant in Deutschland. Was ist ein Beispiel für Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil er eine dunkle Haut hat.",
+        "o": ["seine Deutschkenntnisse zu gering sind.", "er zu hohe Gehaltsvorstellungen hat.", "er eine dunkle Haut hat.", "er keine Erfahrungen im Beruf hat."],
+        "a": "er eine dunkle Haut hat.",
+        "en": "A man with dark skin applies for a job as a waiter in a restaurant in Germany. What is an example of discrimination? He does not get the job solely because...",
+        "o_en": ["his German language skills are too poor.", "he has salary expectations that are too high.", "he has dark skin.", "he has no experience in the profession."],
+        "expl": { "de": "Eine Ablehnung allein aufgrund der Hautfarbe ist rassistische Diskriminierung und nach dem Allgemeinen Gleichbehandlungsgesetz (AGG) verboten.", "en": "Rejection based solely on skin color is racist discrimination and is prohibited under the General Equal Treatment Act (AGG)." }
+    },
+    {
+        "id": 290,
+        "q": "Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was können Sie machen? Den Fernseher {reklamieren}",
+        "o": ["eine Anzeige schreiben", "den Fernseher reklamieren", "das Gerät ungefragt austauschen", "die Garantie verlängern"],
+        "a": "den Fernseher reklamieren",
+        "t": {
+            "reklamieren": "to complain about / make a claim"
+        },
+        "en": "You have bought a television in Germany. At home, you unpack it, but it does not work. The television is broken. What can you do?",
+        "o_en": ["write a report", "complain about the television (reklamieren)", "exchange the device without asking", "extend the warranty"],
+        "expl": { "de": "Bei einem Mangel an einer gekauften Ware hat der Käufer ein Gewährleistungsrecht. Er kann die Ware beim Verkäufer reklamieren und z.B. eine Reparatur oder einen Umtausch verlangen.", "en": "If a purchased item has a defect, the buyer has a warranty right. They can complain about the item to the seller and demand, for example, a repair or an exchange." }
+    },
+    {
+        "id": 291,
+        "q": "Warum muss man in Deutschland bei der {Steuererklärung} aufschreiben, ob man zu einer Kirche gehört oder nicht? Weil es eine {Kirchensteuer} gibt, die an die Einkommen- und Lohnsteuer geknüpft ist.",
+        "o": ["es eine Kirchensteuer gibt, die an die Einkommen- und Lohnsteuer geknüpft ist.", "das für die Statistik in Deutschland wichtig ist.", "man mehr Steuern zahlen muss, wenn man nicht zu einer Kirche gehört.", "die Kirche für die Steuererklärung verantwortlich ist."],
+        "a": "es eine Kirchensteuer gibt, die an die Einkommen- und Lohnsteuer geknüpft ist.",
+        "t": {
+            "Steuererklärung": "tax return",
+            "Kirchensteuer": "church tax"
+        },
+        "en": "Why must one state in the tax return in Germany whether one belongs to a church or not? Because...",
+        "o_en": ["there is a church tax that is linked to income and wage tax.", "it is important for statistics in Germany.", "one has to pay more taxes if one does not belong to a church.", "the church is responsible for the tax return."],
+        "expl": { "de": "In Deutschland erheben die großen Kirchen eine Kirchensteuer als Prozentsatz der Lohn- und Einkommensteuer. Das Finanzamt zieht diese Steuer für die Kirchen ein. Daher ist die Angabe der Religionszugehörigkeit relevant.", "en": "In Germany, the major churches levy a church tax as a percentage of wage and income tax. The tax office collects this tax on behalf of the churches. Therefore, the indication of religious affiliation is relevant." }
+    },
+    {
+        "id": 292,
+        "q": "Die Menschen in Deutschland leben nach dem Grundsatz der religiösen {Toleranz}. Was bedeutet das?",
+        "o": ["Es dürfen keine Moscheen gebaut werden.", "Alle Menschen glauben an Gott.", "Jeder kann glauben, was er möchte.", "Der Staat entscheidet, an welchen Gott die Menschen glauben."],
+        "a": "Jeder kann glauben, was er möchte.",
+        "t": {
+            "Toleranz": "tolerance"
+        },
+        "en": "People in Germany live according to the principle of religious tolerance. What does that mean?",
+        "o_en": ["No mosques may be built.", "All people believe in God.", "Everyone can believe what they want.", "The state decides which God people believe in."],
+        "expl": { "de": "Religiöse Toleranz bedeutet, dass jeder Mensch das Recht hat, seine Religion oder Weltanschauung frei zu wählen und auszuüben, solange er nicht die Rechte anderer oder die Verfassung verletzt. Der Staat ist neutral.", "en": "Religious tolerance means that every person has the right to freely choose and practice their religion or worldview, as long as they do not violate the rights of others or the constitution. The state is neutral." }
+    },
+    {
+        "id": 293,
+        "q": "Was ist in Deutschland ein {Brauch} zu {Ostern}?",
+        "o": ["Kürbisse vor die Tür stellen", "einen Tannenbaum schmücken", "Eier bemalen", "Raketen in die Luft schießen"],
+        "a": "Eier bemalen",
+        "t": {
+            "Brauch": "custom",
+            "Ostern": "Easter"
+        },
+        "en": "What is an Easter custom in Germany?",
+        "o_en": ["Placing pumpkins in front of the door", "Decorating a Christmas tree", "Painting eggs", "Shooting rockets into the air"],
+        "expl": { "de": "Das Bemalen und Verstecken von Eiern ist ein sehr bekannter und beliebter Osterbrauch in Deutschland.", "en": "Painting and hiding eggs is a very well-known and popular Easter custom in Germany." }
+    },
+    {
+        "id": 294,
+        "q": "Pfingsten ist ein christlicher {Feiertag}.",
+        "o": ["christlicher Feiertag.", "deutscher Gedenktag.", "internationaler Trauertag.", "bayerischer Brauch."],
+        "a": "christlicher Feiertag.",
+        "t": {
+            "Feiertag": "holiday"
+        },
+        "en": "Pentecost (Pfingsten) is a...",
+        "o_en": ["Christian holiday.", "German day of remembrance.", "international day of mourning.", "Bavarian custom."],
+        "expl": { "de": "Pfingsten ist ein hohes christliches Fest, an dem die Sendung des Heiligen Geistes an die Apostel gefeiert wird. Der Pfingstmontag ist ein gesetzlicher Feiertag.", "en": "Pentecost is a major Christian festival celebrating the descent of the Holy Spirit upon the Apostles. Whit Monday is a public holiday." }
+    },
+    {
+        "id": 295,
+        "q": "Welche Religion hat die europäische und deutsche {Kultur} {geprägt}?",
+        "o": ["der Hinduismus", "das Christentum", "der Buddhismus", "der Islam"],
+        "a": "das Christentum",
+        "t": {
+            "Kultur": "culture",
+            "geprägt": "shaped / influenced"
+        },
+        "en": "Which religion has shaped European and German culture?",
+        "o_en": ["Hinduism", "Christianity", "Buddhism", "Islam"],
+        "expl": { "de": "Das Christentum hat über Jahrhunderte die Geschichte, Kunst, Philosophie, Rechtsprechung und die gesellschaftlichen Werte in Deutschland und Europa maßgeblich beeinflusst.", "en": "For centuries, Christianity has significantly influenced the history, art, philosophy, jurisprudence, and social values in Germany and Europe." }
+    },
+    {
+        "id": 296,
+        "q": "In Deutschland nennt man die letzten vier Wochen vor Weihnachten die {Adventszeit}.",
+        "o": ["den Buß- und Bettag.", "das Erntedankfest.", "die Adventszeit.", "Allerheiligen."],
+        "a": "die Adventszeit.",
+        "t": {
+            "Adventszeit": "Advent season"
+        },
+        "en": "In Germany, the last four weeks before Christmas are called...",
+        "o_en": ["the Day of Repentance and Prayer.", "the harvest festival.", "the Advent season.", "All Saints' Day."],
+        "expl": { "de": "Die Adventszeit ist die Zeit der Vorbereitung auf Weihnachten und beginnt vier Sonntage vor dem ersten Weihnachtsfeiertag.", "en": "The Advent season is the period of preparation for Christmas and begins four Sundays before the first Christmas holiday." }
+    },
+    {
+        "id": 297,
+        "q": "Aus welchem Land sind die meisten {Migrantinnen und Migranten} nach Deutschland gekommen?",
+        "o": ["Italien", "Polen", "Marokko", "Türkei"],
+        "a": "Türkei",
+        "t": {
+            "Migrantinnen und Migranten": "migrants"
+        },
+        "en": "From which country have most migrants come to Germany?",
+        "o_en": ["Italy", "Poland", "Morocco", "Turkey"],
+        "expl": { "de": "Historisch gesehen, insbesondere durch die Anwerbung von 'Gastarbeitern', stellt die Gruppe von Menschen mit türkischem Migrationshintergrund eine der größten in Deutschland dar.", "en": "Historically, especially due to the recruitment of 'guest workers', the group of people with a Turkish migration background is one of the largest in Germany." }
+    },
+    {
+        "id": 298,
+        "q": "In der DDR lebten vor allem Migrantinnen und Migranten aus …",
+        "o": ["Vietnam, Polen, Mosambik.", "Frankreich, Rumänien, Somalia.", "Chile, Ungarn, Simbabwe.", "Nordkorea, Mexiko, Ägypten."],
+        "a": "Vietnam, Polen, Mosambik.",
+        "en": "In the GDR lived mainly migrants from...",
+        "o_en": ["Vietnam, Poland, Mozambique.", "France, Romania, Somalia.", "Chile, Hungary, Zimbabwe.", "North Korea, Mexico, Egypt."],
+        "expl": { "de": "Die DDR schloss Abkommen mit sozialistischen 'Bruderländern' ab, um 'Vertragsarbeiter' anzuwerben, hauptsächlich aus Vietnam, Polen, Mosambik, Angola und Kuba.", "en": "The GDR concluded agreements with socialist 'brother countries' to recruit 'contract workers', mainly from Vietnam, Poland, Mozambique, Angola, and Cuba." }
+    },
+    {
+        "id": 299,
+        "q": "Ausländische Arbeitnehmerinnen und Arbeitnehmer, die in den 50er und 60er Jahren von der Bundesrepublik Deutschland {angeworben} wurden, nannte man '{Gastarbeiterinnen/Gastarbeiter}'.",
+        "o": ["Schwarzarbeiterinnen/Schwarzarbeiter.", "Gastarbeiterinnen/Gastarbeiter.", "Zeitarbeiterinnen/Zeitarbeiter.", "Schichtarbeiterinnen/Schichtarbeiter."],
+        "a": "Gastarbeiterinnen/Gastarbeiter.",
+        "t": {
+            "angeworben": "recruited",
+            "Gastarbeiterinnen/Gastarbeiter": "guest workers"
+        },
+        "en": "Foreign workers who were recruited by the Federal Republic of Germany in the 50s and 60s were called...",
+        "o_en": ["undeclared workers.", "guest workers.", "temporary workers.", "shift workers."],
+        "expl": { "de": "Der Begriff 'Gastarbeiter' wurde für die ausländischen Arbeitskräfte verwendet, die auf Basis von Anwerbeabkommen nach Deutschland kamen.", "en": "The term 'guest worker' was used for the foreign laborers who came to Germany based on recruitment agreements." }
+    },
+    {
+        "id": 300,
+        "q": "Aus welchem Land kamen die ersten Gastarbeiterinnen und Gastarbeiter in die Bundesrepublik Deutschland?",
+        "o": ["Italien", "Spanien", "Portugal", "Türkei"],
+        "a": "Italien",
+        "en": "From which country did the first guest workers come to the Federal Republic of Germany?",
+        "o_en": ["Italy", "Spain", "Portugal", "Turkey"],
+        "expl": { "de": "Das erste Anwerbeabkommen schloss die Bundesrepublik Deutschland 1955 mit Italien.", "en": "The Federal Republic of Germany concluded the first recruitment agreement with Italy in 1955." }
+    }
+  ]
+}
