@@ -10,21 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
-        /* Styles for the modal (popup) window background */
         .modal-backdrop { position: fixed; inset: 0; background-color: rgba(15, 23, 42, 0.75); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 1rem; }
-        /* Styles for the modal content box */
         .modal-content { background-color: white; border-radius: 0.75rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); padding: 2rem; max-width: 32rem; width: 100%; max-height: 90vh; overflow-y: auto; }
-        /* General style for an answer option button */
         .option { transition: all 0.2s ease-in-out; border: 2px solid #e5e7eb; padding: 0.5rem; border-radius: 0.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-        /* Specific style for text-based options to align text to the left */
         .option.text-option { padding: 0.75rem; justify-content: flex-start; }
-        /* Style for a selected option */
         .option.selected { border-color: #3b82f6; background-color: #dbeafe; }
-        /* Style for a correct answer after submission */
         .option.correct { background-color: #dcfce7 !important; border-color: #22c55e !important; color: #15803d !important; }
-        /* Style for an incorrect answer after submission */
         .option.incorrect { background-color: #fee2e2 !important; border-color: #ef4444 !important; color: #b91c1c !important; }
-        /* General button styles */
         .btn { padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-align: center; transition: all 0.2s ease-in-out; }
         .btn-primary { background-color: #2563eb; color: white; }
         .btn-primary:hover:not(:disabled) { background-color: #1d4ed8; }
@@ -32,18 +24,13 @@
         .btn-secondary { background-color: white; color: #334155; border: 1px solid #cbd5e1; }
         .btn-danger { background-color: #dc2626; color: white; }
         .btn-danger:hover { background-color: #b91c1c; }
-        /* Styles for progress bars in the statistics screen */
         .stats-bar { background-color: #e2e8f0; border-radius: 9999px; height: 1.25rem; overflow: hidden; }
         .stats-bar-fill { height: 100%; transition: width 0.5s ease-in-out; text-align: right; padding-right: 0.5rem; color: white; font-size: 0.75rem; line-height: 1.25rem; }
-        /* Style for the full English translation of a question (Level 2) */
         .static-translation-question { color: #475569; font-size: 0.9rem; margin-top: -0.75rem; margin-bottom: 1.25rem; }
-        /* Style for the box that shows keyword translations */
         .keyword-translation-box { background-color: #f8fafc; border: 1px solid #e2e8f0; color: #475569; padding: 0.75rem; margin-top: 0.5rem; margin-bottom: 1.25rem; border-radius: 0.5rem; font-size: 0.9rem; }
-        /* Style for the loading spinner animation */
         .loader { border: 5px solid #f3f3f3; border-radius: 50%; border-top: 5px solid #3498db; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: auto; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         
-        /* Styles for the explanation dropdown/slider */
         .explanation-details { margin-top: 1rem; }
         .explanation-summary { cursor: pointer; color: #475569; font-weight: 500; font-size: 0.9rem; list-style: none; padding: 0.5rem 0; }
         .explanation-summary::-webkit-details-marker { display: none; }
@@ -56,54 +43,34 @@
     <main id="app-container"></main>
 
     <script>
-    // This event listener ensures that the JavaScript code runs only after the entire HTML page has been loaded.
     document.addEventListener('DOMContentLoaded', () => {
-        
-        // --- SECTION: GLOBAL VARIABLES ---
-        // These variables store the main data and state of the application. They are accessible by all functions.
-        let appData = { users: {}, lastUser: null }; // Holds all user profiles and remembers the last logged-in user.
-        let currentUser = null; // Stores the profile object of the currently logged-in user.
-        let currentQuestionBank = []; // An array to hold the questions for the current test session.
-        let userAnswers = {}; // An object to store the user's selected answers for the current test.
-        let assistanceLevel = 1, selectedStateName = '', selectedQB_Key = ''; // Variables for the test settings.
-        let simulationTimer; // A variable to manage the timer for the test simulation mode.
+        let appData = { users: {}, lastUser: null }; 
+        let currentUser = null; 
+        let currentQuestionBank = []; 
+        let userAnswers = {}; 
+        let assistanceLevel = 1, selectedStateName = '', selectedQB_Key = ''; 
+        let simulationTimer; 
 
-        // --- SECTION: DOM ELEMENT ---
-        // A direct reference to the main container where all content will be rendered.
         const appContainer = document.getElementById('app-container');
         
-        // This is a security helper function. It prevents text from being interpreted as HTML code.
-        // For example, if a question contained "<script>", this function would turn it into plain text
-        // instead of letting it run as a script, which could be dangerous.
         const escapeHTML = str => {
             if (typeof str !== 'string') return '';
             return str.replace(/[&<>'"]/g, 
                 tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
         };
 
-        // --- SECTION: USER & DATA MANAGEMENT ---
-        // These functions handle loading, saving, and managing user data in the browser's local storage.
-
-        /**
-         * Loads all application data from the browser's local storage when the app first starts.
-         * It looks for previously saved data under the key 'einbuergerungApp_v1_2'.
-         */
         function loadAppData() {
             try {
                 const storedData = localStorage.getItem('einbuergerungApp_v1_2');
                 if (storedData) {
-                    appData = JSON.parse(storedData); // Parses the saved text back into a JavaScript object.
+                    appData = JSON.parse(storedData);
                 }
             } catch (e) {
                 console.error("Could not parse app data from localStorage:", e);
-                appData = { users: {}, lastUser: null }; // If there's an error, start with fresh data.
+                appData = { users: {}, lastUser: null };
             }
         }
 
-        /**
-         * Saves the current state of the appData object to local storage.
-         * This is called whenever user data changes (e.g., after a test, creating a new profile).
-         */
         function saveAppData() {
             try {
                 localStorage.setItem('einbuergerungApp_v1_2', JSON.stringify(appData));
@@ -112,38 +79,23 @@
             }
         }
         
-        /**
-         * Handles the user login process.
-         * @param {string} username - The name of the user trying to log in.
-         * @param {string} passcode - The 4-digit passcode entered.
-         * @returns {boolean} - True for a successful login, false otherwise.
-         */
         function login(username, passcode) {
             const user = appData.users[username];
-            // Checks if the user exists and the passcode matches.
             if (user && user.profile.passcode === passcode) {
-                currentUser = user; // Set the current user for the session.
-                appData.lastUser = username; // Remember this user for the next time the app opens.
+                currentUser = user;
+                appData.lastUser = username; 
                 saveAppData();
-                showScreen('setup'); // Go to the test setup screen on successful login.
+                showScreen('setup'); 
                 return true;
             }
-            return false; // Return false if login fails.
+            return false;
         }
 
-        /**
-         * Creates a new user profile and adds it to the application data.
-         * @param {string} name - The new user's name.
-         * @param {string} birthdate - The new user's birthdate.
-         * @param {string} passcode - The new user's 4-digit passcode.
-         */
         function createUser(name, birthdate, passcode) {
-            // Check if a profile with this name already exists.
             if (appData.users[name]) {
                 alert("Ein Profil mit diesem Namen existiert bereits.");
                 return false;
             }
-            // Create a new user object with empty statistics.
             appData.users[name] = {
                 profile: { name, birthdate, passcode },
                 stats: { 
@@ -151,12 +103,9 @@
                     simulations: []      
                 }
             };
-            login(name, passcode); // Automatically log in the new user.
+            login(name, passcode); 
         }
 
-        /**
-         * Logs the current user out and returns to the login screen.
-         */
         function logout() {
             currentUser = null;
             appData.lastUser = null;
@@ -164,15 +113,8 @@
             showScreen('login');
         }
 
-        // --- SECTION: CORE APPLICATION LOGIC ---
-        // These functions control the main flow and features of the app.
-
-        /**
-         * Main navigation function to switch between different app screens.
-         * @param {string} screenName - The name of the screen to display ('login', 'setup', 'test', 'stats', 'words').
-         */
         function showScreen(screenName) {
-            clearInterval(simulationTimer); // Always stop any running timer when changing screens.
+            clearInterval(simulationTimer); 
             if (screenName === 'login') renderLoginScreen();
             else if (screenName === 'setup') renderSetupScreen();
             else if (screenName === 'test') renderTestScreen();
@@ -180,9 +122,6 @@
             else if (screenName === 'words') renderImportantWordsScreen();
         }
 
-        /**
-         * Shows or hides the state selector dropdown based on the chosen test mode.
-         */
         function toggleStateSelectorVisibility() {
             const assistanceSelect = document.getElementById('assistance-select');
             const qbSelect = document.getElementById('qb-select');
@@ -191,7 +130,6 @@
             const isSimulation = assistanceSelect.value === 'simulation';
             const isStateQB = qbSelect.value === 'QB_state_specific';
 
-            // Show the state selector only for simulations or state-specific question banks.
             if (isSimulation || isStateQB) {
                 stateSelectorContainer.classList.remove('hidden');
             } else {
@@ -199,9 +137,6 @@
             }
         }
         
-        /**
-         * Starts either a normal test or a simulation based on user selection from the setup screen.
-         */
         async function startSession() {
             assistanceLevel = document.getElementById('assistance-select').value;
             selectedStateName = document.getElementById('state-select').value;
@@ -210,20 +145,14 @@
                 await startSimulation();
             } else {
                 selectedQB_Key = document.getElementById('qb-select').value;
-                if (!selectedQB_Key) return; // Don't start if no question bank is chosen.
+                if (!selectedQB_Key) return; 
                 await startTest();
             }
         }
         
-        /**
-         * Fetches all questions from either all general JSON files or a specific state's questions.
-         * @param {string} type - 'general' or 'state'.
-         * @returns {Promise<Array>} - A promise that resolves to an array of question objects.
-         */
         async function fetchAllQuestions(type = 'general') {
             const allQuestions = [];
             if (type === 'general') {
-                // Loop through all 10 general question bank files.
                 for (let i = 1; i <= 10; i++) {
                     try {
                         const response = await fetch('./JSON files/QB_' + i + '.json');
@@ -239,7 +168,7 @@
                     const response = await fetch('./JSON files/QB_state_specific.json');
                     if (!response.ok) throw new Error('Network response was not ok');
                     const data = await response.json();
-                    return data.states[selectedStateName] || []; // Return questions for the selected state.
+                    return data.states[selectedStateName] || [];
                 } catch (e) {
                     console.error('Could not load state questions for ' + selectedStateName, e);
                     return [];
@@ -248,24 +177,18 @@
             return allQuestions;
         }
 
-        /**
-         * Prepares and starts a test simulation by fetching and randomizing questions.
-         */
         async function startSimulation() {
             assistanceLevel = 'simulation';
             selectedQB_Key = 'Simulation';
             userAnswers = {};
 
-            // Show a loading screen.
             appContainer.innerHTML = '<div class="modal-backdrop"><div class="modal-content text-center"><div class="loader"></div><p class="mt-4 text-slate-600">Erstelle eine neue Test-Simulation...</p></div></div>';
 
             try {
-                // Get 30 random general questions.
                 const allGeneralQuestions = await fetchAllQuestions('general');
                 const shuffledGeneral = allGeneralQuestions.sort(() => 0.5 - Math.random());
                 const selectedGeneral = shuffledGeneral.slice(0, 30);
 
-                // Get 3 random state questions (or 3 more general questions if no state is selected).
                 let selectedState = [];
                 if(selectedStateName !== 'general'){
                     const allStateQuestions = await fetchAllQuestions('state');
@@ -275,14 +198,13 @@
                     selectedState = shuffledGeneral.slice(30, 33);
                 }
 
-                // Combine the general and state questions to make a 33-question test.
                 currentQuestionBank = [...selectedGeneral, ...selectedState];
                 
                 if (currentQuestionBank.length < 33) {
                      throw new Error('Konnte nicht genügend Fragen finden. Benötigt: 33, Gefunden: ' + currentQuestionBank.length);
                 }
 
-                showScreen('test'); // Show the test screen.
+                showScreen('test');
 
             } catch(error) {
                  console.error("Error creating simulation:", error);
@@ -290,9 +212,6 @@
             }
         }
 
-        /**
-         * Prepares and starts a regular practice test from a specific question bank.
-         */
         async function startTest() {
             userAnswers = {};
             const filePath = selectedQB_Key === 'QB_state_specific' 
@@ -322,38 +241,26 @@
             }
         }
 
-        /**
-         * Handles clicks on answer options during a test.
-         * @param {Event} e - The click event.
-         */
         function handleQuizContainerClick(e) {
             const optionDiv = e.target.closest('.option');
             if (optionDiv) {
                 const questionId = optionDiv.dataset.questionId;
                 const optionsContainer = optionDiv.parentElement;
-                // If the options are disabled (after submission), do nothing.
                 if (optionsContainer.style.pointerEvents === 'none') return;
-                // Un-select any previously selected option for this question.
                 const previouslySelected = optionsContainer.querySelector('.selected');
                 if (previouslySelected) previouslySelected.classList.remove('selected');
-                // Select the new option and store the answer.
                 optionDiv.classList.add('selected');
                 userAnswers[questionId] = optionDiv.dataset.optionText;
             }
         }
         
-        /**
-         * Submits the test, calculates the score, updates stats, and shows the results.
-         */
         function submitTest() {
-            clearInterval(simulationTimer); // Stop the timer.
+            clearInterval(simulationTimer);
             let correctCount = 0;
-            // Loop through each question to check if the user's answer was correct.
             currentQuestionBank.forEach(q => {
                 if(userAnswers[q.id] === q.a) correctCount++;
             });
 
-            // Update the user's statistics based on the test type.
             if (assistanceLevel === 'simulation') {
                 const passed = correctCount >= 17;
                 updateStats(selectedQB_Key, correctCount, currentQuestionBank.length, passed);
@@ -361,9 +268,8 @@
                 updateStats(selectedQB_Key, correctCount, currentQuestionBank.length);
             }
 
-            renderQuestions(true); // Re-render the questions in "results mode" to show correct/incorrect answers.
+            renderQuestions(true); 
             
-            // Display the final score summary at the top of the page.
             const resultsSummary = document.getElementById('results-summary');
             let passThreshold, passed, resultMessage;
 
@@ -382,21 +288,13 @@
                 '<p class="text-lg mt-2">Ergebnis: ' + correctCount + ' / ' + currentQuestionBank.length + ' richtig</p>' +
                 (assistanceLevel === 'simulation' ? '<p class="text-sm text-slate-500 mt-1">(Mindestens ' + passThreshold + ' richtige Antworten benötigt)</p>' : '');
             
-            // Show/hide the appropriate buttons in the footer.
             resultsSummary.classList.remove('hidden');
             document.getElementById('submit-button').classList.add('hidden');
             document.getElementById('back-to-setup-button').classList.remove('hidden');
             document.getElementById('timer-container')?.classList.add('hidden');
-            window.scrollTo(0, 0); // Scroll to the top of the page to see the results.
+            window.scrollTo(0, 0); 
         }
         
-        /**
-         * Updates the user's statistics object after a test is completed.
-         * @param {string} qbKey - The key for the question bank (e.g., 'QB_1' or 'Simulation').
-         * @param {number} correct - The number of correct answers.
-         * @param {number} total - The total number of questions.
-         * @param {boolean} [passed] - Optional. True if a simulation was passed, false otherwise.
-         */
         function updateStats(qbKey, correct, total, passed) {
             if (qbKey === 'Simulation') {
                 if(!currentUser.stats.simulations) currentUser.stats.simulations = [];
@@ -409,14 +307,9 @@
                 if (!currentUser.stats.questionBanks[qbKey]) currentUser.stats.questionBanks[qbKey] = {};
                 currentUser.stats.questionBanks[qbKey][levelKey] = { correct, total, timestamp: new Date().toISOString() };
             }
-            saveAppData(); // Save the updated stats to local storage.
+            saveAppData();
         }
 
-        /**
-         * Helper function to create the HTML for a colored progress bar.
-         * @param {number} percent - The percentage value for the bar fill.
-         * @returns {string} - The HTML string for the progress bar.
-         */
         function createBar(percent) {
             let colorClass = 'bg-red-500';
             if (percent >= 85) colorClass = 'bg-green-500';
@@ -424,19 +317,11 @@
             return '<div class="stats-bar mt-1"><div class="stats-bar-fill ' + colorClass + '" style="width: ' + percent + '%">' + (percent > 15 ? percent+'%' : '') + '</div></div>';
         }
         
-        // --- SECTION: SCREEN RENDERING FUNCTIONS ---
-        // These functions build the HTML for each screen of the app.
-
-        /**
-         * Renders the initial login and profile creation screen.
-         */
         function renderLoginScreen() {
-            // Create a dropdown of existing user profiles.
             const userOptions = Object.keys(appData.users).map(username => 
                 '<option value="' + username + '"' + (username === appData.lastUser ? ' selected' : '') + '>' + username + '</option>'
             ).join('');
 
-            // Set the main container's HTML to the login screen layout.
             appContainer.innerHTML =
                 '<div class="modal-backdrop">' +
                     '<div class="modal-content">' +
@@ -444,7 +329,6 @@
                             '<h1 class="text-3xl font-bold text-slate-800">Willkommen!</h1>' +
                             '<p class="text-slate-600 mt-2">Bitte wählen Sie Ihr Profil oder erstellen Sie ein neues.</p>' +
                         '</div>' +
-                        // Login form for existing users.
                         '<form id="login-form" class="' + (Object.keys(appData.users).length === 0 ? 'hidden' : '') + '">' +
                             '<h3 class="text-lg font-semibold mb-2">Profil laden</h3>' +
                             '<div class="space-y-4">' +
@@ -455,7 +339,6 @@
                             '</div>' +
                         '</form>' +
                         '<div class="my-6 text-center ' + (Object.keys(appData.users).length === 0 ? 'hidden' : '') + '"><span class="text-slate-500">oder</span></div>' +
-                        // Form to create a new profile.
                         '<form id="create-profile-form">' +
                             '<h3 class="text-lg font-semibold mb-2">Neues Profil erstellen</h3>' +
                             '<div class="space-y-4">' +
@@ -471,7 +354,6 @@
                     '</div>' +
                 '</div>';
 
-            // Add event listener for the login form submission.
             document.getElementById('login-form')?.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const username = document.getElementById('user-select').value;
@@ -481,7 +363,6 @@
                 }
             });
 
-            // Add event listener for the create profile form submission.
             document.getElementById('create-profile-form')?.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const name = document.getElementById('new-name').value.trim();
@@ -490,13 +371,9 @@
                 if (name && birthdate && passcode.length === 4) createUser(name, birthdate, passcode);
             });
             
-            // Add event listener for the admin button.
             document.getElementById('admin-button').addEventListener('click', renderAdminLogin);
         }
         
-        /**
-         * Renders the screen where the user sets up their test (level, question bank, state).
-         */
         function renderSetupScreen() {
              appContainer.innerHTML =
                 '<div class="modal-backdrop">' +
@@ -506,7 +383,6 @@
                             '<button id="logout-button" class="btn btn-secondary text-sm">Logout</button>' +
                         '</div>' +
                         '<div class="space-y-6">' +
-                            // Dropdown to select the mode/assistance level.
                             '<div>' +
                                 '<label for="assistance-select" class="block text-sm font-medium text-slate-700 mb-1">1. Modus auswählen</label>' +
                                 '<select id="assistance-select" class="w-full p-3 border border-slate-300 rounded-lg text-lg">' +
@@ -518,14 +394,12 @@
                                     '</optgroup>' +
                                 '</select>' +
                             '</div>' +
-                            // Dropdown for selecting the question bank (for practice modes).
                             '<div id="practice-options">' +
                                 '<div>' +
                                     '<label for="qb-select" class="block text-sm font-medium text-slate-700 mb-1">2. Question Bank</label>' +
                                     '<select id="qb-select" class="w-full p-3 border border-slate-300 rounded-lg text-lg"></select>' +
                                 '</div>' +
                             '</div>' +
-                            // Dropdown for selecting the federal state.
                             '<div id="state-select-container" class="hidden">' +
                                 '<label for="state-select" class="block text-sm font-medium text-slate-700 mb-1">3. Bundesland (State)</label>' +
                                 '<select id="state-select" class="w-full p-3 border border-slate-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500">' +
@@ -534,7 +408,6 @@
                                 '</select>' +
                             '</div>' +
                         '</div>' +
-                        // Main action buttons.
                         '<button id="start-button" class="mt-8 w-full btn btn-primary text-lg">Sitzung starten</button>' +
                         '<button id="view-stats-button" class="mt-3 w-full btn btn-secondary">Statistiken anzeigen</button>' +
                         '<button id="view-words-button" class="mt-3 w-full btn btn-secondary">Wichtige Wörter lernen</button>' +
@@ -544,7 +417,6 @@
             const assistanceSelect = document.getElementById('assistance-select');
             const practiceOptions = document.getElementById('practice-options');
             
-            // This function shows/hides the question bank selector based on the chosen mode.
             function setupMode() {
                 if(assistanceSelect.value === 'simulation') {
                     practiceOptions.classList.add('hidden');
@@ -555,7 +427,6 @@
                 toggleStateSelectorVisibility();
             }
 
-            // Add event listeners to all buttons and dropdowns on this screen.
             assistanceSelect.addEventListener('change', setupMode);
             document.getElementById('qb-select').addEventListener('change', toggleStateSelectorVisibility);
             document.getElementById('start-button').addEventListener('click', startSession);
@@ -563,12 +434,9 @@
             document.getElementById('view-words-button').addEventListener('click', () => showScreen('words'));
             document.getElementById('logout-button').addEventListener('click', logout);
             
-            setupMode(); // Initialize the screen setup.
+            setupMode();
         }
 
-        /**
-         * Populates the dropdown menu for question banks.
-         */
         function setupQuestionBanks() {
             const qbSelect = document.getElementById('qb-select');
             qbSelect.innerHTML = '<option value="" disabled selected>Wählen Sie eine Bank...</option>';
@@ -586,9 +454,6 @@
             qbSelect.appendChild(stateOption);
         }
 
-        /**
-         * Renders the main test screen where questions are displayed.
-         */
         function renderTestScreen() {
             let bankName;
             if (assistanceLevel === 'simulation') {
@@ -605,12 +470,10 @@
                             '<p class="text-slate-600 mt-1">Bundesland: ' + selectedStateName + '</p>' +
                         '</div>' +
                         '<div class="text-right">' +
-                           // The timer is only shown in simulation mode.
                            '<div id="timer-container" class="text-2xl font-bold text-red-600 mb-2 ' + (assistanceLevel !== 'simulation' ? 'hidden' : '') + '">60:00</div>' +
                            '<button id="main-settings-button" class="btn btn-secondary">Zurück zur Auswahl</button>' +
                         '</div>' +
                     '</header>' +
-                    // This container will be filled with questions by the renderQuestions function.
                     '<div id="quiz-container" class="space-y-6"></div>' +
                     '<footer class="mt-8 text-center">' +
                         '<div id="results-summary" class="bg-white p-6 rounded-xl shadow-md mb-6 hidden"></div>' +
@@ -623,9 +486,8 @@
             document.getElementById('submit-button').addEventListener('click', submitTest);
             document.getElementById('back-to-setup-button').addEventListener('click', () => showScreen('setup'));
             
-            // Start the timer if the mode is simulation.
             if (assistanceLevel === 'simulation') {
-                let timeLeft = 3600; // 60 minutes in seconds.
+                let timeLeft = 3600;
                 const timerEl = document.getElementById('timer-container');
                 simulationTimer = setInterval(() => {
                     timeLeft--;
@@ -639,14 +501,9 @@
                     }
                 }, 1000);
             }
-            renderQuestions(false); // Initial rendering of questions for the test.
+            renderQuestions(false);
         }
         
-       /**
-        * Renders all questions for the current test. This is the new, combined function that handles
-        * both image question types and preserves all original assistance features.
-        * @param {boolean} isResultsMode - True if the test is over and results should be shown.
-        */
         function renderQuestions(isResultsMode) {
             const quizContainer = document.getElementById('quiz-container');
             if (!quizContainer) return;
@@ -654,38 +511,43 @@
             quizContainer.innerHTML = '';
             const currentAssistance = assistanceLevel === 'simulation' ? '0' : assistanceLevel;
             
+            // This definitive list identifies all questions that have ONE main image.
+            // This fixes the issue with state map questions being misinterpreted.
+            const singleImageQuestionIds = [
+                "55", "70", "176", "181", "187", "216", "235", // General Questions
+                "308", "318", "328", "338", "348", "358", "368", "378", // State Map Questions
+                "388", "398", "408", "418", "428", "438", "448", "458"  // State Map Questions cont.
+            ];
+
             currentQuestionBank.forEach((q, index) => {
                 const questionElement = document.createElement('div');
                 questionElement.className = 'bg-white p-6 rounded-xl shadow-md border border-slate-200';
                 
-                // --- START: COMBINED IMAGE AND KEYWORD LOGIC ---
-
                 let mainImageHtml = '';
-                let optionsAreImages = false;
+                let optionsAreImages = false; 
 
-                // Check if the JSON flags this as a question with an image.
+                // Check if the question is flagged as having an image.
                 if (q.isImage) {
-                    // Differentiate between single-image and multi-image questions by checking the option text length.
-                    // A long option text implies it's a single-image question with text-based answers.
-                    if (q.o && q.o.length > 0 && q.o[0].length > 15) {
+                    // NEW LOGIC: Check if the question's ID is in our definitive list of single-image questions.
+                    if (singleImageQuestionIds.includes(q.id.toString())) {
+                        // This is a SINGLE-IMAGE question (like Q55 or a state map).
                         mainImageHtml = '<img src="./img/' + q.id + '.png" alt="Zugehöriges Bild zur Frage" class="w-full max-w-md mx-auto h-auto rounded-lg mb-4">';
-                        optionsAreImages = false; // Options should be rendered as text.
+                        optionsAreImages = false; // Its options should be rendered as text.
                     } else {
-                        optionsAreImages = true; // Options should be rendered as images.
+                        // Otherwise, it's a MULTI-IMAGE question (like Q21 or a state coat of arms).
+                        optionsAreImages = true; // Its options should be rendered as images.
                     }
                 }
 
                 let processedQuestionText = escapeHTML(q.q);
                 let keywordTranslationsHtml = '';
 
-                // This is the original, stable logic for highlighting and translating important words.
+                // This logic for highlighting and translating important words is from the stable v1.2 code.
                 if ((currentAssistance == 1 || currentAssistance == 2) && !isResultsMode && q.t && Object.keys(q.t).length > 0) {
                     const translations = [];
-                    // This regular expression finds any text inside {braces}.
                     processedQuestionText = processedQuestionText.replace(/{([^}]+)}/g, (match, word) => {
                         const translation = q.t[word] || 'N/A';
                         translations.push('<strong>' + escapeHTML(word) + '</strong>: ' + escapeHTML(translation));
-                        // It replaces the {word} with a bolded version in the question text.
                         return '<strong>' + escapeHTML(word) + '</strong>';
                     });
                     
@@ -694,40 +556,30 @@
                     }
                 }
                 
-                // --- END: COMBINED IMAGE AND KEYWORD LOGIC ---
-
                 let questionHTML = '<p class="text-lg font-semibold text-slate-800 mb-2">' + (index + 1) + '. ' + processedQuestionText + '</p>';
                 
-                // This adds the full English translation of the question for Level 2.
                 const level2TranslationHtml = (currentAssistance == 2 && q.en) ? '<p class="static-translation-question">(' + escapeHTML(q.en) + ')</p>' : '';
                 
-                // This builds the HTML for all the answer option buttons.
                 const optionsHtml = q.o.map((optionText, optionIndex) => {
                     let classes = 'option';
                     let contentHtml = '';
 
-                    // This `if` statement now uses the `optionsAreImages` flag we determined earlier.
                     if (optionsAreImages) {
-                        // Logic for MULTI-IMAGE options (like Q21, Q130).
-                        const imageIdentifier = optionText.replace('Bild ', ''); // Handles "Bild 1" -> "1"
+                        const imageIdentifier = optionText.replace('Bild ', '');
                         const imagePath = './img/' + q.id + '/' + imageIdentifier + '.png';
                         contentHtml = '<img src="' + imagePath + '" alt="Option ' + escapeHTML(optionText) + '" class="w-full h-auto rounded-md">';
                     } else {
-                        // Logic for TEXT options (for normal questions AND single-image questions like Q55).
                         classes += ' text-option';
                         contentHtml = escapeHTML(optionText);
-                        // Add English translation for option text in Level 2.
                         if (currentAssistance == 2 && q.o_en && q.o_en[optionIndex]) {
                             contentHtml += '<span class="block text-sm text-slate-500 mt-1">(' + escapeHTML(q.o_en[optionIndex]) + ')</span>';
                         }
                     }
                     
-                    // In results mode, color the options green for correct, red for incorrect.
                     if (isResultsMode) {
                         if(optionText === q.a) classes += ' correct';
                         else if(userAnswers[q.id] === optionText) classes += ' incorrect';
                     } else {
-                        // Before submission, just mark the selected option.
                         if (userAnswers[q.id] === optionText) classes += ' selected';
                     }
                     return '<div class="' + classes + '" data-question-id="' + q.id + '" data-option-text="' + escapeHTML(optionText) + '">' + contentHtml + '</div>';
@@ -755,53 +607,76 @@
                     }
                 }
                 
-                // Set the correct layout for the options container (grid for images, list for text).
                 const optionsContainerHTML = '<div class="options-container ' + (optionsAreImages ? 'grid grid-cols-2 gap-4' : 'space-y-3') + '"' + (isResultsMode ? ' style="pointer-events:none;"' : '') + '>' + optionsHtml + '</div>';
                 
-                // Assemble all the parts of the question card into the final HTML.
                 questionElement.innerHTML = mainImageHtml + questionHTML + level2TranslationHtml + keywordTranslationsHtml + optionsContainerHTML + explanationHtml;
                 quizContainer.appendChild(questionElement);
             });
         }
         
+        // --- SECTION: STATISTICS & ADMIN PANEL RENDERING ---
+
+        /**
+         * Renders the main container for the statistics page.
+         * This function builds the "shell" of the popup window, including the title and back button.
+         * It then calls renderStatsDetails() to fill the shell with the actual data.
+         */
         function renderStatsScreen() {
+            // This HTML creates a modal (popup) for displaying statistics.
             appContainer.innerHTML =
                 '<div class="modal-backdrop">' +
                     '<div class="modal-content">' +
+                        // Header section with the title and a close button.
                         '<div class="flex justify-between items-start mb-4">' +
+                            // The title includes the current user's name for a personalized feel.
                             '<h2 class="text-3xl font-bold text-slate-800">Lernstatistik für ' + currentUser.profile.name + '</h2>' +
                             '<button id="close-stats-btn" class="btn btn-secondary text-sm">Zurück</button>' +
                         '</div>' +
+                        // This is an empty placeholder div. The actual statistics will be injected here.
                         '<div id="stats-details" class="space-y-6"></div>' +
                     '</div>' +
                 '</div>';
             
+            // Makes the "Zurück" (Back) button functional. When clicked, it returns to the setup screen.
             document.getElementById('close-stats-btn').addEventListener('click', () => showScreen('setup'));
+            // This function is called immediately to fill the placeholder with the user's stats.
             renderStatsDetails();
         }
 
+        /**
+         * Calculates and displays the user's detailed progress.
+         * It generates progress bars for practice tests and a list of simulation results.
+         */
         function renderStatsDetails() {
+            // Get the placeholder div from the HTML.
             const statsDetails = document.getElementById('stats-details');
-            if (!statsDetails) return;
+            if (!statsDetails) return; // Exit if the container isn't found.
 
+            // --- Part 1: Render Practice Test Statistics ---
             const qbStats = currentUser.stats.questionBanks || {};
             let qbHtml = '<h3 class="text-xl font-bold text-slate-700">Ergebnisse nach Question Bank</h3><div class="space-y-4">';
             
+            // Create a list of all possible question bank keys.
             const qbKeys = [...Array(10).keys()].map(i => 'QB_' + (i + 1));
             qbKeys.push('QB_state_specific');
 
+            // Loop through each question bank to display its stats.
             qbKeys.forEach(key => {
                 const qbData = qbStats[key] || {};
                 const bankName = key.startsWith('QB_S') ? 'State-Specific Questions' : 'Question Bank ' + key.split('_')[1];
                 qbHtml += '<div class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold mb-2">' + bankName + '</p><div class="space-y-2">';
+                // For each bank, loop through the 3 assistance levels to show a progress bar for each.
                 ['2', '1', '0'].forEach(i => {
                     const levelKey = 'level_' + i;
                     qbHtml += '<div><p class="text-xs text-slate-600">Level ' + i + '</p>';
+                    // Check if a score exists for this bank and level.
                     if(qbData[levelKey]) {
                         const { correct, total } = qbData[levelKey];
                         const percent = total > 0 ? Math.round((correct / total) * 100) : 0;
+                        // Call the helper function to generate a colored progress bar.
                         qbHtml += createBar(percent);
                     } else {
+                        // If no score exists, show a "not attempted" message.
                         qbHtml += '<div class="stats-bar mt-1"><div class="text-xs text-slate-400 px-2 py-1">Noch nicht versucht</div></div>';
                     }
                     qbHtml += '</div>';
@@ -810,18 +685,22 @@
             });
             qbHtml += '</div>';
 
+            // --- Part 2: Render Test Simulation Statistics ---
             const simStats = currentUser.stats.simulations || [];
             let simHtml = '<hr class="my-6"><h3 class="text-xl font-bold text-slate-700 mb-3">Test Simulationen</h3>';
             if (simStats.length > 0) {
                 const totalSimulations = simStats.length;
                 const passedCount = simStats.filter(sim => sim.passed).length;
                 
+                // Display a summary of all simulations.
                 simHtml += '<p class="mb-4 text-slate-600">Gesamtversuche: <span class="font-semibold">' + totalSimulations + '</span> | Bestanden: <span class="font-semibold text-green-600">' + passedCount + '</span></p>';
                 
                 simHtml += '<div class="space-y-3">';
+                // Loop through the simulations in reverse to show the newest one first.
                 simStats.slice().reverse().forEach((sim, index) => {
                     const testNumber = totalSimulations - index;
                     const date = new Date(sim.timestamp).toLocaleString('de-DE', { dateStyle: 'short', timeStyle: 'short' });
+                    // Create a colored block for each simulation result (green for pass, red for fail).
                     simHtml += 
                        '<div class="p-4 rounded-lg flex justify-between items-center ' + (sim.passed ? 'bg-green-50' : 'bg-red-50') + '">' +
                            '<div>' +
@@ -836,13 +715,18 @@
                 simHtml += '<p class="text-slate-500">Noch keine Simulationen absolviert. Führen Sie eine durch, um hier Ergebnisse zu sehen!</p>';
             }
 
+            // Finally, inject all the generated HTML into the placeholder div.
             statsDetails.innerHTML = qbHtml + simHtml;
         }
         
+        /**
+         * Renders the Admin login modal, which acts as a simple password gate.
+         */
         function renderAdminLogin() {
             const adminModal = document.createElement('div');
             adminModal.id = 'admin-modal';
             adminModal.className = 'modal-backdrop';
+            // Create the HTML for the login form popup.
             adminModal.innerHTML =
                 '<div class="modal-content">' +
                     '<h3 class="text-xl font-bold mb-4">Admin Authentifizierung</h3>' +
@@ -856,28 +740,38 @@
                         '</div>' +
                     '</form>' +
                 '</div>';
+            // Add the modal to the page to make it visible.
             document.body.appendChild(adminModal);
             
+            // Add functionality to the form.
             adminModal.querySelector('#admin-login-form').addEventListener('submit', e => {
-                e.preventDefault();
+                e.preventDefault(); // Prevent the form from reloading the page.
                 const user = document.getElementById('admin-user').value;
                 const pass = document.getElementById('admin-pass').value;
+                // Check if the credentials are correct.
                 if (user === 'admin' && pass === '8888') {
-                    renderAdminPanel();
+                    renderAdminPanel(); // If correct, show the admin tools.
                 } else {
-                    document.getElementById('admin-error').classList.remove('hidden');
+                    document.getElementById('admin-error').classList.remove('hidden'); // Otherwise, show an error.
                 }
             });
 
+            // Make the "Cancel" button remove the modal.
             adminModal.querySelector('#cancel-admin-login').addEventListener('click', () => {
                 adminModal.remove();
             });
         }
 
+        /**
+         * Renders the Admin panel for managing user profiles.
+         * This function only runs after a successful admin login and now includes Super Admin functions.
+         */
         function renderAdminPanel() {
+            // Create a dropdown list of all existing user profiles.
             const userOptions = Object.keys(appData.users).map(username => '<option value="' + username + '">' + username + '</option>').join('');
             
             const adminModal = document.getElementById('admin-modal');
+            // Replace the login form with the admin tool interface.
             adminModal.innerHTML = 
                 '<div class="modal-content">' +
                     '<h3 class="text-xl font-bold mb-4">Profil Verwaltung</h3>' +
@@ -886,14 +780,24 @@
                              '<label for="admin-user-select" class="block text-sm font-medium text-slate-700">Profil zum Verwalten auswählen</label>' +
                              '<select id="admin-user-select" class="w-full p-3 border border-slate-300 rounded-lg mt-1">' + userOptions + '</select>' +
                          '</div>' +
+                         // Add buttons for resetting stats and deleting profiles.
                          '<div class="flex space-x-4">' +
                              '<button id="reset-stats-btn" class="w-full btn btn-secondary">Statistik zurücksetzen</button>' +
                              '<button id="delete-profile-btn" class="w-full btn btn-danger">Profil löschen</button>' +
                          '</div>' +
+                         // --- START: NEW SUPER ADMIN SECTION ---
+                         '<hr class="my-4 border-t-2 border-red-200">' +
+                         '<h4 class="text-lg font-bold text-red-700">Super-Admin Aktionen</h4>' +
+                         '<div class="flex space-x-4">' +
+                            '<button id="reset-all-btn" class="w-full btn btn-danger">Alle Statistiken zurücksetzen</button>' +
+                            '<button id="delete-all-btn" class="w-full btn btn-danger">Alle Profile löschen</button>' +
+                         '</div>' +
+                         // --- END: NEW SUPER ADMIN SECTION ---
                          '<button type="button" id="cancel-admin-panel" class="w-full btn btn-secondary mt-4">Schließen</button>' +
                     '</div>' +
                 '</div>';
 
+            // Add functionality to the "Reset Stats" button for a single user.
             adminModal.querySelector('#reset-stats-btn').addEventListener('click', () => {
                 const userToReset = document.getElementById('admin-user-select').value;
                 if (confirm('Sind Sie sicher, dass Sie alle Statistiken für ' + userToReset + ' zurücksetzen möchten? Diese Aktion kann nicht rückgängig gemacht werden.')) {
@@ -905,6 +809,7 @@
                 }
             });
 
+            // Add functionality to the "Delete Profile" button for a single user.
             adminModal.querySelector('#delete-profile-btn').addEventListener('click', () => {
                  const userToDelete = document.getElementById('admin-user-select').value;
                  if (confirm('Sind Sie absolut sicher, dass Sie das Profil von ' + userToDelete + ' löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.')) {
@@ -912,33 +817,79 @@
                         delete appData.users[userToDelete];
                         saveAppData();
                         alert('Profil ' + userToDelete + ' wurde gelöscht.');
-                        adminModal.remove();
-                        renderLoginScreen();
+                        adminModal.remove(); 
+                        renderLoginScreen(); 
                     }
                 }
             });
+
+            // --- START: EVENT LISTENERS FOR SUPER ADMIN BUTTONS ---
             
+            // Add functionality to the "Reset All Statistics" button.
+            adminModal.querySelector('#reset-all-btn').addEventListener('click', () => {
+                const pin = prompt("Dies setzt die Statistiken für ALLE Profile zurück. Bitte geben Sie den Super-Admin-PIN ein:");
+                if (pin === "2525") {
+                    if (confirm("Bestätigung: Alle Statistiken wirklich zurücksetzen?")) {
+                        Object.keys(appData.users).forEach(username => {
+                            appData.users[username].stats = { questionBanks: {}, simulations: [] };
+                        });
+                        saveAppData();
+                        alert("Die Statistiken für alle Profile wurden zurückgesetzt.");
+                    }
+                } else if (pin !== null) { // Handle case where user clicks cancel vs enters wrong pin
+                    alert("Falscher PIN. Aktion abgebrochen.");
+                }
+            });
+            
+            // Add functionality to the "Delete All Profiles" button.
+            adminModal.querySelector('#delete-all-btn').addEventListener('click', () => {
+                const pin = prompt("WARNUNG: Dies löscht ALLE Profile permanent. Bitte geben Sie den Super-Admin-PIN ein:");
+                if (pin === "2525") {
+                    if (confirm("FINALE WARNUNG: Alle Profile werden unwiderruflich gelöscht. Sind Sie absolut sicher?")) {
+                        appData.users = {};
+                        appData.lastUser = null;
+                        saveAppData();
+                        alert("Alle Profile wurden gelöscht.");
+                        location.reload(); // Reload the entire application
+                    }
+                } else if (pin !== null) {
+                    alert("Falscher PIN. Aktion abgebrochen.");
+                }
+            });
+
+            // --- END: EVENT LISTENERS FOR SUPER ADMIN BUTTONS ---
+            
+            // Make the "Close" button remove the modal.
             adminModal.querySelector('#cancel-admin-panel').addEventListener('click', () => {
                 adminModal.remove();
             });
         }
 
+        /**
+         * Renders the screen that displays a complete, alphabetized list of important vocabulary.
+         * This function serves as a dedicated study tool for the user.
+         */
         async function renderImportantWordsScreen() {
+            // Immediately show a loading spinner while the vocabulary file is being fetched.
             appContainer.innerHTML = '<div class="modal-backdrop"><div class="modal-content text-center"><div class="loader"></div><p class="mt-4 text-slate-600">Lade alle wichtigen Wörter...</p></div></div>';
 
             try {
+                // Fetch the special, pre-compiled vocabulary file.
                 const response = await fetch('./JSON files/Vocab.json');
                 if (!response.ok) throw new Error('Could not load Vocab.json');
                 const data = await response.json();
                 const wordsArray = data.words || [];
 
+                // Sort the list of words alphabetically based on the German word.
                 wordsArray.sort((a, b) => a.de.localeCompare(b.de));
 
+                // Loop through the sorted list and create an HTML table row for each word.
                 let tableRows = '';
                 for (const item of wordsArray) {
                     tableRows += '<tr><td class="border p-2 font-semibold">' + escapeHTML(item.de) + '</td><td class="border p-2">' + escapeHTML(item.en) + '</td></tr>';
                 }
 
+                // Construct the final HTML for the vocabulary popup window.
                 const modalHTML =
                     '<div class="modal-backdrop">' +
                         '<div class="modal-content !max-w-3xl">' + 
@@ -946,6 +897,7 @@
                                 '<h2 class="text-2xl font-bold text-slate-800">Wichtige Wörter</h2>' +
                                 '<button id="close-words-btn" class="btn btn-secondary text-sm">Zurück</button>' +
                             '</div>' +
+                            // This container will be scrollable if the list is too long.
                             '<div class="max-h-[60vh] overflow-y-auto">' +
                                 '<table class="w-full border-collapse text-left"><thead><tr><th class="border p-2 bg-slate-100">Deutsch</th><th class="border p-2 bg-slate-100">Englisch</th></tr></thead><tbody>' +
                                     tableRows +
@@ -954,21 +906,32 @@
                         '</div>' +
                     '</div>';
                 
+                // Replace the loading spinner with the complete vocabulary table.
                 appContainer.innerHTML = modalHTML;
                 document.getElementById('close-words-btn').addEventListener('click', () => showScreen('setup'));
 
             } catch(error) {
+                // If the Vocab.json file cannot be loaded, show an error message.
                 console.error("Error loading important words:", error);
                 appContainer.innerHTML = '<div class="modal-backdrop"><div class="modal-content text-center"><h2 class="text-xl font-bold text-red-600">Fehler</h2><p class="mt-2 text-slate-600">Die Vokabel-Datei (Vocab.json) konnte nicht geladen werden.</p><button onclick="showScreen(\'setup\')" class="btn btn-primary mt-4">Zurück</button></div></div>';
             }
         }
 
         // --- SECTION: INITIALIZATION ---
-        // This is the first function that runs when the page loads.
+
+        /**
+         * This is the main entry point of the entire application.
+         * It's the very first function that runs when the page is ready.
+         */
         function initApp() {
-            loadAppData(); // Load any saved data.
-            showScreen('login'); // Show the login screen.
-            // This general event listener helps handle clicks on answer options efficiently.
+            // Load any previously saved user data from the browser's memory.
+            loadAppData(); 
+            // Tell the app to display the initial login screen.
+            showScreen('login'); 
+            // Set up a single, efficient "master" event listener on the main app container.
+            // This listener waits for any click inside the container. If the click was on
+            // an element with the class '.option', it calls the correct handler function.
+            // This is more efficient than adding a separate listener to every single answer button.
             appContainer.addEventListener('click', (e) => {
                 if (e.target.closest('.option')) {
                     handleQuizContainerClick(e);
